@@ -1,0 +1,43 @@
+IIR filter design 
+Impulse invariance technique
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Design of IIR filters from Analog filters
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Properties for effective conversion from Analog to Digital
+(mapping from s-plane to z-plane)
+• Direct relationship between the frequency variable in the s-domain and z-domain 
+• jΩ axis in s-plane should map into the unit circle in z-plane
+• LHP of s-plane should map into the inside of the unit circle in z-plane. 
+• A stable analog filter can be converted to a stable digital filter
+• Analog LTI system is stable if all its poles lie in the left half of s-plane
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Design of IIR filters:
+• Two steps
+• First design an analog filter – Butterworth, Chebyshev or Elliptic
+• Convert this analog filter to digital using 
+• Impulse invariance technique
+• Bilinear transformation
+• Matched Z – transform
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Impulse invariance transformation:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Impulse invariance transformation
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Remember this
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal

@@ -1,0 +1,1755 @@
+Topic : Random variables
+Topic : Random variables
+1 / 70
+Contents
+1 One dimensional random variables
+2 Expectation and Variance
+3 Problems
+4 Two dimensional random variables
+5 Expectation and Covariance
+6 Problems
+7 Correlation coeﬃcient
+8 Regression lines
+Topic : Random variables
+2 / 70
+Random variable
+Deﬁnition
+Let S be a sample space associated with a random experiment E, then a
+random variable X is a real valued function deﬁned on S.
+i.e., X : S →R such that for each element s ∈S, there is a unique real
+number X = X(s) associated.
+Example 1
+Consider the random experiment of tossing a coin two times in succession.
+Then the sample space is S = {HH, HT, TH, TT}.
+Let X denotes the number of heads obtained, then X is a random variable
+and for each outcome, its value is given as,
+X(HH) = 2, X(HT) = 1, X(TH) = 1, X(TT) = 0.
+In this case we can write, the range of X is {0, 1, 2}.
+Topic : Random variables
+3 / 70
+Example 2
+A person plays a game of tossing a coin thrice. For each head, he is given
+Rs 2 by the organizer of the game and for each tail, he has to give Rs 1.50
+to the organizer. Let X denote the amount gained or lost by the person.
+Then X is a random variable.
+Here, S = {HHH, HTT, THH, TTH, THT, TTT, HHT, HTH}. Then,
+X(HHH) = 3 × 2 = 6
+X(HTT) = X(THT) = X(TTH) = (1 × 2) −(2 × 1.50) = −1
+X(HHT) = X(HTH) = X(THH) = (2 × 2) −(1 × 1.50) = 2.50
+X(TTT) = 3 × 1.50 = 4.50.
+Hence the range set of the random variable X is {−1, −2.50, 4.50, 6}.
+There are two types of one dimensional random variables;
+1 Discrete random variable
+2 Continuous random variable
+Topic : Random variables
+4 / 70
+Discrete random variable
+A random variable X is said to be discrete if X assumes only ﬁnite number
+of values or countably inﬁnite values.
+Example
+The number of heads in four tosses of a coin is a discrete random variable.
+Because, here X takes only the values 0, 1, 2, 3, 4.
+Continuous random variable
+A random variable X is said to be continuous if X assumes any value within
+an interval.
+Example
+The weights of a group of individuals in a class.
+Topic : Random variables
+5 / 70
+Discrete probability distribution
+Let X be a discrete random variable which assumes values x1, x2, x3, ..., xn, ...
+With each possible xi we associate a real number pi = P (X = xi) for
+i = 1, 2, 3, ..., n, ..., satisﬁes the conditions
+1 pi ≥0 for all i = 1, 2, 3, ..., n, ...
+2
+∞
+X
+i=1
+pi = 1.
+Then the function pi is called the discrete probability distribution or
+probability mass function (p.m.f.) or probability density function of
+the random variable X.
+We can represent the probability mass function of X in a tabular form as
+below,
+X
+x1
+x2
+x3
+...
+...
+xi
+...
+...
+xn
+...
+pi = P(X = xi)
+p1
+p2
+p3
+...
+...
+pi
+...
+...
+pi
+...
+Topic : Random variables
+6 / 70
+Note: For a speciﬁed t = xi,
+P(X ≤t) = P(X = x1) + P(X = x2) + ... + P(X = xi−1) + P(X = xi)
+P(X < t) = P(X = x1) + P(X = x2) + P(X = x3) + ... + P(X = xi−1)
+Distribution function or Cumulative distribution function (c.d.f.)
+Let X be a any random variable. Then the distribution function or
+cumulative distribution function (c.d.f.) of X is a function F deﬁned by
+F(t) = P(X ≤t).
+For a discrete random variable X, the c.d.f. of X is,
+F(t) = P(X ≤t) =
+X
+x≤t
+P(X = x).
+Topic : Random variables
+7 / 70
+Expectation of a discrete random variable
+Let X be a discrete random variable which assumes values x1, x2, x3, ..., xn, ...
+with p.m.f. pi = P(X = xi). Then the expectation or mean of X is deﬁned
+as
+E(X) =
+∞
+X
+i=1
+xiP(X = xi).
+Similarly,
+E(X 2) =
+∞
+X
+i=1
+x2
+i P(X = xi).
+Topic : Random variables
+8 / 70
+Continuous probability distribution
+Let X be a continuous random variable which assumes values from an in-
+terval I ⊆R. If there exists a function f satisﬁes the conditions;
+1 f (x) ≥0 for all x ∈I
+2
+Z ∞
+−∞
+f (x) dx = 1.
+Then the function f is called the continuous probability distribution or
+probability distribution function (p.d.f.) of the random variable X.
+Note: Let X be a continuous random variable. Then for a speciﬁc a, b such
+that −∞< a < b < ∞we have
+P (a ≤x ≤b) = P (a < x ≤b) = P (a ≤x < b) = P (a < x < b)
+=
+Z b
+a
+f (x) dx.
+Topic : Random variables
+9 / 70
+For a continuous random variable X, the c.d.f. of X is,
+F(t) = P(X ≤t) =
+Z t
+−∞
+f (x) dx.
+Expectation of a continuous random variable
+Let X be a continuous random variable with p.d.f. f (x). Then the expec-
+tation or mean of X is deﬁned as
+E(X) =
+Z ∞
+−∞
+x f (x) dx.
+Similarly,
+E(X 2) =
+Z ∞
+−∞
+x2 f (x) dx.
+Note: If X and Y are two random variables and α, β are two constants
+then E (αX + βY ) = αE(X) + βE(Y ) and
+E (αX + β) = αE(X) + β.
+Topic : Random variables
+10 / 70
+Variance
+Let X be a random variable with the probability distribution.
+Then the
+variance of X is deﬁned as
+V (X) = E [X −E(X)]2
+i.e.,
+V (X) = E [X −E(X)]2
+= E
+h
+X 2 −2XE(X) + (E(X))2i
+= E(X 2) −2E(X)E(X) + −[E(X)]2
+= E(X 2) −2 [E(X)]2 + [E(X)]2
+= E(X 2) −[E(X)]2
+The standard deviation of X is deﬁned as S.D.(X) =
+p
+V (X).
+Topic : Random variables
+11 / 70
+Note: If X and Y are two random variables and α, β are two constants
+then
+V (αX + βY ) = α2V (X) + β2V (Y )
+and
+V (αX + β) = α2V (X).
+Topic : Random variables
+12 / 70
+Problems
+Question 1.
+Five defective bulbs are accidently mixed with 20 good ones.
+It is not
+possible to just look at a bulb and tell whether or not it is defective. Find
+the probability distribution of the number of defective bulbs, if 4 bulbs are
+drawn at random from this lot?
+Solution: Let X be the random variable denotes the number of defective
+bulbs out of 4. Then, X takes the values 0, 1, 2, 3, 4.
+Number of defective bulbs =5.
+Number of good bulbs=20.
+Total number of bulbs = 25.
+P(X = 0) = P(no defective bulb) = P(all good ones) = 20C4
+225C4
+= 969
+2530.
+Topic : Random variables
+13 / 70
+P(X = 1) = P(1 defective bulb and 3 good ones) = 5C1 × 20C3
+225C4
+= 1140
+2530.
+P(X = 2) = P(2 defective bulb and 2 good ones) = 5C2 × 20C2
+225C4
+= 380
+2530.
+P(X = 3) = P(3 defective bulb and 1 good ones) = 5C3 × 20C1
+225C4
+=
+40
+2530.
+P(X = 4) = P(4 defective bulb ) =
+5C4
+225C4
+=
+1
+2530.
+Therefore the required p.m.f. is,
+X
+0
+1
+2
+3
+4
+P(X = x)
+969
+2530
+1140
+2530
+380
+2530
+40
+2530
+1
+2530
+Topic : Random variables
+14 / 70
+Question 2.
+The probability mass function (p.m.f.) of a random variable X is given by
+the following table:
+X
+−2
+−1
+0
+1
+2
+3
+P(X = x)
+0.3
+k
+0.2
+2k
+0.3
+k
+1 Determine the value of k.
+2 Find the mean and variance of X.
+3 Find P(X < 1),
+P(−1 ≤X < 2).
+Solution: (1) For a valid p.m.f. we have,
+X
+x
+P(X = x) = 1 implies
+0.6 + 4k = 1 =⇒k = 0.1.
+(2)
+Mean of X = E(X) =
+6
+X
+i=1
+xiP(X = xi)
+= −2(0.1) −1(k) + 0 + 1(k) + (0.3) + 3(k)
+= 0.4 + 4k = 0.8.
+Topic : Random variables
+15 / 70
+E(X 2) =
+6
+X
+i=1
+x2
+i P(X = xi)
+= 4(0.1) + 1(k) + 0 + 1(k) + (0.3) + 9(k)
+= 1.6 + 12k = 1.8.
+Therefore,variance of X is,
+V (X) = E(X 2) −(E(X))2
+= 1.8 −0.64 = 2.16
+(3) P(X < 1) = P(X = −2) + P(X = −1) + P(X = 0) = 0.5 + k = 0.6
+P(−1 ≤X < 2) = P(X = −1) + P(X = 0) + P(X = 1) = 0.2 + 3k = 0.5
+Topic : Random variables
+16 / 70
+Question 3.
+A box contains 12 balls of which 3 are white and 9 are red. A sample of
+3 balls is selected from the box. Let X denote the number of white balls
+in the sample. Find the p.m.f. of X. Determine the mean and standard
+deviation of X.
+Solution: Here X = 0, 1, 2, 3. Then,
+P(X = 0) = 9C3
+12C3
+= 84
+220;
+P(X = 1) = 3C1 × 9C2
+12C3
+= 108
+220
+P(X = 2) = 3C2 × 9C1
+12C3
+= 27
+220;
+P(X = 3) = 3C3
+12C3
+=
+1
+220
+Therefore the required p.m.f. is,
+X
+0
+1
+2
+3
+P(X = x)
+84
+220
+108
+220
+27
+220
+1
+220
+Topic : Random variables
+17 / 70
+Question 4.
+Let X be a continuous random variable with p.d.f.
+f (x) =
+(
+3x2,
+if 0 < x < 1,
+0,
+else where
+Then ﬁnd E(X) and V (X)?
+Solution: We have,
+E(X) =
+Z ∞
+−∞
+x f (x) dx
+=
+Z 1
+0
+x (3x2) dx
+= 3
+Z 1
+0
+x3 dx
+= 3
+4.
+Topic : Random variables
+18 / 70
+Also,
+E(X 2) =
+Z ∞
+−∞
+x2 f (x) dx
+=
+Z 1
+0
+x2 (3x2) dx
+= 3
+Z 1
+0
+x4 dx
+= 3
+5.
+Therefore, V (X) = E(X 2) −(E(X))2 = 3
+5 −9
+16 = 3
+80.
+Topic : Random variables
+19 / 70
+Question 5.
+Let X be a continuous random variable with p.d.f.
+f (x) = ke−|x|,
+if −∞< x < ∞.
+Then ﬁnd the value of k, E(X) and S.D.(X)?
+Solution: We have, |x| =
+(
+−x,
+if x < 0,
+x,
+ifx ≥0
+Therefore, the p.d.f.
+becomes, f (x) =
+(
+kex,
+if x < 0,
+ke−x,
+if x ≥0
+Since f (x) is a valid p.d.f, we’ve
+Z ∞
+−∞
+f (x) dx = 1 =⇒
+Z ∞
+−∞
+ke−|x|
+| {z }
+even function
+dx = 1
+=⇒2
+Z ∞
+0
+ke|x| dx = 1 =⇒2k
+Z ∞
+0
+e−x dx = 1
+=⇒2k (−e−x)∞
+0 = 1 =⇒k = 1
+2.
+Topic : Random variables
+20 / 70
+We have,
+E(X) =
+Z ∞
+−∞
+x f (x) dx
+=
+Z ∞
+−∞
+xe−|x|
+| {z }
+odd function
+dx = 0
+Also,
+E(X 2) =
+Z ∞
+−∞
+x2 f (x) dx
+=
+Z ∞
+−∞
+x2e−|x|
+| {z }
+even function
+dx
+= 2
+Z ∞
+0
+x2e−|x| dx = 2
+Z ∞
+0
+x2e−x dx = 2
+So, V (X) = E(X 2) −(E(X))2 = 2. Hence, S.D.(X) =
+√
+2.
+Topic : Random variables
+21 / 70
+Question 6.
+Let X be a continuous random variable with p.d.f.
+f (x) =
+
+
+
+
+
+x,
+if 0 ≤x ≤1,
+2 −x,
+1 < x ≤2
+0,
+else where
+Then ﬁnd the c.d.f of X and ﬁnd (i)
+P
+
+X ≥3
+2
+
+(ii) P
+
+3
+2 < X ≤2
+
+?
+Solution: We know the c.d.f of X is F(t) = P(X ≤t) =
+Z t
+−∞
+f (x) dx.
+Case(1): When −∞< t < 0
+We have, F(t) =
+Z t
+−∞
+f (x) dx =
+Z t
+−∞
+0 dx = 0.
+Case(2): When 0 ≤t ≤1
+We have, F(t) =
+Z t
+−∞
+f (x) dx =
+Z 0
+−∞
+f (x) dx +
+Z t
+0
+f (x) dx =
+Z 0
+−∞
+0 dx +
+Z t
+0
+x dx = t2
+2 .
+Topic : Random variables
+22 / 70
+Case(3): When 1 < t ≤2
+We have,
+F(t) =
+Z t
+−∞
+f (x) dx =
+Z 0
+−∞
+f (x) dx +
+Z 1
+0
+f (x) dx +
+Z t
+1
+f (x) dx =
+Z 0
+−∞
+0 dx+
+Z 1
+0
+x dx+
+Z t
+1
+(2−x) dx = 1
+2+
+ 
+−(t −2)2
+2
++ 1
+2
+!
+= 1−(t −2)2
+2
+.
+Case(4): When t ≥2
+We have, F(t) =
+Z t
+−∞
+f (x) dx =
+Z 0
+−∞
+f (x) dx +
+Z 1
+0
+f (x) dx +
+Z 2
+1
+f (x) dx +
+Z t
+1
+f (x) dx =
+Z 0
+−∞
+0 dx +
+Z 1
+0
+x dx +
+Z t
+1
+(2 −x) dx
+Z t
+1
+0 dx = 0 + 1
+2 + 1
+2 + 0 = 1.
+Topic : Random variables
+23 / 70
+Hence the required c.d.f of X is,
+F(t) = P(X ≤t) =
+
+
+
+
+
+
+
+
+
+0,
+if −∞< t < 0,
+t2
+2 ,
+if 0 ≤t ≤1
+1 −(t−2)2
+2
+,
+if 1 < t ≤2
+0,
+if t > 2
+(i) We know that,
+P(X ≥3
+2) = 1 −P(X < 3
+2)
+= 1 −F
+3
+2
+
+= 1 −
+
+
+1 −
+
+3
+2 −2
+2
+2
+
+
+= 1
+8.
+Topic : Random variables
+24 / 70
+Or,
+P(X ≥3
+2) = 1 −P(X < 3
+2)
+= 1 −
+Z
+3
+2
+−∞
+f (x) dx
+= 1 −
+Z 0
+−∞
+0 dx +
+Z 1
+0
+x dx +
+Z
+3
+2
+1
+(2 −x) dx = 1
+8.
+(ii) We have P
+
+3
+2 < X ≤2
+
+= F(2) −F
+
+3
+2
+
+= 1 −7
+8 = 1
+8.
+Or,
+P
+3
+2 < X ≤2
+
+=
+Z 2
+3
+2
+f (x) dx
+=
+Z 2
+3
+2
+(2 −x) dx
+=
+ 
+2x −x2
+2
+!2
+3
+2
+1
+8.
+Topic : Random variables
+25 / 70
+Two dimensional random variable
+Let S be the sample space associated to a random experiment. Let X and
+Y be two random variables on S. Let X = f (s) and Y = g(s) for s ∈S
+where f and g are real valued functions deﬁned on S. Then the pair (X, Y )
+is called the two dimensional random variable.
+Two dimensional discrete random variable: Let (X, Y ) be a two dimen-
+sional random variable. If (X, Y ) takes ﬁnite or countably inﬁnite values
+then (X, Y ) is called a two dimensional discrete random variable. In this
+case we can write,
+(X, Y ) =
+n
+(xi, yj) | i = 1, 2, 3, ..., n, ... & j = 1, 2, 3, ..., m, ...
+o
+Two dimensional continuous random variable: Let (X, Y ) be a two
+dimensional random variable. If (X, Y ) assumes values in an uncountable set
+of the Euclidean plane R2 then (X, Y ) is called a two dimensional continuous
+random variable. In this case we can write,
+(X, Y ) =
+n
+(x, y) | (x, y) ∈R ⊆R2o
+Topic : Random variables
+26 / 70
+Discrete joint probability distribution
+Let (X, Y ) be the two dimensional discrete random variable. With each
+possible outcome (xi, yj) for i = 1, 2, 3, ...n, ... and j = 1, 2, 3, ...m, ... we
+associate a real number pij = p(xi, yj) = P (X = xi, Y = yj) satisfying the
+conditions:
+1 pij ≥0 for all i = 1, 2, 3, ...n, ... and j = 1, 2, 3, ...m, ...
+2
+∞
+X
+j=1
+∞
+X
+i=1
+pij = 1
+Then pij is called the joint probability density function of (X, Y ) .
+Topic : Random variables
+27 / 70
+The discrete joint probability distribution can be represented in the
+following table
+X \ Y
+y1
+y2
+y3
+...
+yj
+...
+x1
+p11
+p12
+p13
+...
+p1j
+...
+x2
+p21
+p22
+p23
+...
+p2j
+...
+x3
+p31
+p32
+p33
+...
+p3j
+...
+...
+...
+...
+...
+...
+...
+...
+xi
+pi1
+pi2
+pi3
+...
+pij
+...
+...
+...
+...
+...
+...
+...
+...
+Marginal probability distributions
+Let (X, Y ) be the two dimensional discrete random variable. Then the
+marginal probability distribution of X is P(X = xi) =
+∞
+X
+j=1
+pij for ﬁxed i.
+Similarly, the marginal probability distribution of Y is P(Y = yj) =
+∞
+X
+i=1
+pij
+for ﬁxed j.
+Topic : Random variables
+28 / 70
+Expectation
+Let (X, Y ) be the two dimensional discrete random variable with joint
+probability density function pij = p(xi, yj) then the
+1 Expectation or mean of X is E(X) =
+∞
+X
+i=1
+xiP(X = xi)
+2 Expectation or mean of Y is E(Y ) =
+∞
+X
+j=1
+yjP(Y = yj)
+3 Expectation or mean of XY is E(XY ) =
+∞
+X
+i=1
+∞
+X
+j=1
+xiyjpij
+Topic : Random variables
+29 / 70
+Continuous joint probability distribution
+Let (X, Y ) be the two dimensional continuous random variable assuming
+values from a region R ⊆R2. The joint probability distribution function
+f (x, y) is a function satisfying the conditions:
+1 f (x, y) ≥0 for all (x, y) ∈R
+2
+ZZ
+R
+f (x, y)dxdy =
+Z ∞
+x=−∞
+Z ∞
+y=−∞
+f (x, y)dydx = 1
+Note: Let (X, Y ) be the two dimensional continuous random variable and
+if −∞< a < b < ∞and −∞< c < d < ∞then
+1 P (a ≤X ≤b, c ≤Y ≤d) =
+Z b
+x=a
+Z d
+y=c
+f (x, y)dydx
+2 P (a ≤X ≤b) =
+Z b
+x=a
+Z ∞
+y=−∞
+f (x, y)dydx
+3 P (c ≤Y ≤d) =
+Z ∞
+x=−∞
+Z d
+y=c
+f (x, y)dydx
+Topic : Random variables
+30 / 70
+Marginal probability distributions
+Let (X, Y ) be the two dimensional continuous random variable with joint
+p.d.f. f (x, y) then
+1 the marginal distribution of X is
+g(x) = P(X = x) =
+Z ∞
+y=−∞
+f (x, y)dy for −∞< x < ∞.
+2 the marginal distribution of Y is
+h(y) = P(Y = y) =
+Z ∞
+x=−∞
+f (x, y)dx for −∞< y < ∞.
+Topic : Random variables
+31 / 70
+Expectation
+Let (X, Y ) be the two dimensional continuous random variable with joint
+probability distribution f (x, y) then the
+1 Expectation of X is,
+E(X) =
+Z ∞
+x=−∞
+x g(x) dx =
+Z ∞
+x=−∞
+x
+Z ∞
+y=−∞
+f (x, y)dy
+
+dx
+2 Expectation of Y is,
+E(Y ) =
+Z ∞
+x=−∞
+y h(y) dy
+Z ∞
+y=−∞
+y
+Z ∞
+x=−∞
+f (x, y)dx
+
+dy
+3 Expectation of XY is, E(XY ) =
+Z ∞
+x=−∞
+Z ∞
+y=−∞
+f (x, y)dydx
+Topic : Random variables
+32 / 70
+Problems
+Question 1.
+Let (X, Y ) be the two dimensional random variable with joint probability
+distribution p(x, y) = c(2x + y) where x and y can assume all integral
+values such that 0 ≤x ≤2, 0 ≤y ≤3 and p(x, y) = 0 otherwise. Then
+ﬁnd
+1 the value of c.
+2 P(X = 2, Y = 1), P(X ≥1, Y ≤2), P(X + Y ≤1)
+Solution: Here, X = 0, 1, 2 and Y = 0, 1, 2, 3. The joint probability
+distribution of (X, Y ) is
+X \ Y
+0
+1
+2
+3
+0
+0
+c
+2c
+3c
+1
+2c
+3c
+4c
+5c
+2
+4c
+5c
+6c
+7c
+Topic : Random variables
+33 / 70
+(1) For a valid p.d.f., we have,
+3
+X
+i=1
+4
+X
+j=1
+p (xi, yj) = 1 =⇒42c = 1 =⇒c = 1
+42.
+(2) We have, P(X = 2, Y = 1) = 5c = 5
+42.
+P(X ≥1, Y ≤2) = P(X = 1.Y ≤2) + P(X = 2, Y ≤2)
+= P(1, 0) + P(2, 0) + P(1, 1) + P(2, 1) + P(1, 2) + P(2, 2)
+= 24c = 1
+2.
+and
+P(X + Y ≤1) = P(X = 0.Y = 1) + P(X = 1, Y = 0)
+= 3c = 1
+14.
+Topic : Random variables
+34 / 70
+Question 2.
+A coin is tossed three times. Let X = 0 or 1 according as a head or a tail
+occurs on the ﬁrst toss. Let Y be equal to the total number heads occur.
+Then ﬁnd
+1 the joint probability distribution of (X, Y ).
+2 the marginal probability distribution of X and Y .
+3 E(X), E(Y ), E(2X + Y ), E(XY ).
+Solution: We have,
+S =
+n
+HHH, HHT, HTH, THH, THT, HTT, TTH, TTT
+o
+. Here X = 0, 1
+and Y = 0, 1, 2, 3.
+(1) The joint probability distribution of (X.Y ) is,
+X \ Y
+0
+1
+2
+3
+0
+P(X = 0, Y = 0) = 0
+1
+8
+2
+8
+1
+8
+1
+P(X = 1, Y = 0) = 1
+8
+2
+8
+1
+8
+0
+Topic : Random variables
+35 / 70
+(2) The marginal probability distribution of X is,
+X
+0
+1
+P(X = x)
+4
+8
+4
+8
+The marginal probability distribution of X is,
+Y
+0
+1
+2
+3
+P(Y = y)
+1
+8
+3
+8
+3
+8
+1
+8
+(3) We have,
+E(X) =
+2
+X
+i=1
+xiP(X = xi) = 0 × P(X = 0) + 1 × P(X = 1) = 1
+2. and
+E(Y ) =
+4
+X
+j=1
+yjP(Y = yj)
+= 0 × P(Y = 0) + 1 × P(Y = 1) + 2 × P(Y = 2) + 3 × P(Y = 3)
+= 3
+2.
+Topic : Random variables
+36 / 70
+We have, E(2X + Y ) = 2E(X) + E(Y ) = 1 + 3
+2 = 5
+2. and
+E(XY ) =
+2
+X
+i=1
+4
+X
+j=1
+xiyj pij
+= (0x0) × P(0, 0) + (0x1) × P(0, 1) + (0x2) × P(0, 2)
++ (0x3) × P(0, 3) + (1x0) × P(1, 0) + (1x1) × P(1, 1)
++ (1x2) × P(1, 2) + (1x3) × P(1, 3) = 1
+2.
+Topic : Random variables
+37 / 70
+Question 2.
+Let (X, Y ) be the two dimensional random variable with joint probability
+distribution f (x, y) =
+(
+k(x + 1)e−y,
+if 0 < x < 1, y > 0
+0,
+else where
+. Then ﬁnd
+1 the value of k.
+2 The marginal probability distributions of X and Y
+Solution: We know that for a valid p.d.f.,
+Z ∞
+x=−∞
+Z ∞
+y=−∞
+f (x, y)dydx = 1
+=⇒
+Z 1
+x=0
+Z ∞
+y=0
+k(x + 1)e−y dydx = 1
+=⇒k
+Z 1
+x=0
+(x + 1)
+ 
+e−y
+−1
+!∞
+y=0
+dx = 1 =⇒k
+Z 1
+x=0
+(x + 1) dx = 1
+=⇒k
+
+x2
+2 + x
+1
+0 = 1 =⇒
+3k
+2 = 1 =⇒k = 2
+3.
+Topic : Random variables
+38 / 70
+The marginal probability distribution of X is, g(x) =
+Z ∞
+y=−∞
+f (x, y)dy for
+−∞< x < ∞.
+=⇒
+g(x) =
+Z ∞
+y=−0
+k(x + 1)e−y dy
+= 2
+3(x + 1)
+ 
+e−y
+−1
+!∞
+y=0
+= 2
+3(x + 1) for 0 < x < 1.
+The marginal probability distribution of X is, h(y) =
+Z ∞
+x=−∞
+f (x, y)dx for
+−∞< y < ∞.
+=⇒
+h(y) =
+Z 1
+x=−0
+k(x + 1)e−y dx
+= 2
+3e−y
+ 
+x2
+2 + x
+!1
+0
+= e−y for 0 < y < ∞.
+Topic : Random variables
+39 / 70
+Question 3.
+Let (X, Y ) be the two dimensional random variable with joint probability
+distribution f (x, y) =
+
+
+
+x2 + xy
+3 ,
+if 0 < x < 1, 0 < y < 2
+0,
+else where
+. Then ﬁnd
+1 P(X + Y ≥1)
+Solution:
+Topic : Random variables
+40 / 70
+(1)
+P(X + Y ≥1) = 1 −P(X + y < 1)
+= 1 −
+Z 1
+0
+Z 1−x
+0
+f (x, y) dydx
+= 1 −
+Z 1
+0
+Z 1−x
+0
+x2 + xy
+3 dydx
+= 1 −
+Z 1
+0
+ 
+x2y + xy2
+6
+!1−x
+0
+dx
+= 1 −
+Z 1
+0
+ 
+x2(1 −x) + x(1 −x)2
+6
+!
+dx
+1 −7
+72 = 65
+72.
+Topic : Random variables
+41 / 70
+Question 4.
+Let (X, Y ) be the two dimensional random variable with joint probability
+distribution f (x, y) =
+(
+e−(x+y),
+if x ≥0, y ≥0
+0,
+else where
+. Then ﬁnd
+1 E(X), E(Y ) and E(XY ).
+Solution: We know,
+E(X) =
+Z ∞
+x=−∞
+x
+Z ∞
+y=−∞
+f (x, y)dy
+
+dx
+=
+Z ∞
+x=0
+x
+Z ∞
+y=0
+f (x, y)dy
+
+dx
+=
+Z ∞
+x=0
+x
+Z ∞
+y=0
+e−(x+y)dy
+
+dx
+=
+Z ∞
+x=0
+xe−xdx = 1
+Topic : Random variables
+42 / 70
+We know,
+E(Y ) =
+Z ∞
+y=−∞
+y
+Z ∞
+x=−∞
+f (x, y)dx
+
+dy
+=
+Z ∞
+y=0
+y
+Z ∞
+x=0
+f (x, y)dx
+
+dy
+=
+Z ∞
+y=0
+y
+Z ∞
+x=0
+e−(x+y)dx
+
+dx
+=
+Z ∞
+y=0
+ye−ydx = 1
+We know,
+E(XY ) =
+Z ∞
+x=−∞
+Z ∞
+y=−∞
+xyf (x, y)dy
+
+dx
+=
+Z ∞
+x=0
+Z ∞
+y=0
+xyf (x, y)dy
+
+dx
+=
+Z ∞
+x=0
+Z ∞
+y=0
+xye−(x+y)dy
+
+dx
+Topic : Random variables
+43 / 70
+=
+Z ∞
+x=0
+xe−x
+Z ∞
+y=0
+ye−ydy
+
+dx
+=
+Z ∞
+x=0
+xe−xdx ×
+Z ∞
+y=0
+ye−ydy = 1.
+Topic : Random variables
+44 / 70
+Correlation coeﬃcient
+There are, many phenomenae where the changes in one variable are related
+to the changes in the other variable. When the changes in one variable
+are associated or followed by changes in the other, is called correlation. If
+an increase (or decrease) in the values of one variable corresponds to an
+increase (or decrease) in the other, the correlation is said to be positive. If
+the increase (or decrease) in one corresponds to the decrease (or increase)
+in the other, the correlation is said to be negative. If there is no relation-
+ship indicated between the variables, they are said to be independent or
+uncorrelated.
+Topic : Random variables
+45 / 70
+The numerical measure of correlation is called the coeﬃcient of correlation.
+Let (X, Y ) be a two-dimensional random variable. Then the correlation
+co-eﬃcient between X and Y is denoted by ρXY and is deﬁned as
+ρXY = E{(X −E(X))(Y −E(Y ))}
+p
+V (X)V (Y )
+.
+Note 1.1
+E{(X −E(X))(Y −E(Y ))} is called the covariance of X and Y and is
+denoted by COV(X, Y ).
+Topic : Random variables
+46 / 70
+Theorem 1.2
+Prove that ρXY = E(XY ) −E(X)E(Y )
+p
+V (X)V (Y )
+.
+Proof: It is enough to show that
+E{(X −E(X))(Y −E(Y ))} = E(XY ) −E(X)E(Y ).
+Consider
+E{(X −E(X))(Y −E(Y ))} = E{XY −XE(Y ) −YE(X) + E(X)E(Y )}
+=E(XY ) −E(X)E(Y ) −E(Y )E(X) + E(X)E(Y )
+=E(XY ) −E(X)E(Y ).
+Topic : Random variables
+47 / 70
+Note 1.3
+If X and Y are independent, then E(XY ) = E(X)E(Y ). Hence
+ρXY = 0. The converse need not be true. That is, if ρXY = 0, then X
+and Y need not be independent.
+Consider a random variable X with pdf f (x) = 1/2, −1 ≤x ≤1.
+Deﬁne a random variable Y = X 2.
+Then E(XY ) −E(X)E(Y ) = E(X.X 2) −E(X)E(X 2).
+E(X 3) =
+R ∞
+−∞x3f (x)dx =
+R 1
+−1 x3 · 1
+2dx = 0
+E(X) =
+R ∞
+−∞xf (x)dx =
+R 1
+−1 x · 1
+2dx = 0.
+Hence ρXY = 0. But X and Y are not independent.
+Topic : Random variables
+48 / 70
+Theorem 1.4
+Prove that −1 ≤ρ ≤1.
+Proof: We have E{X −E(X)
+p
+V (X)
+± Y −E(Y )
+p
+V (Y ) }2 ≥0
+⇒E[(X −E(X))2
+V (X)
++ (Y −E(Y ))2
+V (Y )
+± 2(X −E(X))(Y −E(Y ))
+p
+V (X)V (Y )
+] ≥0
+⇒E(X −E(X))2
+V (X)
++ E(Y −E(Y ))2
+V (Y )
+± 2E[(X −E(X))(Y −E(Y ))]
+p
+V (X)V (Y )
+≥0
+⇒V (X)
+V (X) + V (Y )
+V (Y ) ± 2E[(X −E(X))(Y −E(Y ))]
+p
+V (X)V (Y )
+≥0
+⇒2 ± 2ρXY ≥0
+⇒1 ± ρXY ≥0
+⇒1 + ρXY ≥0; 1 −ρXY ≥0
+⇒ρXY ≥−1; 1 ≥ρXY ;
+⇒−1 ≤ρXY ≤1.
+Topic : Random variables
+49 / 70
+Theorem 1.5
+If X and Y are linearly related, then show that ρXY = ±1.
+Proof: Let Y = a + bX with a and b are constants.
+We have ρXY = E(XY ) −E(X)E(Y )
+p
+V (X)V (Y )
+Consider E(XY ) = E(X(a + bX)) = E(aX + bX 2) = aE(X) + bE(X 2)
+E(Y ) = E(a + bX) = a + bE(X)
+V (Y ) = V (a + bX) = b2V (X)
+Then ρXY = aE(X) + bE(X 2) −E(X)(a + bE(X))
+q
+V (X)b2V (X))
+ρXY = aE(X) + bE(X 2) −aE(X) −b(E(X))2
+±bV (X)
+=b[E(X 2) −(E(X))2]
+±bV (X)
+= ±1.
+Topic : Random variables
+50 / 70
+Problem 1.6
+The random variable (X, Y ) has a joint pdf given by
+f (x, y) = x + y, 0 ≤x ≤1, 0 ≤y ≤1. Compute the correlation
+co-eﬃcient between X and Y .
+Solution: E(XY ) =
+R ∞
+−∞
+R ∞
+−∞xyf (x, y)dxdy
+=
+R 1
+0
+R 1
+0 xy(x + y)dxdy = 1/3
+E(X) =
+R ∞
+−∞
+R ∞
+−∞xf (x, y)dxdy =
+R 1
+0
+R 1
+0 x(x + y)dxdy = 7/12
+E(Y ) =
+R ∞
+−∞
+R ∞
+−∞yf (x, y)dxdy =
+R 1
+0
+R 1
+0 y(x + y)dxdy = 7/12
+E(X 2) =
+R ∞
+−∞
+R ∞
+−∞x2f (x, y)dxdy =
+R 1
+0
+R 1
+0 x2(x + y)dxdy = 5/12
+E(Y 2) =
+R ∞
+−∞
+R ∞
+−∞y2f (x, y)dxdy =
+R 1
+0
+R 1
+0 y2(x + y)dxdy = 5/12
+V (X) = E(X 2) −(E(X))2 = 11/144 and
+V (Y ) = E(Y 2) −(E(Y ))2 = 11/144.
+ρXY = E(XY ) −E(X)E(Y )
+p
+V (X)V (Y )
+= −1
+11 .
+Topic : Random variables
+51 / 70
+Problem 1.7
+Show that V (aX + bY ) = a2V (X) + b2V (Y ) + 2abCOV (X, Y )
+Solution: V (aX + bY ) = E[(aX + bY ) −E(aX + bY )]2
+= E[aX + bY −aE(X) −bE(Y )]2
+= E[a(X −E(X)) + b(Y −E(Y )]2
+= E[a2(X −E(X))2 + b2(Y −E(Y ))2 + 2ab(X −E(X))(Y −E(Y ))]
+= a2E(X −E(X))2 + b2E(Y −E(Y ))2 + 2abE{(X −E(X))(Y −E(Y ))}
+= a2V (X) + b2V (Y ) + 2abCOV (X, Y ).
+Topic : Random variables
+52 / 70
+Note 1.8
+If X and Y are independent random variables, then
+E(XY ) = E(X)E(Y ). Hence COV (X, Y ) = 0. Therefore
+V (aX + bY ) = a2V (X) + b2V (Y ).
+Problem 1.9
+If X1, X2 and X3 are uncorrelated random variables having the same
+standard deviation. Then ﬁnd the correlation co-eﬃcient between
+X1 + X2 and X2 + X3.
+Topic : Random variables
+53 / 70
+Solution: Since X1, X2 and X3 are uncorrelated, then ρX1X2 = 0,
+ρX2X3 = 0 and ρX3X1 = 0.
+Let V (X1) = V (X2) = V (X3) = σ.
+Now, take U = X1 + X2 and V = X2 + X3. Then
+ρUV = E(UV ) −E(U)E(V )
+p
+V (U)V (V )
+= E((X1 + X2)(X2 + X3)) −E(X1 + X2)E(X2 + X3)
+p
+V (X1 + X2)V (X2 + X3)
+= E(X1X2 + X1X3 + X 2
+2 + X2X3) −(E(X1) + E(X2))(E(X2) + E(X3))
+p
+V (X1 + X2)V (X2 + X3)
+= E(X1X2) + E(X1X3) + E(X 2
+2 ) + E(X2X3) −E(X1)E(X2) −E(X1)E(X3) −(E(X2))2 −(E(X2)E(X3))
+p
+(V (X1) + V (X2))(V (X2) + V (X3))
+[V (X1 + X2) = V (X1) + V (X2) + 2COV (X1, X2). Since ρX1X2 = 0, then
+COV (X1, X2) = 0]
+=E(X 2
+2 ) −(E(X2))2
+√
+2σ · 2σ
+= V (X2)
+√
+2σ · 2σ = σ
+2σ = 1/2.
+Topic : Random variables
+54 / 70
+Lines of Regression
+It frequently happens that the dots of the scatter diagram generally, tend
+to cluster along a well deﬁned direction which suggests a linear relationship
+between the variables x and y. Such a line of best-ﬁt for the given distri-
+bution of dots is called the line of regression. There are two such lines, one
+line gives the best possible mean values of y for each speciﬁed value of x
+is known as the line of regression of y on x and the other line gives the
+best possible mean values of x for given values of y is known as the line of
+regression of x on y.
+Topic : Random variables
+55 / 70
+Consider ﬁrst the line of regression of y on x. Let the straight line satisfying
+the general trend of n dots in a scatter diagram be y = a + bx......(1)
+We have to determine the constants a and b so that (1) gives for each value
+of x, the best estimate for the average value of y in accordance with the
+principle of least squares, then the normal equations for a and b are
+Σy = na + bΣx .........(2) and
+Σxy = aΣx + bΣx2.......(3)
+(2) gives 1
+nΣy = a + b.1
+nΣx
+⇒¯y = a + b¯x.
+This shows that means of x and y (¯x, ¯y) lie on (1).
+Topic : Random variables
+56 / 70
+By shifting the origin to (¯x, ¯y), (3) takes the form
+Σ(x −¯x)(y −¯y) = aΣ(x −¯x) + bΣ(x −¯x)2, but aΣ(x −¯x) = 0,
+∴b = Σ(x −¯x)(y −¯y)
+Σ(x −¯x)2
+= ΣXY
+ΣX 2 = ΣXY
+nσ2x
+= r σy
+σx
+Thus the line of best ﬁt becomes y −¯y = r σy
+σx
+(x −¯x)
+which is the equation of the line of regression of y on x. Its slope is called
+the regression coeﬃcient of y on x.
+Interchanging x and y, we ﬁnd that the line of regression of x on y is
+x −¯x = r σx
+σy
+(y −¯y)
+Thus the regression coeﬃcient of y on x =rσy/σx and the regression coef-
+ﬁcient of x on y =rσx/σy.
+Topic : Random variables
+57 / 70
+Problem 2.1
+The two regression equations of the variables x and y are
+x = 19.13 −0.87y and y = 11.64 −0.50x. Find (i) mean of x′s, (ii)
+mean of y′s and (iii) the correlation coeﬃcient between x and y.
+Solution: Since the mean of x’s and the mean of y’s lie on the two
+regression lines, we have
+¯x = 19.13 −0.87¯y ......(i)
+¯y = 11.64 −0.50¯x..........(ii)
+Multiplying (ii) by 0.87 and subtracting from (i), we have
+[1 −(0.87)(0.50)]¯x = 19.13 −(11.64)(0.87) or 0.57¯x = 9.00 or ¯x = 15.79
+¯y = 11.64 −(0.50)(15.79) = 3.74
+∴regression coeﬃcient of y on x is -0.50 and that of x on y is -0.87.
+Since the coeﬃcient of correlation is the geometric mean between the two
+regression coeﬃcients, then
+r =
+p
+(−0.50)(−0.87) =
+√
+0.43 = −0.66
+(negative sign is taken since both the regression coeﬃcients are negative).
+Topic : Random variables
+58 / 70
+Problem 2.2
+Calculate the lines of regression of y on x and x on y by using the
+following data.
+x
+28
+25
+24
+29
+31
+22
+21
+25
+26
+28
+y
+22
+23
+21
+25
+26
+20
+19
+21
+21
+24
+Solution: ¯x = Σxi
+n
+= 25.9; ¯y = Σyi
+n
+= 22.2
+x
+y
+X = x −¯x
+Y = y −¯y
+X 2
+Y 2
+XY
+28
+22
+2.1
+-0.2
+4.41
+0.04
+-0.42
+25
+23
+-0.9
+0.8
+0.81
+0.64
+-0.72
+24
+21
+-1.9
+-1.2
+3.61
+1.44
+2.28
+29
+25
+3.1
+2.8
+9.61
+7.84
+8.68
+31
+26
+5.1
+3.8
+26.01
+14.44
+19.38
+22
+20
+-3.9
+-2.2
+15.21
+4.84
+8.58
+21
+19
+-4.9
+-3.2
+24.01
+10.24
+15.68
+25
+21
+-0.9
+-1.2
+0.81
+1.44
+1.08
+26
+21
+0.1
+-1.2
+0.01
+1.44
+-0.12
+28
+24
+2.1
+1.8
+4.41
+3.24
+3.78
+Topic : Random variables
+59 / 70
+ΣX 2 = 88.9;
+ΣY 2 = 45.6; ΣXY = 58.2
+The regression line of x on y is x −¯x = r σx
+σy
+(y −¯y)
+Now, r σx
+σy
+= ΣXY
+nσxσy
+× σx
+σy
+= ΣXY
+nσy 2 = ΣXY
+nΣY 2
+n
+= ΣXY
+ΣY 2
+Hence the regression line of x on y is x −¯x = ΣXY
+ΣY 2 (y −¯y)
+x −25.9 = 58.2
+45.6(y −22.2)
+⇒x −25.9 = 1.2763(y −22.2)
+⇒x = 1.2763y −2.44.
+The regression line of y on x is y −¯y = ΣXY
+ΣX 2 (x −¯x)
+y −22.2 = 58.2
+88.9(x −25.9)
+⇒y = 5.244 + 0.6547x.
+Topic : Random variables
+60 / 70

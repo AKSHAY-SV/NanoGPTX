@@ -1,0 +1,24 @@
+Lattice-Ladder structures
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Lattice and Lattice-Ladder structures for IIR Systems
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+[Alternate method]
+Note: If value of all the lattice 
+coefficients are less than 1, then the 
+system is stable
+[Alternate method]
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Determine the system function and the impulse response
+Of the system shown below
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Alternate method for finding lattice coefficients:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal

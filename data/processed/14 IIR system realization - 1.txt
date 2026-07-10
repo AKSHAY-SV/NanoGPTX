@@ -1,0 +1,40 @@
+Structure for IIR systems
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Structure for IIR systems:
+LTI discrete time systems can be characterized by Linear constant coefficient difference 
+equation(LCCDE)
+Direct Form Structures:
+Direct Form I 
+Direct Form II
+Transposed
+Cascaded
+Parallel
+Lattice-Ladder structure
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Zeros
+Poles
+Direct Form I structure realization:
+=                                         = 𝐻1(𝑧) 𝐻2(𝑧)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Find Direct form I structure 
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Direct Form II structure realization:
+= 𝐻1(𝑧) 𝐻2(𝑧)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+DF 1 →
+DF 2→
+Delay blocks 
+are reduced – 
+Canonic form
+Two pole structures:
+• If zero/pole is complex – difficult to implement (complex coefficients)
+• This can be converted into structure with real coefficients – 2 pole structures
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Recap – Goertzel algorithm:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal

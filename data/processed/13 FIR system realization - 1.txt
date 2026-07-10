@@ -1,0 +1,34 @@
+Implementation of Discrete 
+Time Systems (Realization):
+Structure for FIR systems
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+FIR and IIR systems
+• A LTI system is classified based on impulse response as below
+• FIR system
+• IIR system
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Structures for FIR systems 
+Structures:
+1. Direct form
+2. Cascaded form
+3. Frequency Sampling 
+4. Lattice 
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Tapped delay line structure
+(M) multiplications and (M-1) additions
+Linear Phase FIR filters:
+An FIR filter is said to have linear phase if its impulse response satisfies either symmetry or asymmetry conditions
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Cascade- Form structures
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Cascade- Form structures
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal

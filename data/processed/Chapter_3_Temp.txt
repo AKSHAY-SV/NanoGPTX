@@ -1,0 +1,1166 @@
+Friday, February 21, 2025
+1
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+The p-n Junction
+By Dr Bhaskar Awadhiya
+BASIC STRUCTURE OF THE pn JUNCTION
+The p-n Junction
+BASIC STRUCTURE OF THE pn JUNCTION
+Friday, February 21, 2025
+2
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+It 
+is 
+important 
+to 
+realize 
+that 
+the 
+entire 
+semiconductor is a single-crystal material in which 
+one region is doped with acceptor atoms and the 
+adjacent region is doped with donor atoms.
+➢
+The interface separating regions is referred to as the 
+Metallurgical junction.
+➢
+For simplicity, we will consider a step junction in 
+which the doping concentration is uniform.
+➢
+Initially, at the metallurgical junction, there is a very large density gradient in both 
+electron and hole concentrations.
+➢
+Majority carrier electrons in the n region will begin diffusing into the p region.
+➢
+Majority carrier holes in the p region will begin diffusing into the n region.
+BASIC STRUCTURE OF THE pn JUNCTION
+The p-n Junction
+BASIC STRUCTURE OF THE pn JUNCTION
+Friday, February 21, 2025
+3
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+If we assume there are no external connections 
+to the semiconductor, then this diffusion 
+process cannot continue indefinitely. 
+➢
+As electrons diffuse from the n region, 
+positively charged donor atoms are left behind. 
+➢
+Similarly, as holes diffuse from the p region, 
+they uncover negatively charged acceptor 
+atoms.
+➢
+The net positive and negative charges in the n 
+and p regions induce an electric field in the 
+region near the metallurgical junction.
+➢
+The direction of the induced electric field is 
+from the positive to the negative charge, or 
+from the n to the p region.
+BASIC STRUCTURE OF THE pn JUNCTION
+The p-n Junction
+BASIC STRUCTURE OF THE pn JUNCTION
+Friday, February 21, 2025
+4
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+Regions with charged impurity atoms are referred to as the space charge region.
+➢
+Essentially all electrons and holes are swept out of the space charge region by the 
+electric field. 
+➢
+Since the space charge region is depleted of any mobile charge, this region is also 
+referred to as the Depletion region.
+➢
+Density gradients still exist in the majority carrier 
+concentrations at each edge of the space charge 
+region.
+➢
+Diffusion forces, acts on the electrons and holes at 
+the edges of the space charge region.
+➢
+The electric field produces another force which is in 
+the opposite direction to the diffusion forces.
+➢
+In thermal equilibrium, the diffusion force and the 
+E-field force exactly balance each other.
+BUILT-IN POTENTIAL BARRIER
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+5
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+If we assume that no voltage is applied across the pn junction, then the junction is 
+in thermal equilibrium —the Fermi energy level is constant throughout the entire 
+system.
+➢
+Figure shows the energy-band diagram for the pn junction in thermal
+equilibrium.
+➢
+The conduction and valance band energies must bend as we go through
+the space charge region, since the relative position of the conduction and valence
+bands with respect to the Fermi energy changes between p and n regions.
+➢
+Electrons in the conduction band of the n 
+region see a potential barrier in trying to 
+move into the conduction band of the p 
+region. 
+➢
+This potential barrier is referred to as the 
+Built-in potential barrier and is denoted 
+by Vbi.
+Potential 
+Barrrier
+BUILT-IN POTENTIAL BARRIER
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+6
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+The built-in potential barrier maintains 
+equilibrium between electron in n side 
+(majority) and p side (minority) and also 
+between hole in n side (minority) and p 
+side (majority).
+➢
+Is it possible to measure potential barrier 
+using Voltmeter?
+➢
+The potential Vbi maintains equilibrium, so no current is produced by this voltage.
+➢
+The intrinsic Fermi level is equidistant from the conduction band edge through
+the junction.
+➢
+Thus, the built-in potential barrier can be determined as the difference between the 
+intrinsic Fermi levels in the p and n regions.
+𝑉𝑏𝑖= 𝑒𝜑𝐹𝑛+ 𝑒𝜑𝐹𝑝
+Potential 
+Barrrier
+BUILT-IN POTENTIAL BARRIER
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+7
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+In the n region, the electron concentration in the conduction band is given by
+(
+)
+
+
+
+
+−
+−
+=
+kT
+E
+E
+N
+n
+F
+c
+c exp
+0
+which can also be written in the form
+
+
+
+
+−
+=
+kT
+E
+E
+n
+n
+Fi
+F
+i exp
+0
+where ni and EFi are the intrinsic carrier concentration and the intrinsic Fermi energy,
+respectively. We may define the potential ϕFn in the n region as
+F
+Fi
+Fn
+E
+E
+e
+−
+=
+
+(
+)
+
+
+
+−
+=
+
+kT
+e
+n
+n
+Fn
+i
+
+exp
+0
+Taking the natural log of both sides of Equation, setting n0 =Nd, 
+
+
+
+
+−
+=
+i
+d
+Fn
+n
+N
+e
+kT ln
+
+BUILT-IN POTENTIAL BARRIER
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+8
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+Similarly, In the p region
+𝜑𝐹𝑝= +𝑘𝑇
+𝑒
+ln
+ൗ
+𝑁𝑎𝑛𝑖
+𝑉𝑏𝑖= 𝜑𝐹𝑛+ 𝜑𝐹𝑝= 𝑘𝑇
+𝑒ln 𝑁𝑎𝑁𝑑
+𝑛𝑖
+2
+= 𝑉𝑡ln 𝑁𝑎𝑁𝑑
+𝑛𝑖
+2
+where Vt = kT/e and is defined as the Thermal voltage.
+BUILT-IN POTENTIAL BARRIER
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+9
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+OBJECTIVE: Calculate the built-in potential barrier in a pn junction. 
+Consider a silicon pn junction at T = 300 K with doping concentrations of Na =2 x1017 
+cm-3 and Nd = 1015 cm-3.
+The built-in potential barrier is determined as
+(
+)
+(
+)(
+)
+(
+)
+V
+n
+N
+N
+V
+bi
+V
+i
+d
+a
+t
+713
+.0
+10
+5.1
+10
+10
+2
+ln
+0259
+.0
+ln
+2
+10
+15
+17
+2
+=
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+=
+If we change the doping concentration in the p region of the pn junction such that the 
+doping concentrations become Na = 1016 cm-3 and Nd = 1015 cm-3, then the built-in 
+potential barrier becomes Vbi = 0.635 V
+The built-in potential barrier changes only slightly as the doping concentrations change 
+by orders of magnitude because of the logarithmic dependence.
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+10
+?
+ELECTRIC FIELD
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+11
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+An electric field is created in the depletion 
+region by the separation of positive and negative 
+space charge densities. 
+➢
+Figure shows the volume charge density 
+distribution in the pn junction assuming step 
+junction
+➢
+The electric field is determined from Poisson’s 
+equation, which, for a one dimensional analysis, 
+is
+dx
+x
+dE
+x
+dx
+x
+d
+s
+)
+(
+)
+(
+)
+(
+2
+2
+−
+=
+−
+=
+
+
+
+where ϕ(x) is the electric potential, E(x) is the electric field, ρ(x) is the volume charge 
+density, and εs is the permittivity of the semiconductor
+➢
+From Figure the charge densities (charge/volume) are 
+0
+)
+(
+
+
+−
+−
+=
+x
+x
+eN
+x
+p
+a
+
+n
+d
+x
+x
+eN
+x
+
+
+=
+0
+)
+(
+
+ELECTRIC FIELD
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+12
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+1
+)
+(
+C
+x
+eN
+dx
+eN
+dx
+x
+E
+s
+a
+s
+a
+s
++
+−
+=
+−
+=
+=
+
+
+
+
+
+
+➢
+The electric field in the p region is found by poisson’s equation as
+➢
+The electric field is assumed to be zero in the neutral p region for x < -xp since the 
+currents are zero in thermal equilibrium.
+➢
+Since there are no surface charge densities within the pn junction structure, the 
+electric field is a continuous function.
+➢
+The constant of integration is determined by setting E=0 at x=- xp. The electric 
+field in the p region is then given by 
+(
+)
+0
+
+
+−
++
+−
+=
+x
+x
+x
+x
+eN
+E
+p
+p
+s
+a
+
+➢
+In the n region, the electric field is determined from
+2
+C
+x
+eN
+dx
+eN
+E
+s
+d
+s
+d
++
+=
+=
+
+
+ELECTRIC FIELD
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+13
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+C2 is again a constant of integration and is determined by setting E=0 at
+x = xn , since the E-field is assumed to be zero in the n region and is a continuous
+function. Then
+(
+)
+n
+n
+s
+d
+x
+x
+x
+x
+eN
+E
+
+
+−
+−
+=
+0
+
+➢
+The electric field is also continuous at the metallurgical junction, or at x = 0. 
+n
+d
+p
+a
+x
+N
+x
+N
+=
+➢
+Above equation states that the number of negative charges per unit area in the p 
+region is equal to the number of positive charges per unit area in the n region.
+➢
+The electric field direction is from the n to the p 
+region, or in the negative x direction for this 
+geometry. 
+➢
+For the uniformly doped pn junction, the E-field is 
+a linear function of distance through the junction. 
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+14
+The electric profile for silicon p-n junction diode at T=300K is shown below, It has a depletion 
+width of 0.951µm. Calculate the built-in potential.
+The electric profile for silicon p-n junction diode at T=300K is shown below, Calculate the built-
+in potential and the depletion width.
+𝑉𝑏𝑖= 0.6368𝑉 and W = 0.92125µ𝑚
+POTENTIAL
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+15
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+The maximum (magnitude) electric field occurs at 
+the metallurgical junction. 
+➢
+An electric field exists in the depletion region 
+even when no voltage is applied between the p 
+and n regions.
+➢
+The potential in the junction is found by integrating the electric field. In the
+p region then, we have
+dx
+x
+x
+eN
+dx
+x
+E
+x
+p
+s
+a
+)
+(
+)
+(
+)
+(
++
+=
+−
+= 
+
+
+'
+1
+2
+)
+2
+(
+)
+(
+C
+x
+x
+x
+eN
+x
+p
+s
+a
++
+
++
+= 
+
+➢
+The potential difference through the pn junction is the important parameter, rather 
+than the absolute potential.
+➢
+We may arbitrarily set the potential equal to zero at x=xp. The constant of 
+integration is then found as
+BUILT IN POTENTIAL
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+16
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+2
+'
+1
+2
+p
+s
+a x
+eN
+C
+
+=
+so that the potential in the p region can now be written as
+(
+)
+0
+)
+(
+2
+)
+(
+2
+
+
+−
++
+=
+x
+x
+x
+x
+eN
+x
+p
+p
+s
+a
+
+
+We determine the potential in the n region by integrating the electric field
+dx
+x
+x
+eN
+x
+n
+s
+d
+)
+(
+)
+(
+−
+=
+
+'
+2
+2
+)
+2
+(
+)
+(
+C
+x
+x
+x
+eN
+x
+n
+s
+d
++
+−
+
+= 
+
+The potential is a continuous function, so at the metallurgical junction, or at x=0, gives
+2
+'
+2
+2
+p
+s
+a x
+eN
+C
+
+=
+)
+0
+(
+2
+)
+2
+(
+)
+(
+2
+2
+n
+p
+s
+a
+n
+s
+d
+x
+x
+x
+eN
+x
+x
+x
+eN
+x
+
+
++
+−
+
+=
+
+
+
+POTENTIAL
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+17
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+➢
+Figure is a plot of the potential through 
+the junction and shows the quadratic 
+dependence on distance. 
+➢
+The magnitude of the potential at x = xn is 
+equal to the built in potential barrier. 
+➢
+Then we have
+)
+(
+2
+)
+(
+2
+2
+p
+a
+n
+d
+s
+n
+bi
+x
+N
+x
+N
+e
+x
+x
+V
++
+=
+=
+=
+
+
+➢
+The potential energy of an electron is given by E=eϕ, which means that the 
+electron potential energy also varies as a quadratic function of distance through 
+the space charge region.
+SPACE CHARGE WIDTH
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+18
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+We can determine the distance that the space charge region extends into the p and n 
+regions from the metallurgical junction. This distance is known as the space charge 
+width.
+a
+n
+d
+p
+n
+d
+p
+a
+N
+x
+N
+x
+x
+N
+x
+N
+=
+
+=
+Then, substituting in the Vbi equation and solving for xn, we obtain
+2
+/
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+
+
+
+
+=
+d
+a
+d
+a
+bi
+s
+n
+N
+N
+N
+N
+e
+V
+x
+
+Above equation gives the space charge width, or the width of the depletion region, xn 
+extending into the n-type region for the case of zero applied voltage.
+Similarly solving for xp
+2
+/
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+
+
+
+
+=
+d
+a
+a
+d
+bi
+s
+p
+N
+N
+N
+N
+e
+V
+x
+
+where xp is the width of the depletion region extending into the p region for the case of 
+zero applied voltage.
+SPACE CHARGE WIDTH
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+19
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+The total depletion or space charge width W is the sum of the two components, or
+n
+p
+x
+x
+W
++
+=
+2
+/
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
++
+=
+d
+a
+d
+a
+bi
+s
+N
+N
+N
+N
+e
+V
+W
+
+OBJECTIVE: Calculate the space charge width and electric field in a pn junction for 
+zero bias. 
+Consider a silicon pn junction at T =300 K with doping concentrations of Na=1016 cm-3 
+and Nd =1015 cm-3.
+In previous example we determined the built-in potential barrier as Vbi = 0.635 V. 
+The space charge width is
+2
+/
+1
+15
+16
+15
+16
+19
+14
+2
+/
+1
+10
+10
+10
+10
+10
+6.1
+)
+635
+.0
+)(
+10
+85
+.8
+)(
+7.
+11
+(
+2
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+=
+
+
+
+
+
+
+
+
+
+
+
+
++
+=
+−
+−
+d
+a
+d
+a
+bi
+s
+N
+N
+N
+N
+e
+V
+W
+
+m
+cm
+W
+
+951
+.0
+10
+951
+.0
+4
+=
+
+=
+−
+SPACE CHARGE WIDTH
+The p-n Junction
+ZERO APPLIED BIAS
+Friday, February 21, 2025
+20
+Semiconductor Device Theory (Dr. Bhaskar 
+Awadhiya)
+We can also find xn and xp as xn =0.8644 μm, and xp = 0.0864 μm.
+The peak electric field at the metallurgical junction is,
+(
+)
+cm
+V
+x
+eN
+E
+n
+s
+d
+/
+10
+34
+.1
+)
+10
+85
+.8
+)(
+7.
+11
+(
+)
+10
+8644
+.0
+)(
+10
+1
+)(
+10
+6.1(
+4
+14
+4
+15
+19
+
+−
+=
+
+
+
+
+−
+=
+−
+=
+−
+−
+−
+
+➢
+The peak electric field in the space charge region of a pn junction is quite large.
+➢
+We must keep in mind, however, that there is no mobile charge in this region; 
+hence there will be no drift current. 
+➢
+We may also note, that the width of each space charge region is a reciprocal 
+function of the doping concentration
+➢
+The depletion region will extend further into the lower-doped region.
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar Awadhiya)
+21
+The p-n Junction
+NUMERICALS
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar Awadhiya)
+22
+𝑛0 = 𝑛𝑖exp 𝐸𝐹−𝐸𝐹𝑖
+𝑘𝑇
+𝐸𝐹−𝐸𝐹𝑖= 𝑘𝑇 ln 𝑛0
+𝑛𝑖
+𝐸𝐹−𝐸𝐹𝑖 = 0.329eV
+𝐸𝐹𝑖−𝐸𝐹= 𝑘𝑇 ln 𝑝0
+𝑛𝑖
+𝐸𝐹𝑖−𝐸𝐹 = 0.467eV
+e𝑉𝑏𝑖= 𝑒𝜑𝐹𝑛+ 𝑒𝜑𝐹𝑝
+e𝑉𝑏𝑖= 0.467eV+ 0.329 eV = 0.796eV
+𝑒𝑉𝑏𝑖= 𝑉𝑡ln 𝑁𝑎𝑁𝑑
+𝑛𝑖
+2
+= 0.796eV
+𝑝0 = 𝑛𝑖exp 𝐸𝐹𝑖−𝐸𝐹
+𝑘𝑇
+The p-n Junction
+NUMERICALS
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar Awadhiya)
+23
+e𝑉𝑏𝑖= 𝑒𝜑𝐹𝑛+ 𝑒𝜑𝐹𝑝
+e𝑉𝑏𝑖= 0.467eV+ 0.329 eV = 0.796eV
+𝑒𝑉𝑏𝑖= 𝑉𝑡ln 𝑁𝑎𝑁𝑑
+𝑛𝑖
+2
+= 0.796eV
+The p-n Junction
+NUMERICALS
+Friday, February 21, 2025
+Semiconductor Device Theory (Dr. Bhaskar Awadhiya)
+24

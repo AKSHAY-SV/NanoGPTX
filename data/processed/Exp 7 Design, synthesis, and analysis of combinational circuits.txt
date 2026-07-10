@@ -1,0 +1,544 @@
+ 
+ 
+Experiment-7 
+Design, synthesis, and analysis of combinational circuits. 
+ 
+Objective: 
+The main objectives of this lab are: 
+• Familiarization with synthesis flow. 
+• Synthesis the simulation without constraints or with constraints 
+• Generating optimized gate-level netlist and Standard Design Constraints. 
+ 
+Example: Full Adder Circuit-  
+• 
+Write a Verilog code for Full-Adder circuit (Any style you can use) 
+• 
+Simulate with NC launch  
+• 
+Simulate without NC launch  
+• 
+Synthesis using TCL command 
+ 
+Design information and block diagram- 
+A Full Adder is a combinational logic circuit that performs the addition of three binary digits: two input 
+bits (A, B) and a carry-in bit (Cin). It produces two outputs: 
+• 
+Sum (S): Represents the least significant bit (LSB) of the addition. 
+• 
+Carry-out (Cout): Represents the most significant bit (MSB), which is carried to the next higher 
+bit position in multi-bit addition. 
+Boolean Expressions 
+• 
+Sum (S): S=A⊕B⊕Cin 
+• 
+Carry-out (Cout): Cout=(A⋅B)+(B⋅Cin)+(A⋅Cin)Cout 
+Truth Table of Full Adder 
+A 
+B 
+Cin 
+Sum(S) 
+Cout 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+1 
+0 
+1 
+0 
+0 
+1 
+1 
+0 
+1 
+1 
+0 
+0 
+1 
+0 
+ 
+1 
+0 
+1 
+0 
+1 
+1 
+1 
+0 
+0 
+1 
+1 
+1 
+1 
+1 
+1 
+Tool Required:  
+• Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim). 
+• Synthesis: Genus 
+ Creating a Workspace: 
+• In Desktop Create a folder and name it as Digital_Vlsi (give folder name without any space). 
+• Create a new sub-directory and name it as pipo_seq for the design and open a terminal from the 
+sub-directory.  
+Functional Simulation:  
+• Invoke the cadence environment by type the below commands • csh (Invokes C-Shell)  
+• source /home/install/cshrc (mention the path of the tools) (The path of cshrc could vary 
+depending on the installation destination as /home/install/or /home etc.) 
+Creating Source Codes: 
+•  In the Terminal, type gedit .v  
+• A blank document opens up into which the following source code can be typed down. 
+Source Code 
+ 
+Creating Test Bench: Similarly, create your test bench using gedit <filename_tb>.v to open a new blank 
+document. 
+ 
+ 
+Waveform Full Adder- 
+ 
+ 
+To Launch Simulation tool  
+• 
+linux:/> nclaunch -new&  
+// “-new” option is used for invoking NCVERILOG for the first time for any design  
+• 
+linux:/> nclaunch& 
+// On subsequent calls to NCVERILOG  
+• 
+It will invoke the nclaunch window for functional simulation we can compile, elaborate and simulate it 
+using Multiple. 
+ 
+To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation.  
+ 
+ 
+• 
+After compilation it will come under worklib you can see in right side window. 
+• 
+Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and 
+test-bench.  
+• 
+The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It 
+contains statements that map logical library names to their physical directory paths. For this Design, you will 
+define a library called “worklib”. 
+ 
+ 
+RUN WITHOUT NCLAUNCH: Instead of NC Launch, design file and testbench can be run using single irun 
+command. (Use your file name for .V) 
+ 
+ 
+Synthesize the design using Constraints and analyse reports, critical path and Max Operating Frequency 
+ 
+ 
+ 
+ 
+ 
+Genus Script file with .tcl file Extension  
+Make sure that the following file need to be present in the directory where the simulation is performed.   
+ 
+ 
+ 
+Make sure the following commands are present inside the tcl (name.tcl) file 
+ 
+ 
+ 
+ 
+ 
+Steps to create tcl file 
+ 
+ 
+Write a tcl scripting file-  
+• If the circuits do not contain any clock signal then you can skip the .sdc file using the command “-
+unconstrained”.  
+• Further if you want to add delay information/ any input information for any circuits then .sdc file 
+required  
+ 
+ 
+ 
+Run the created tcl file- 
+ 
+ 
+ 
+ 
+ 
+Area report- 
+ 
+ 
+ 
+ 
+Power consumption report- 
+ 
+ 
+ 
+Netlist files- 
+ 
+ 
+Schematic Diagram- 
+ 
+ 
+ 
+ 
+ 
+• 
+To show the synthesized output execute the command gui_show 
+• 
+The GUI window of the genus synthesis output will be opened. If you click and zoom into each block of the 
+circuit, you will be able to view the gate interconnections inside the block. 
+ 
+ 
+ 
+Exercise problem: 
+1. Write a Verilog code for the following expression Q= (AB)’.(A+B)’.C and do the synthesis. Further, 
+calculate the power area and performance with and without using the constraint file. 
+2. Repeat the first problem by giving a delay to the input signal and checking the PPA. 
+3. s 
+ 
+Homework 
+• Exercise Problem- 1 
+A Line follower Robot uses 2 Infra-Red (IR) sensors to detect the color of the surface. Sensor output is High 
+when white surface is detected and Low on a black surface. Try to model the Robot controller and then implement 
+its hardware? A Line follower Robot uses 2 Infra-Red (IR) sensors to detect the color of the surface. Sensor 
+output is High when white surface is detected and Low on a black surface. Try to model the Robot controller and 
+then implement its hardware? 
+ 
+ 
+Figure 1: Line Follower 
+ 
+ 
+Source Code: 
+ 
+module LineFollowerRobot ( 
+    input clk, reset, 
+    input sensorLeft, sensorRight, // Sensors detecting black or white surfaces 
+    output reg motorLeft, motorRight 
+); 
+ 
+parameter STRAIGHT = 2'b00, TURN_LEFT = 2'b01, TURN_RIGHT = 2'b10, STOP = 2'b11; 
+reg [1:0] state, next_state; 
+ 
+always @(posedge clk or posedge reset) begin 
+    if (reset) 
+        state <= STRAIGHT;  
+    else 
+        state <= next_state; 
+end 
+ 
+always @(*) begin 
+    case (state) 
+ 
+        STRAIGHT: begin 
+            if (sensorLeft == 1 && sensorRight == 1) 
+                next_state <= STRAIGHT; 
+            else if (sensorLeft == 0 && sensorRight == 1) 
+                next_state <= TURN_LEFT; 
+            else if (sensorLeft == 1 && sensorRight == 0) 
+                next_state <= TURN_RIGHT; 
+            else 
+                next_state <= STOP; 
+        end 
+        TURN_LEFT: begin 
+            if (sensorLeft == 0 && sensorRight == 1) 
+                next_state <= TURN_LEFT; 
+            else if (sensorLeft == 1 && sensorRight == 0) 
+                next_state <= TURN_RIGHT; 
+            else 
+                next_state <= STOP; 
+        end 
+        TURN_RIGHT: begin 
+            if (sensorLeft == 1 && sensorRight == 0) 
+                next_state <= TURN_RIGHT; 
+            else if (sensorLeft == 0 && sensorRight == 1) 
+                next_state <= TURN_LEFT; 
+            else 
+                next_state <= STOP; 
+        end 
+        STOP: begin 
+            if (sensorLeft == 0 && sensorRight == 0) 
+                next_state <= STOP; 
+            else 
+                next_state <= STRAIGHT; 
+        end 
+        default: next_state <= STRAIGHT; 
+    endcase 
+end 
+always @(*) begin 
+    case (state) 
+        STRAIGHT: begin 
+            motorLeft <= 1; 
+            motorRight <= 1; 
+        end 
+        TURN_LEFT: begin 
+            motorLeft <= 0; 
+            motorRight <= 1; 
+        end 
+        TURN_RIGHT: begin 
+            motorLeft <= 1; 
+            motorRight <= 0; 
+        end 
+ 
+        STOP: begin 
+            motorLeft <= 0; 
+            motorRight <= 0; 
+        end 
+default: begin 
+            motorLeft <= 1; 
+            motorRight <= 1; 
+        end 
+    endcase 
+end 
+endmodule 
+ 
+Testbench: 
+ 
+module tb_LineFollowerRobot(); 
+    reg clk, reset; 
+    reg sensorLeft, sensorRight; 
+    wire motorLeft, motorRight; 
+ 
+    LineFollowerRobot UUT ( 
+        .clk(clk), 
+        .reset(reset), 
+        .sensorLeft(sensorLeft), 
+        .sensorRight(sensorRight), 
+        .motorLeft(motorLeft), 
+        .motorRight(motorRight) 
+    ); 
+ 
+        always #5 clk = ~clk; 
+    
+initial begin 
+        clk=0; 
+        reset = 0; 
+sensorLeft = 0; 
+sensorRight = 0; 
+ 
+reset = 1;#10; 
+        reset = 0; 
+ 
+        sensorLeft = 1; sensorRight = 1; #10;  
+        sensorLeft = 0; sensorRight = 1; #10;  
+        sensorLeft = 1; sensorRight = 0; #10;  
+        sensorLeft = 0; sensorRight = 0; #10;  
+#60; $finish; 
+    end 
+initial begin 
+$monitor("Time %t: clk=%b, reset=%b, sensorLeft=%b, 
+sensorRight=%b,motorLeft=%b,motorRight=%b", 
+$time,clk,reset,sensorLeft,sensorRight,motorLeft,motorRight); 
+ 
+end 
+endmodule 
+ 
+ 
+ 
+Waveform and Simulation: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• 
+Exercise Problem- 2 
+ 
+1. Model and implement an Elevator control system handling 4 floors (0 to 3) 
+ 
+ 
+ 
+ 
+ 
+Source Code: 
+ 
+module elevator( 
+    input clk, 
+    input reset, 
+    input [1:0] current_floor,   
+    input [3:0] buttons_in,       
+    input [3:0] buttons_out,      
+    output reg [3:0] motor,       
+    output reg dir_up, 
+    output reg dir_down          
+); 
+ 
+    reg [3:0] floor_requests;     
+    reg [1:0] next_floor;         
+ 
+    always @(posedge clk or posedge reset) begin 
+        if (reset) begin 
+            motor <= 4'b0000; 
+            dir_up <= 1'b0; 
+            dir_down <= 1'b0; 
+            next_floor <= current_floor; 
+            floor_requests <= 4'b0000; 
+        end 
+        else begin 
+             
+            floor_requests <= buttons_in | buttons_out; 
+ 
+            if (floor_requests[current_floor]) begin 
+                motor <= 4'b0000;  // Stop at current floor 
+                dir_up <= 1'b0; 
+                dir_down <= 1'b0; 
+            end 
+            else begin 
+                if (current_floor == 2'b00 && floor_requests[1]) begin 
+                    next_floor <= 2'b01; 
+                    motor <= 4'b0010;  
+                    dir_up <= 1'b1; 
+                    dir_down <= 1'b0; 
+                end 
+                else if (current_floor <= 2'b01 && floor_requests[2]) begin 
+ 
+                    next_floor <= 2'b10; 
+                    motor <= 4'b0100;  
+                    dir_up <= 1'b1; 
+                    dir_down <= 1'b0; 
+                end 
+                else if (current_floor <= 2'b10 && floor_requests[3]) begin 
+                    next_floor <= 2'b11; 
+                    motor <= 4'b1000;  
+                    dir_up <= 1'b1; 
+                    dir_down <= 1'b0; 
+                end 
+     
+                else if (current_floor >= 2'b01 && floor_requests[0]) begin 
+                    next_floor <= 2'b00; 
+                    motor <= 4'b0001;  
+                    dir_up <= 1'b0; 
+                    dir_down <= 1'b1; 
+                end 
+                 
+else if (current_floor >= 2'b10 && floor_requests[1]) begin 
+                    next_floor <= 2'b01; 
+                    motor <= 4'b0010;  
+                    dir_up <= 1'b0; 
+                    dir_down <= 1'b1; 
+                end 
+                else if (current_floor >= 2'b11 && floor_requests[2]) begin 
+                    next_floor <= 2'b10; 
+                    motor <= 4'b0100;  
+                    dir_up <= 1'b0; 
+                    dir_down <= 1'b1; 
+                end 
+                else begin 
+                    motor <= 4'b0000; // No movement if no requests in any direction 
+                    dir_up <= 1'b0; 
+                    dir_down <= 1'b0; 
+                end 
+            end 
+        end 
+    end 
+endmodule 
+ 
+ 
+Testbench: 
+ 
+module elevator_tb; 
+     
+    reg clk; 
+    reg reset; 
+    reg [1:0] current_floor; 
+    reg [3:0] buttons_in; 
+    reg [3:0] buttons_out; 
+    wire [3:0] motor; 
+    wire dir_up; 
+ 
+    wire dir_down; 
+ 
+    
+    elevator uut ( 
+        .clk(clk), 
+        .reset(reset), 
+        .current_floor(current_floor), 
+        
+ .buttons_in(buttons_in), 
+        .buttons_out(buttons_out), 
+        .motor(motor), 
+        .dir_up(dir_up), 
+        .dir_down(dir_down) 
+    ); 
+ 
+    
+    always #5 clk = ~clk; 
+ 
+    initial begin 
+        clk = 0; 
+        reset = 1; 
+        current_floor = 2'b00;   
+        buttons_in = 4'b0000; 
+        buttons_out = 4'b0000; 
+ 
+         
+        #10; 
+        reset = 0; 
+ 
+        // Request to go to the 3rd floor (external) 
+        #10; 
+        buttons_out = 4'b1000;  // Request for 3rd floor 
+        #20; 
+        current_floor = 2'b01;  // Move to 1st floor 
+        #20; 
+        current_floor = 2'b10;  // Move to 2nd floor 
+        #20; 
+        current_floor = 2'b11;  // Reach 3rd floor 
+        #20; 
+        buttons_out = 4'b0000;  // Clear requests 
+ 
+        // Request from 1st and 2nd floors (internal) 
+        #10; 
+        buttons_in = 4'b0110;   // Requests for 1st and 2nd floors 
+        #20; 
+        current_floor = 2'b10;  // Move to 2nd floor 
+        #20; 
+        buttons_in = 4'b0000;   // Clear requests 
+ 
+        // Request to go down to ground floor (external) 
+        #10; 
+        buttons_out = 4'b0001;  // Request for ground floor 
+        #20; 
+ 
+        current_floor = 2'b10;  // Move to 2nd floor 
+        #20; 
+        current_floor = 2'b01;  // Move to 1st floor 
+        #20; 
+        current_floor = 2'b00;  // Reach ground floor 
+        #20; 
+        buttons_out = 4'b0000;  // Clear requests 
+ 
+        
+        $finish; 
+    end 
+ 
+     
+    initial begin 
+        $monitor("Time=%0t | Floor=%0d | Buttons In=%b | Buttons Out=%b | Motor=%b | Dir_Up=%b | 
+Dir_Down=%b",  
+                 $time, current_floor, buttons_in, buttons_out, motor, dir_up, dir_down); 
+    end 
+ 
+endmodule 
+ 
+Waveform and Simulation: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

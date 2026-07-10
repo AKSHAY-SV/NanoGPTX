@@ -1,0 +1,254 @@
+Functions of One dimensional random variables 
+If X is a discrete random variable and 𝑌= 𝐻(𝑋) is a continuous function of X, 
+then Y is also a Discrete Random Variable. 
+Eg:  
+𝑋 
+-1 
+0 
+1 
+𝑃(𝑥) 
+1
+3 
+1
+2 
+1
+6 
+ Suppose 𝑌= 3𝑋+ 1,then pmf of Y is given by 
+𝑌 
+-2 
+1 
+4 
+𝑃(𝑦) 
+1
+3 
+1
+2 
+1
+6 
+Suppose 𝑌= 𝑋2, then pmf of 𝑌is 
+𝑌 
+1 
+0 
+𝑃(𝑦) 
+1
+2 
+1
+2 
+ 
+Suppose X is a continuous random variable with pdf 𝑓(𝑥) and 𝐻(𝑋) is a 
+continuous function of 𝑋. Then 𝑌 is a continuous random variable. To obtain pdf 
+of Y we follow the following steps. 
+1. Obtain cdf of 𝑌, i.e., 𝐺(𝑦) = 𝑃(𝑌≤𝑦). 
+2. Differentiate 𝐺(𝑦) with respect to 𝑦 to get pdf of 𝑦 i.e., 𝑔(𝑦). 
+3. Determine the range space of 𝑌 such that 𝑔(𝑦) > 0. 
+ 
+Problems: 
+ 
+1. If 𝑓(𝑥) = {2𝑥;
+0 < 𝑥< 1
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒, and 𝑌= 3𝑋+ 1, find pdf of 𝑌. 
+Soln: 𝐺(𝑦) = 𝑃(𝑌≤𝑦) = 𝑃(3𝑋+ 1 ≤𝑦) = 𝑃(𝑋≤
+𝑦−1
+3 ) 
+     𝐺(𝑦) = ∫
+2𝑥𝑑𝑥= (
+𝑦−1
+3 )
+2
+.
+𝑦−1
+3
+0
+ 
+  𝑔(𝑦) = 𝐺’(𝑦)= 
+2(𝑦−1)
+9
+. 
+ 0 < 𝑥< 1 ⟹0 <
+𝑦−1
+3 < 1 ⟹1 < 𝑦< 4. 
+Therefore, 𝑔(𝑦) = { 
+2(𝑦−1)
+9
+;
+1 < 𝑦< 4
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+. 
+   
+2. If 𝑓(𝑥) = {2𝑥;
+0 < 𝑥< 1
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒, and 𝑌= 𝑒−𝑋, find pdf of 𝑌. 
+Soln: 𝐺(𝑦) = 𝑃(𝑌≤𝑦) = 𝑃(𝑒−𝑋≤𝑦) = 𝑃(log𝑒
+1
+𝑦≤𝑋) 
+  𝐺(𝑦) = ∫
+2𝑥𝑑𝑥= 1 −(loge
+1
+𝑦)
+2
+  .
+1
+log𝑒
+1
+𝑦
+ 
+  𝑔(𝑦) = 𝐺’(𝑦)= 
+2
+𝑦loge
+1
+𝑦. 
+ 0 < 𝑥< 1 ⟹0 < loge
+1
+𝑦< 1 ⟹
+1
+𝑒< 𝑦< 1. 
+Therefore, 𝑔(𝑦) = { 
+2
+𝑦loge
+1
+𝑦;
+1
+𝑒< 𝑦< 1
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+. 
+ 
+Result: Let 𝑋 be a continuous random variable with pdf 𝑓(𝑥). Let 𝑌= 𝑋2. 
+Then pdf of 𝑌 is 𝑔(𝑦) =
+1
+2√𝑦(𝑓(√𝑦) + 𝑓(−√𝑦)) 
+Example 1:  Suppose 𝑓(𝑥) = { 2𝑥𝑒−𝑥2;
+0 < 𝑥< ∞
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒. Find pdf of 𝑌= 𝑋2. 
+ Soln:  
+𝑔(𝑦) =
+1
+2√𝑦(𝑓(√𝑦) + 𝑓(−√𝑦)) =
+1
+2√𝑦(2√𝑦𝑒−𝑦+ 0) = 𝑒−𝑦; 0 < 𝑥< ∞. 
+ 
+Example 2: Suppose 𝑓(𝑥) = { 
+2
+9 (𝑥+ 1);
+−1 < 𝑥< 1
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+. Find pdf of 𝑌= 𝑋2. 
+ Soln:  
+𝑔(𝑦) =
+1
+2√𝑦(𝑓(√𝑦) + 𝑓(−√𝑦)) =
+1
+2√𝑦(
+2(√𝑦+1)
+9
++
+2(−√𝑦+1)
+9
+) =
+2
+9√𝑦; 0 < 𝑥< 1. 
+ 
+Theorem: Let X be a continuous random variable with pdf 𝑓(𝑥). Suppose 
+𝑌= 𝐻(𝑋) is a strictly monotone (increasing or decreasing) function of X, 
+then pdf of 𝑌 is given by 
+ 𝑔(𝑦) = 𝑓(𝑥) |
+𝑑𝑥
+𝑑𝑦| where 𝑥= 𝐻−1(𝑦). 
+ 
+Example: 
+1. Suppose X is uniformly distributed over (0,1), find pdf of 𝑌=
+1
+𝑋+1. 
+Soln: We know that 𝑌 is strictly monotone. 
+ 𝑓(𝑥) = {1;
+0 < 𝑥< 1
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒. 
+Note that 𝑋=
+1
+𝑌−1. ⇒𝑓(𝑥) = 𝑓(
+1
+𝑌−1) = 1.  
+ |
+𝑑𝑥
+𝑑𝑦| =
+1
+𝑦2. 
+Therefore, 𝑔(𝑦) =
+1
+𝑦2 ;
+1
+2 < 𝑦< 1. 
+ 
+2. If 𝑋 is uniformly distributed over (−
+𝜋
+2 ,
+𝜋
+2), find the pdf of 𝑌=
+𝑡𝑎𝑛𝑋. (Or show that 𝑌= 𝑡𝑎𝑛𝑋 follows Cauchy’s distribution). 
+Soln: Given 𝑓(𝑥) = {
+1
+𝜋;
+−
+𝜋
+2 < 𝑥<
+𝜋
+2
+0;
+𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+. 
+                 We know that 𝑌 is strictly monotone.  
+                 Then 𝑋= tan−1 𝑌⇒𝑓(tan−1 𝑌) =
+1
+𝜋. And  |
+𝑑𝑥
+𝑑𝑦| =
+1
+1+𝑦2. 
+      Therefore, 𝑔(𝑦) =
+1
+𝜋
+1
+1+𝑦2 ; −∞< 𝑦< ∞. 
+3. If 𝑋~𝑁(𝜇, 𝜎2), then show that 𝑍=
+𝑋−𝜇
+𝜎~𝑁(0,1) and 𝑌= 𝑍2~𝜒2(1). 
+Soln: 𝐺(𝑧) = 𝑃(𝑍≤𝑧) = 𝑃(
+𝑋−𝜇
+𝜎
+≤𝑧) = 𝑃(𝜎𝑧+ 𝜇≥𝑥) 
+ 
+ 𝐺(𝑧) = 𝐹(𝜎𝑧+ 𝜇). 
+   
+ 𝑔(𝑧) = 𝐺′(𝑧) = 𝐹′(𝜎𝑧+ 𝜇)𝜎= 𝑓(𝜎𝑧+ 𝜇)𝜎=
+1
+√2𝜋𝑒−𝑧2
+2 ~𝑁(0,1).  
+ 
+Now, 𝑔(𝑦) =
+1
+2√𝑦(𝑓(√𝑦) + 𝑓(−√𝑦)) =
+1
+2√𝑦(
+1
+√2𝜋𝑒−𝑦
+2 +
+1
+√2𝜋𝑒−𝑦
+2) 
+ 
+𝑔(𝑦) =
+1
+√𝑦 √2𝜋𝑒−𝑦
+2 . 
+ 
+Hence, 𝑔(𝑦)~𝜒2(1). 
+ 
+Extra Problem: 
+1. A random variable X having Cauchy distribution. Show that 1/𝑋 
+also has Cauchy distribution. 

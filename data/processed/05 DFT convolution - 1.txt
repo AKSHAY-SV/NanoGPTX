@@ -1,0 +1,23 @@
+DFT - convolution
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+• Ans: 4, -2j, 4 , 2j 
+Applications of DFT – IDFT tools
+• Frequency (spectrum) analysis
+• Power spectrum estimations
+• Linear filtering
+• Presence of computationally efficient algorithms
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+Multiplication of two DFT and circular convolution
+• Let
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+9

@@ -1,0 +1,15 @@
+Fast Fourier Transform 
+Algorithms - DITFFT
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Try {2,1,2,1}.
+Ans:{6,0,2,0}
+Verify this using DIT-FFT algorithm 
+x(n) = {1,1,1,0,0,0,0,0}
+X(k) = {3, 1.71-j1.71, -j, 0.29+j0.29, 1, 0.29-j0.29, j, 1.71+j1.71}
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+9

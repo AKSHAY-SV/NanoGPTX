@@ -1,0 +1,769 @@
+ 
+ 
+ 
+Page 1 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+B.Tech. Electronics and Communication Engineering 
+COURSE PLAN: THEORY COURSE 
+  
+            
+Course Outcomes (COs) to PO, PSO, BL Mapping 
+At the end of this course, the student 
+should be able to: 
+No. of 
+Contact 
+Hours 
+Marks 
+Program 
+Outcomes 
+(POs) 
+PSOs 
+BL 
+(Recomm
+ended) 
+CO1 
+Explain the fundamental 
+principles and technologies used 
+in MOS digital integrated circuit 
+design. 
+14 
+30 
+1,2,12 
+1 
+2 
+CO2 
+Demonstrate the application of 
+MOSFET to create logic gates 
+and circuits and explain delay 
+models. 
+7 
+15 
+1, 3,5 
+1 
+3 
+CO3 
+Illustrate various IC fabrication 
+techniques with stick diagrams 
+and layouts. 
+5 
+10 
+1,3,5 
+1 
+3 
+CO4 Analyze and design MOS based 
+subsystem design  
+4 
+9 
+2,3,5 
+1 
+4 
+CO5 Analyze and design various 
+memory structures.  
+18 
+36 
+1,3,4 
+1 
+4 
+ 
+Total 
+48 
+100 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Department : 
+Electronics and Communication Engineering 
+Course Name & code : 
+VLSI Design & ECE-2221 
+Core  
+Semester & branch : 
+IV 
+ECE & EE(VLSI Design and 
+Technology) 
+Name of the faculty : 
+SKT, BM, ASR, PM, AKG 
+L 
+T 
+P 
+C 
+4 
+0 
+0 
+4 
+No of contact hours/week: 
+ 
+ 
+ 
+Page 2 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+ 
+Course Articulation Matrix 
+CO 
+Engineering knowledge 
+Problem analysis 
+Design/development of solutions 
+Investigations of complex problems 
+Modern tool usage 
+Engineer and society 
+Environment and sustainability 
+Ethics 
+Individual and team work 
+Communication 
+Project management and finance 
+Life-long learning 
+ 
+ 
+ 
+ 
+PO1 
+PO2 
+PO3 
+PO4 
+PO5 
+PO6 
+PO7 
+PO8 
+PO9 
+PO10 
+PO11 
+PO12 
+PSO1 
+PSO2 
+PSO3 
+PSO4 
+CO1 
+3 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+3 
+ 
+ 
+ 
+CO2 
+3 
+ 
+2 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+CO3 
+3 
+ 
+2 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+CO4 
+ 
+3 
+2 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+CO5 
+2 
+ 
+2 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+Average 
+Articulation 
+Level 
+2.75 
+2.5 
+2 
+2 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+3 
+ 
+ 
+ 
+ 
+ICT Tools used in delivery and assessment 
+Sl. No 
+Name of the ICT tool used 
+Details of how it is used 
+1 
+LMS 
+To share course materials, lecture recordings, and conduct 
+quizzes 
+2 
+MS Teams 
+To share course materials 
+3 
+MS Powerpoint 
+To deliver lectures 
+4 
+ 
+ 
+5 
+ 
+ 
+6 
+ 
+ 
+Typical tools including LMS, Smart Boards, MS Teams, etc 
+ 
+ 
+ 
+ 
+ 
+Page 3 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+Mapping of Course Outcomes (COs)/Course Learning Outcomes (CLOs) #  
+At the end of this course, the 
+student should be able to: 
+No. of 
+Contact 
+Hours 
+Marks 
+Program 
+Outcomes 
+(POs) 
+Learning 
+Outcomes 
+(LOs) 
+BL 
+(Recommen
+ded) 
+CLO1 
+Explain the 
+fundamental 
+principles and 
+technologies used in 
+MOS digital 
+integrated circuit 
+design. 
+14 
+30 
+1,2,12 
+1 
+2 
+CLO2 
+Demonstrate the 
+application of 
+MOSFET to create 
+logic gates and 
+circuits and explain 
+delay models. 
+7 
+15 
+1, 3,5 
+1 
+3 
+CLO3 
+Illustrate various IC 
+fabrication techniques 
+with stick diagrams 
+and layouts. 
+5 
+10 
+1,3,5 
+1 
+3 
+CLO4 
+Analyze and design 
+MOS based 
+subsystem design  
+4 
+9 
+2,3,5 
+1 
+4 
+CLO5 
+Analyze and design 
+various memory 
+structures.  
+18 
+36 
+1,3,4 
+1 
+4 
+ 
+Total 
+48 
+100 
+ 
+ 
+ 
+# Applicable to IET Accredited Courses (modules) Only 
+ 
+ Delivery and Assessment Plan of LOs # 
+Learning Outcome (LO) mapped to the course 
+Delivery and assessment Plan 
+LO 
+LO statement 
+   1 
+Explain 
+the 
+fundamental 
+principles 
+and 
+technologies used in MOS digital integrated circuit 
+design. 
+Classroom teaching, Quizes, 
+Descriptive exam 
+2 
+Demonstrate the application of MOSFET to create 
+logic gates and circuits and explain delay models. 
+Classroom teaching, Quizes, 
+Descriptive exam 
+3 
+Illustrate various IC fabrication techniques with 
+stick diagrams and layouts. 
+Classroom teaching, Quizes, 
+Descriptive exam 
+4 
+Analyze and design MOS based subsystem design  
+Classroom teaching, Quizes, 
+Descriptive exam 
+5 
+Analyze and design various memory structures.  
+Classroom teaching, Quizes, 
+Descriptive exam 
+# Applicable to IET Accredited Programs Only 
+ 
+ 
+ 
+Page 4 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+Assessment Plan (As communicated from o/o AD-A, in every odd semester) 
+IN – SEMESTER ASSESSMENTS 
+Sl. 
+No. 
+Assessment 
+Mode 
+Assessment 
+Method 
+**Time 
+Duration 
+**Marks 
+** Weightage 
+Typology of 
+Questions 
+(Recommended) 
+**Schedule 
+**Topics Covered 
+1 
+MISAC 
+1 
+Quiz  
+ 
+ 
+Objective: 5M 
+10 MCQs × ½ = 5 
+marks  
+ 
+Descriptive: 10 M 
+(2 Questions of 2 
+marks +2 Questions of 
+3 marks)  
+Bloom’s 
+taxonomy (B) 
+level of the 
+question should 
+be L3 and above.  
+ 
+ 
+2 
+Mid-Term 
+Test 
+ 
+ 
+10 MCQs × ½ = 5 
+Bloom’s 
+taxonomy (BT) 
+level of the 
+question should 
+be L3 and above. 
+ 
+ 
+3 
+Surprise 
+Assignment 
+ 
+ 
+1 Question × 5M = 5 
+marks 
+(Minimum 5 
+questions to be given) 
+ 
+Bloom’s 
+taxonomy (BT) 
+level of the 
+question should 
+be L3 and above. 
+ 
+ 
+2 
+FISAC 
+1 
+*** 
+** 
+5 
+*** 
+Bloom’s 
+taxonomy (BT) 
+level of the 
+question should 
+be L3 and above. 
+ 
+ 
+ 
+2 
+*** 
+** 
+5 
+*** 
+Bloom’s 
+taxonomy (BT) 
+level of the 
+ 
+ 
+ 
+ 
+ 
+Page 5 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+question should 
+be L3 and above. 
+ 
+END – SEMESTER ASSESSMENT 
+ 
+1 
+Regular/Make–Up Exam 
+180 Mins 
+50 
+Answer all 5 full 
+questions of 10 marks 
+each. Each question 
+can have 3 parts of 
+2/3/4/5/6 marks. 
+Bloom’s 
+taxonomy (BT) 
+level of the 
+question should 
+be L3 and above. 
+ 
+ 
+ 
+**    Individual faculty will be entering the details 
+*** Individual faculty shall identify the assessment method from FISAC Assessment method (Table 1 below) and fill in the details. 
+NOTE: Information provided in the Table 1 is as per the In-semester assessment plan notified by Associate Director (Academics). 
+ 
+ 
+ 
+Page 6 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+ 
+Lesson Plan 
+L No 
+Topics 
+CO Addressed 
+0 
+To address OBE philosophy towards NBA and IET accreditation followed by a 
+discussion on Course Plan, Course Outcomes, CO-PO Mapping and Blooms 
+Taxonomy, with prerequisites for the course, if any. 
+ 
+1 
+Introduction to the Course, Structure, Scope, Assessment and evaluation 
+1 
+2 
+Introduction: VLSI technology trends & Performance measures and Moore’s law 
+1 
+3 
+MOS devices and Circuits: MOS capacitor 
+1 
+4 
+MOS devices and Circuits: MOS transistors: Study of enhancement mode operation 
+1 
+5 
+MOS transistors: Study of depletion mode operation 
+1 
+6 
+MOS transistors: Drain current analysis, and numerical based on it 
+1 
+7 
+MOS transistors: Drain current analysis, and numerical based on it 
+1 
+8 
+Threshold voltage and numerical based on it 
+1 
+9 
+Second order effects in MOSFETs (Numerical involving ChannelLength Modulation) 
+1 
+10 
+Analysis of NMOS inverter circuit -1 
+1 
+11 
+Analysis of NMOS inverter circuit -2 
+1 
+12 
+NMOS inverter with derivation of Zpu/Zpd ratio 
+1 
+13 
+NMOS inverter with derivation of Zpu/Zpd ratio (degraded input) 
+1 
+14 
+Analysis of CMOS inverter circuit 
+1 
+15  
+Implementation of Boolean functions and combinational circuits using gate logic 
+5 
+16 
+Implementation of Boolean functions and combinational circuits using switch logic 
+(Pass transistors and Transmission gate) 
+5 
+17 
+BiCMOS inverters and Logic circuits 
+5 
+18 
+Dynamic and clocked CMOS inverters, clocking strategies 
+5 
+19 
+Pseudo NMOS inverter with derivation of Zpu/Zpd ratio 
+5 
+20 
+Domino CMOS Logic circuits 
+5 
+21 
+Fabrication of ICs: Lithographic fundamentals 
+2 
+22 
+Fabrication of ICs: Fabrication of process of NMOS and PMOS transistor 
+2 
+23 
+Fabrication of ICs: Fabrication of process of NMOS and PMOS transistor 
+2 
+24 
+CMOS fabrication: N-well and P-well 
+2 
+25 
+Twin tub processes 
+2 
+26 
+Latch up in CMOS and its prevention 
+2 
+27 
+SOI process 
+2 
+28 
+MOS Circuit Design & Layouts 
+3 
+29 
+Stick diagrams, design rules and layouts- combinational circuits 
+3 
+30 
+Stick diagrams, design rules and layouts- sequential circuits. 
+3 
+31 
+Stick diagrams, design rules and layouts- switch logic. 
+3 
+32 
+Sheet resistance, standard unit of capacitance 
+3 
+33 
+Estimation of delay in NMOS and CMOS inverters 
+5 
+34 
+Driving of large capacitive loads 
+5 
+35 
+RC Delay Model, Elmore Delay 
+5 
+36 
+Linear Delay Model, Parasitic Delay, Delay in Logic Gate 
+5 
+ 
+ 
+ 
+Page 7 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+37 
+Euler network, and Scaling of MOS circuits 
+5 
+38 
+Static and dynamic memory cells: RAM 
+5 
+39 
+ROM like NOR and NAND ROM 
+5 
+40 
+EPROM, EEPROM and flash memory 
+5 
+41 
+Designing Memory and Array structures 
+5 
+42 
+Memory Core, Memory Peripheral Circuitry 
+5 
+43 
+Super buffers 
+5 
+44 
+Power dissipation in CMOS 
+5 
+45 
+Design strategies, issues, Structured approach: design examples 
+4 
+46 
+Structured approach: Bus arbitration logic, Shifter as design example 
+4 
+47 
+Structured approach: ALU as design example, Parity generator 
+4 
+48 
+Design of logic circuits using PLA: combinational and sequential logic 
+4 
+ 
+             
+Faculty members teaching the course (if multiple sections exist): 
+Faculty 
+Section 
+Faculty 
+Section 
+SKT 
+A 
+PM 
+D 
+BM 
+B 
+ 
+ 
+ASR 
+C 
+ 
+ 
+ 
+References:  
+ 
+Textbooks 
+• 
+J. M Rabaey, “Digital Integrated Circuits”, Prentice 
+Hall India, 2003. 
+• 
+N Weste and K Eshraghian, “Principles of CMOS VLSI 
+Design: A Systems Perspective”, Addiso-Wesley Pub. 
+Company, 1993. 
+• 
+S. M. Kang, Y. Leblebici, “CMOS Digital Integrated 
+Circuits Design and Analysis”, Tata Mcgraw Hill, 1996. 
+• 
+D. A. Pucknell and K. Eshraghian,“Basic VLSI Design”, 
+PHI publication, 2009. 
+• 
+John P Uyemura, "Introduction to VLSI Circuits and 
+Systems." Wiley, 2002. 
+Self-Directed Learning: Simulation of MOSFET based logic circuits using LTSPICE 
+Research Literature/ Case 
+Studies 
+• 
+ 
+• 
+ 
+NPTEL/Coursera/any 
+MOOC-based material 
+• 
+ 
+• 
+ 
+ 
+ 
+Submitted by: Dr. Shailendra Kumar Tiwari 
+ 
+ 
+(Signature of the faculty) 
+Date: 01/01/2025 
+ 
+ 
+ 
+Page 8 of 8 
+ 
+MIT/GEN/F-01/R4-UGT 
+Approved by: Prof. (Dr.) Pallavi R Mane  
+ 
+(Signature of HoD) 
+Flexible In-semester Assessment Component (FISAC): 
+i) 
+The FISAC 1 & FISAC 2 may be any of the types given in Table 1. However, tne two components 
+should be of different type.  
+ii) 
+The type of assessment should be informed to the students well in advance.  
+iii) 
+Syllabus for the last component of In-semester Assessment (ISAC) i.e. FISAC 2 should cover the 
+topics mentioned for self-study if any / topics which are not covered till MISAC 4: In-Semester 
+Exam 2.  
+Table 1: Flexible In-semester Assessment Component (FISAC) 
+ 
+              
+ 

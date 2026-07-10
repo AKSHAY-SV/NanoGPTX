@@ -1,0 +1,167 @@
+Review of Z transform and 
+DFT
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Transforms:
+• Continuous time – Laplace transform
+• Stable and periodic – Fourier Series
+• Stable and non-periodic – Fourier Transform
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+• Discrete time – Z transform
+• Stable and periodic – Discrete Time Fourier Series
+• Stable and non-periodic – Discrete Time Fourier Transform
+                                              
+Why z-Transform?
+• A generalization of Fourier transform
+• Why generalize it?
+• FT does not converge on all sequence
+• Simplifies analysis – convolution becomes multiplication
+• Characterizes the LTI System – Transfer function
+• Its response to various signals – locating poles and zeros
+Definition
+• The z-transform of sequence x(n) is defined by
+
+
+−
+=
+−
+=
+n
+n
+z
+n
+x
+z
+X
+)
+(
+)
+(
+⚫Let z = e−j.
+(
+)
+( )
+j
+j n
+n
+X e
+x n e
+
+
+
+−
+=−
+= 
+Fourier 
+Transform
+z-Plane
+Re
+Im
+z = re−j
+
+
+
+−
+=
+−
+=
+n
+n
+z
+n
+x
+z
+X
+)
+(
+)
+(
+(
+)
+( )
+j
+j n
+n
+X e
+x n e
+
+
+
+−
+=−
+= 
+Fourier Transform is to evaluate z-transform 
+on a unit circle (r = 1)
+Definition
+• Give a sequence, the set of values of z for which the 
+z-transform converges, i.e., |X(z)|<, is called the 
+region of convergence.
+
+
+=
+=
+
+
+
+−
+=
+−
+
+−
+=
+−
+n
+n
+n
+n
+z
+n
+x
+z
+n
+x
+z
+X
+|
+||
+)
+(
+|
+)
+(
+|)
+(
+|
+ROC is centered on origin and 
+consists of a set of rings.
+Stable Systems
+Re
+Im
+1
+• A stable system requires that its Fourier transform is 
+uniformly convergent.
+⚫Fact: Fourier transform is to 
+evaluate z-transform on a unit 
+circle.
+⚫A stable system requires the 
+ROC of z-transform to include 
+the unit circle.
+Review of Fourier representation of discrete signals
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+• The DTFT and inverse DTFT are not symmetric. One is integration over a 
+finite interval (2π), and the other is summation over infinite terms
+• The signal, x[n] is aperiodic, and hence, the transform is a continuous 
+function of frequency
+• Not practical for (real-time) computation on a digital computer.
+Examples
+Convolution Property
+Multiplication Property
+Find DTFT of x[n] = (0.5)n u[n-4]
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+13
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+14

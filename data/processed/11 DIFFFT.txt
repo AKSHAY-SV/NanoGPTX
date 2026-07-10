@@ -1,0 +1,18 @@
+Fast Fourier Transform 
+Algorithms - DIFFFT
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Decimation In Frequency FFT (DIFFFT) Algorithm
+• Decompose the computation into successively smaller DFT computations.
+• We exploit both the symmetry and periodicity property of the complex exponential 𝑊𝑁
+𝑛𝑘= 𝑒−𝑗2𝜋
+𝑁𝑛𝑘
+• In this algorithm the decomposition is based on the output sequence 𝑋(𝑘) into successively smaller 
+subsequences
+N-point DFT
+N/2 pt DFT
+N/2 pt DFT
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+13

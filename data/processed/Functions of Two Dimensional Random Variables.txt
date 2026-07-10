@@ -1,0 +1,247 @@
+Functions of two dimensional random variables 
+Let (𝑋, 𝑌) be a continuous two dimensional random variable with pdf 𝑓(𝑥, 𝑦).  If 𝑍= 𝐻1(𝑋, 𝑌) 
+is a continuous function of (𝑋, 𝑌), then 𝑍 will be a continuous (one-dimensional) random  
+variable. In order to  find the pdf of 𝑍,  we shall follow the procedure discussed below.  
+To find the pdf of 𝑍= 𝐻1(𝑋, 𝑌), we first introduce a second random variable, say 𝑊=
+𝐻2(𝑋, 𝑌), and obtain the joint pdf of 𝑍 and 𝑊, say  𝑘(𝑧, 𝑤).  From the knowledge of  𝑘(𝑧, 𝑤),  
+we can then obtain the desired pdf of 𝑍, say 𝑔(𝑧), by simply integrating 𝑘(𝑧, 𝑤) with respect 
+to 𝑤. That is, 𝑔(𝑧) = ∫
+𝑘(𝑧, 𝑤)𝑑𝑤
+∞
+−∞
+.  
+Two problems which arise here are  
+i. 
+ how to find the joint pdf  𝑘(𝑧, 𝑤)of 𝑍and 𝑊 
+ii. 
+ how to choose the appropriate random variable 𝑊= 𝐻2(𝑋, 𝑌) 
+To resolve these problems, let us simply state that we usually make the simplest possible choice 
+for 𝑊 as it plays only an intermediate role. In order to find the joint pdf 𝑘(𝑧, 𝑤),  we need the 
+following theorem.  
+ 
+Theorem: 
+Suppose that (𝑋, 𝑌) is a two-dimensional continuous random 
+variable with joint pdf 𝑓(𝑥, 𝑦).  Let 𝑍= 𝐻1(𝑋, 𝑌) and 𝑊= 𝐻2(𝑋, 𝑌) and assume that the 
+functions 𝐻1 and 𝐻2 satisfy the following conditions: 
+i. 
+The equations 𝑧= 𝐻1(𝑥, 𝑦) and 𝑤= 𝐻2(𝑥, 𝑦) may be uniquely solved for 𝑥 and 
+𝑦 in terms of 𝑧 and 𝑤, say 𝑥= 𝐺1(𝑧, 𝑤) and 
+ 𝑦= 𝐺2(𝑧, 𝑤).  
+ii. 
+ The partial derivatives 
+𝜕𝑥
+𝜕𝑧,
+𝜕𝑥
+𝜕𝑤,
+𝜕𝑦
+𝜕𝑧 and 
+𝛿𝑦
+𝛿𝑤 exist and are continuous. 
+Then the joint pdf (𝑍, 𝑊), say 𝑘(𝑧, 𝑤), is given  by the following expression: 
+𝑘(𝑧, 𝑤) = 𝑓[𝐺1(𝑧, 𝑤), 𝐺2(𝑧, 𝑤)]|𝐽(𝑧, 𝑤)|, 
+where 𝐽(𝑧, 𝑤) is the following 2 × 2 determinant: 
+𝐽(𝑧, 𝑤) = |
+𝜕𝑥
+𝜕𝑧
+𝜕𝑥
+𝜕𝑤
+𝜕𝑦
+𝜕𝑧
+ 𝛿𝑦
+𝛿𝑤
+| 
+This determinant is called the ‘Jacobian’ of the transformation (𝑥, 𝑦) →(𝑧, 𝑤) and is 
+sometimes denoted by  
+𝛿(𝑥,𝑦)
+𝛿(𝑧,𝑤). We note that 𝑘(𝑧, 𝑤) will be nonzero for those values of (𝑧, 𝑤) 
+corresponding to values of (𝑥, 𝑦) for which 𝑓(𝑥, 𝑦) is nonzero. 
+  
+Problems 
+ 
+1. Suppose that 𝑋 and 𝑌 are two independent random variables having pdf 𝑓(𝑥) =
+𝑒−𝑥, 0 ≤𝑥≤∞ and 𝑔(𝑦) = 2𝑒−2𝑦, 0 ≤𝑦≤∞. Find the pdf of X+Y 
+Solution: 
+Since 𝑋 and 𝑌 are independent, the joint pdf of (𝑋, 𝑌) is given by,  
+𝑓(𝑥, 𝑦) = 𝑓(𝑥)𝑔(𝑦) = 2𝑒−(𝑥+2𝑦), 0 ≤𝑥, 𝑦≤∞ 
+Let 𝑍= 𝑋+ 𝑌 and 𝑊= 𝑍, that is 𝑌= 𝑊 and 𝑋= 𝑍−𝑊.   
+The Jacobian 𝐽= |
+𝜕𝑥
+𝜕𝑧
+𝜕𝑥
+𝜕𝑤
+𝜕𝑦
+𝜕𝑧
+ 
+𝛿𝑦
+𝛿𝑤
+| = |1
+−1
+ 0
+  1 | = 1 
+Thus joint pdf of (𝑊, 𝑍) is, 
+𝑘(𝑧, 𝑤) = 𝑓(𝑥, 𝑦)|𝐽| = 2𝑒−(𝑥+2𝑦) = 2𝑒−(𝑧+𝑤) 
+       0 ≤𝑦≤∞⇒ 0 ≤𝑤≤∞ 
+                                                     0 ≤𝑥≤∞⇒0 ≤𝑧−𝑤≤∞⇒𝑤≤𝑧≤∞ 
+ 
+Thus 𝑘(𝑤, 𝑧) = 2𝑒−(𝑧+𝑤), 0 ≤𝑤≤𝑧≤∞  
+      The required pdf of z, ℎ(𝑧) = ∫
+2𝑒−(𝑧+𝑤)𝑑𝑤
+𝑧
+𝑤=0
+ 
+                                                          = 2(𝑒−𝑧−𝑒−2𝑧), 0 ≤𝑧≤∞. 
+ 
+2. If 𝑋~𝑁(0, 𝜎2) , 𝑌~𝑁(0, 𝜎2) and 𝑋, 𝑌 are independent.  Find the pdf of 𝑅= √𝑋2 + 𝑌2 
+Solution: 
+Pdf of 𝑋: 𝑓(𝑥) =
+1
+√2𝜋𝜎𝑒−𝑥2 2𝜎2
+⁄
+, −∞≤𝑥≤∞  
+Pdf of 𝑌: 𝑔(𝑦) =
+1
+√2𝜋𝜎𝑒−𝑦2 2𝜎2
+⁄
+, −∞≤𝑦≤∞  
+Since 𝑋 and 𝑌 are independent, the joint pdf of (𝑋, 𝑌) is given by,  
+𝑓(𝑥, 𝑦) = 𝑓(𝑥)𝑔(𝑦) =
+1
+2𝜋𝜎2 𝑒−(𝑥2+𝑦2) 2𝜎2
+⁄
+, −∞≤𝑥, 𝑦≤∞ 
+ Let 𝑅= √𝑋2 + 𝑌2  and 𝜃= tan−1 (
+𝑋
+𝑌), that is 𝑋= 𝑅𝑐𝑜𝑠 𝜃 and 𝑌= 𝑅𝑠𝑖𝑛 𝜃 and the 
+Jacobian 𝐽= 𝑅.   
+Thus joint pdf of (𝑅, 𝜃) is,  
+𝑘(𝑟, 𝜃) = 𝑓(𝑥, 𝑦)|𝐽| =
+𝑅
+2𝜋𝜎2 𝑒−𝑅2 2𝜎2
+⁄
+, 𝑅≥0, 0 ≤𝜃≤2𝜋                
+The required pdf of z, ℎ(𝑧) = ∫
+𝑅
+2𝜋𝜎2 𝑒−𝑅2 2𝜎2
+⁄
+𝑑𝜃
+2𝜋
+𝜃=0
+ 
+                                                  =
+𝑅
+𝜎2 𝑒−𝑅2 2𝜎2
+⁄
+, 𝑅≥0. 
+ 
+3. If 𝑋1, 𝑋2 are independent and have standard normal distribution 𝑋1, 𝑋2~𝑁(0, 1). Find 
+the pdf of 
+𝑋1
+𝑋2.  
+Solution: 
+Pdf of 𝑋1: 𝑓(𝑥1) =
+1
+√2𝜋𝑒−𝑥12 2
+⁄ , −∞≤𝑥1 ≤∞  
+Pdf of 𝑋2: 𝑔(𝑥2) =
+1
+√2𝜋𝑒−𝑦12 2
+⁄ , −∞≤𝑦1 ≤∞  
+Since𝑋1, 𝑋2 are independent, the joint pdf of (𝑋1, 𝑋2)is given by,  
+𝑓(𝑥1, 𝑥2) = 1
+2𝜋𝑒−(𝑥12+𝑥22) 2
+⁄ , −∞≤𝑥1, 𝑦1 ≤∞ 
+Let 𝑍=
+𝑋1
+𝑋2and 𝑊= 𝑋2, that is 𝑋2 = 𝑊 and 𝑋1 = 𝑍𝑊.   
+The Jacobian 𝐽= |𝑤
+𝑧
+ 0
+  1| = 𝑤 
+Thus joint pdf of (𝑊, 𝑍) is,  
+𝑘(𝑧, 𝑤) =
+|𝑤|
+2 𝜋𝑒−𝑤2(1+𝑧 2) 2
+⁄ ,      −∞≤𝑤, 𝑧≤∞.  
+The required pdf of 𝑍, ℎ(𝑧) = ∫
+|𝑤|
+2𝜋𝑒−𝑤2(1+𝑧 2) 2
+⁄
+∞
+−∞
+𝑑𝑤 
+ 
+ 
+ 
+ 
+    =
+2
+2 𝜋∫|𝑤|𝑒−𝑤2(1+𝑧 2) 2
+⁄
+∞
+0
+𝑑𝑤 
+ On substitution: −𝑤2(1 + 𝑧 
+2) 2
+⁄
+= 𝑡 
+ 
+ 
+   −𝑤(1 + 𝑧 
+2)𝑑𝑤= 𝑑𝑡 
+We get, ℎ(𝑧) =
+1
+𝜋∫
+𝑒−𝑡
+1+𝑧2
+∞
+0 
+𝑑𝑡=
+1
+𝜋(1+𝑧2) , −∞≤𝑧≤∞.  
+ 
+ 
+4. The joint pdf of the random variable(𝑋, 𝑌) is given by 
+𝑓(𝑥, 𝑦) = 𝑥
+2 𝑒−𝑦, 0 < 𝑥< 2, 𝑦> 0 
+    Find the pdf of 𝑋+ 𝑌 
+   Solution: 
+Let 𝑍= 𝑋+ 𝑌 and 𝑊= 𝑍, that is 𝑌= 𝑊 and 𝑋= 𝑍−𝑊.   
+The Jacobian 𝐽= 1 
+ Thus joint pdf of (𝑊, 𝑍) is, 𝑘(𝑧, 𝑤) = 𝑓(𝑥, 𝑦)|𝐽| =
+𝑧−𝑤
+2 𝑒−𝑤 
+           0 ≤𝑦≤∞⇒ 0 ≤𝑤≤∞ 
+                                                0 ≤𝑥≤2 ⇒0 ≤𝑧−𝑤≤2 ⇒𝑤≤𝑧≤2 + 𝑤               
+             𝑘(𝑧, 𝑤) =
+𝑧−𝑤
+2 𝑒−𝑤, 0 ≤𝑤≤𝑧≤2 + 𝑤 
+ 
+ 
+     The required pdf of z, ℎ(𝑧) = {
+∫(
+𝑧−𝑤
+2 ) 𝑒−𝑤
+𝑧
+0
+𝑑𝑤, 𝑤ℎ𝑒𝑛 0 < 𝑧< 2
+∫
+(
+𝑧−𝑤
+2 ) 𝑒−𝑤
+𝑧
+𝑧−2
+𝑑𝑤, 𝑤ℎ𝑒𝑛 2 < 𝑧< ∞
+ 
+ℎ(𝑧) = {
+1
+2 (𝑧+ 𝑒−𝑧−1),
+𝑤ℎ𝑒𝑛 0 < 𝑧< 2
+1
+2 (𝑒𝑧+ 𝑒2−𝑧),
+𝑤ℎ𝑒𝑛 2 < 𝑧< ∞
+ 
+ 
+ 
+                           ********* 
+ 
+ 

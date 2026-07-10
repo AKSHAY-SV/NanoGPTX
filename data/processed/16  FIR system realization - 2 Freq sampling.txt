@@ -1,0 +1,27 @@
+Structure for FIR systems:
+Frequency sampling structure
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Frequency sampling structure:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Take Z- 
+transform to 
+obtain the 
+structure
+Frequency Sampling Structure
+Alternative structure for FIR filter
+Parameters that characterize the parameter are the values of the desired frequency response instead of impulse response
+To derive the frequency sampling structure, we specify the desired frequency response at a set of equally spaced 
+frequencies,
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal

@@ -1,0 +1,1389 @@
+Physics of Semiconductor Devices
+By Dr. Bhaskar Awadhiya
+1
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+𝑓𝐹(𝐸) =
+1
+1 + exp 𝐸−𝐸𝐹
+𝑘𝑇
+where 
+•
+EF     = Fermi energy. 
+•
+fF(E)  =  Fermi-Dirac distribution or probability function.
+Semiconductor 
+materials 
+at 
+0K 
+have 
+the 
+same 
+structure 
+as
+insulators—a filled valence band separated from an empty conduction band 
+METAL, INSULATOR & SEMICONDUCTOR
+2
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+We may write the most probable distribution function as
+𝑓𝐹(𝐸) =
+1
+1 + exp 𝐸−𝐸𝐹
+𝑘𝑇
+where 
+•
+EF     = Fermi energy. 
+•
+fF(E)  =  Fermi-Dirac distribution or probability function.
+fF(E) gives the probability that a quantum state at the energy E will be occupied by an 
+electron.
+FERMI-DIRAC PROBABILITY FUNCTION
+3
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+We plot the distribution function versus energy to understand the meaning of the 
+distribution function and the Fermi Energy
+Initially, let T = 0K and consider the case when E < EF. 
+𝑓𝐹(𝐸< 𝐸𝐹) =
+1
+1 + exp 𝐸−𝐸𝐹
+𝑘⋅(0)
+⇒
+1
+1 + exp −∞= 1
+Now, let T = 0K and consider the case when E > EF. 
+𝑓𝐹(𝐸> 𝐸𝐹) =
+1
+1 + exp 𝐸−𝐸𝐹
+𝑘⋅(0)
+⇒
+1
+1 + exp ∞= 0
+This result shows that, for T = 0K, the electrons are in their lowest possible energy 
+states. The probability of a quantum state being occupied is unity (100%) for E < EF 
+and the probability of a state being occupied is zero for E > EF. All electrons have 
+energies below the Femi energy at T = 0K.
+FERMI ENERGY
+4
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+For T > 0K and consider the case when E = EF. 
+𝑓𝐹(𝐸= 𝐸𝐹) =
+1
+1 + exp(
+Τ
+𝐸−𝐸𝐹𝑘. 𝑇) ⇒
+1
+1 + exp 0 = 1
+2
+The probability of a state being occupied at E = EF  is 0.5
+Figure shows the Fermi-Dirac distribution function plotted for several temperatures, 
+assuming the Fermi energy is independent of temperature.
+As temperature increases the 
+probability 
+of 
+finding 
+electron beyond EF increases.
+FERMI ENERGY
+5
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: To calculate the probability that an energy state above EF is occupied by 
+an electron. 
+Let T = 300 K. Determine the probability that an energy level 3kT above the Fermi 
+energy is occupied by an electron.
+𝑓𝐹(𝐸) =
+1
+1 + exp(
+Τ
+𝐸−𝐸𝐹𝑘. 𝑇) =
+1
+1 + exp
+Τ
+3𝑘𝑇𝑘𝑇
+𝑓𝐹(𝐸) =
+1
+1 + 20.09 = 0.0474 = 4.74%
+At energies above EF, the probability of a state being occupied by an electron can 
+become significantly less than unity or the ratio of electrons to available quantum states 
+can be quite small.
+FERMI ENERGY
+6
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: Assume the Fermi energy level is 0.30 eV below the conduction band 
+energy Ec. Assume T = 300 K. (a) Determine the probability of a state being occupied 
+by an electron at E = Ec + kT/4. (b) Repeat part (a) for an energy state at E = Ec + kT.
+FERMI ENERGY
+[Ans. (a) 7.26 × 10-6; (b) 3.43 × 10-6]
+7
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: 
+The Fermi energy  at T = 300 K is 7.0 eV. 
+(a) Find the probability of an energy level at 7.15 eV being occupied by an electron. 
+(b) Repeat part (a) for T =1000 K. 
+(c) Repeat part (a) for E = 6.85 eV and T = 300 K. 
+(d) Determine the probability of the energy state at E = EF being occupied at T =300 K 
+and at T = 1000 K. 
+FERMI ENERGY
+[Ans. a) 0.304% , b) 14.96% , c) 99.7% , d) 0.5]
+8
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+FERMI ENERGY
+9
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Assume that the Fermi energy level for a particular material is 6.25eV. Electrons in this 
+material follow the Fermi-Dirac distribution function. Calculate the temperature at 
+which there is 1% probability that a state 0.30eV below the Fermi energy level will not 
+contain an electron. {k=8.6173303×10-5 eVK-1}
+1 −𝑓𝐹(𝐸) = 1 −
+1
+1 + exp(
+Τ
+𝐸−𝐸𝐹𝑘. 𝑇)
+0.01 = 1 −
+1
+1 + exp(
+Τ
+5.95 −6.25 𝑘𝑇)
+Solving for kT we find kT = 0.06529eV, so that the temperature is T = 756 K.
+The Fermi probability function is a strong function of temperature.
+The probability that a state is empty is
+FERMI ENERGY
+10
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE Assume that EF is 0.3 eV below Ec. Determine the temperature at which the 
+probability of an electron occupying an energy state at E= (Ec +0.025) eV is 8× 10-6.
+FERMI ENERGY
+(Ans. T = 321 K)
+11
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+CHARGE CARRIERS IN SEMICONDUCTORS 
+The current in a semiconductor is determined largely by the number of carriers and 
+hence an important characteristic of the semiconductor is the density of these charge 
+carriers. 
+VB
+e
+Ec
+Ev
+CB
+T > 0K
+Particles that can freely move and contribute to 
+the current flow (conduction) are considered as 
+Carriers
+Semiconductors have 2 types of charge Carrier,
+ELECTRON 
+in CB,
+HOLE 
+ 
+in VB 
+12
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+•
+For an intrinsic semiconductor, the concentration of electrons in CB is equal to the 
+concentration of holes in the VB. [n0=p0]
+•
+The Fermi energy level for the intrinsic semiconductor is called the intrinsic Fermi energy, 
+or EF=EFi
+•
+The concentration of electrons in the conduction band is the effective density of states 
+(Nc) times the probability of occupancy at Ec. 
+•
+Similarly, the concentration of holes in the valence band is the effective density of states 
+(Nv) ) times the probability of non occupancy of electron at Ev
+                   f(Ec) = 
+1
+1+exp
+(𝐸𝐶−𝐸𝐹𝑖)
+𝑘𝑇
+𝑝0 = 𝑁𝑣exp −(𝐸𝐹𝑖−𝐸𝑣)
+𝑘𝑇
+𝑛0 = 𝑁𝐶exp −(𝐸𝐶−𝐸𝐹𝑖)
+𝑘𝑇
+13
+𝑛0 = Nc× f(Ec)
+f(Ev) =1-
+1
+1+exp
+(𝐸𝑣−𝐸𝐹𝑖)
+𝑘𝑇
+f(Ec) = exp
+−(𝐸𝐶−𝐸𝐹𝑖)
+𝑘𝑇
+𝑝0 = Nv× {1- f(Ev)}
+f(Ev) = exp
+−(𝐸𝐹𝑖−𝐸𝑣)
+𝑘𝑇
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Taking product of the above two equations
+
+
+
+−
+=
+
+
+
+
+−
+−
+=
+=
+kT
+Eg
+N
+N
+kT
+E
+E
+N
+N
+n
+p
+n
+v
+C
+v
+C
+v
+C
+i
+exp
+)
+(
+exp
+2
+0
+0
+where Eg is the band gap energy. For a given semiconductor material at a constant 
+temperature, the value of ni is a constant, and independent of the Fermi energy.
+➢
+NC and Nv are constant for a given material (effective mass) and temperature.
+➢
+Position of Fermi energy is important
+➢
+If EF is closer to EC than to Ev, n > p
+➢
+If EF is closer to Ev than to EC, n < p
+14
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+15
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE:To calculate the intrinsic carrier concentration in Gallium arsenide at 
+T=300K and at T = 450K.
+The values of NC and NV, at 300 K for gallium arsenide are 4.7 x 1017 cm-3 and
+7.0 x 1018cm-3, respectively. 
+Assume the band gap energy of gallium arsenide is 1.42eV and does not vary with 
+temperature (over this range). 
+3
+6
+12
+2
+18
+17
+2
+10
+26
+.2
+10
+09
+.5
+0259
+.0
+42
+.1
+exp
+)
+10
+0.7
+)(
+10
+7.4
+(
+300
+−
+
+=
+
+=
+
+
+
+−
+
+
+=
+=
+cm
+n
+n
+n
+K
+T
+For
+i
+i
+i
+3
+10
+21
+2
+3
+18
+17
+2
+10
+85
+.3
+10
+48
+.1
+0388
+.0
+42
+.1
+exp
+300
+450
+)
+10
+0.7
+)(
+10
+7.4
+(
+450
+−
+
+=
+
+=
+
+
+
+−
+
+
+
+
+
+
+
+
+=
+=
+cm
+n
+n
+n
+K
+T
+For
+i
+i
+i
+The intrinsic carrier concentration is a very strong function of temperature.
+EQUILIBRIUM DISTRIBUTION OF ELECTRONS AND HOLES
+16
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EQUILIBRIUM DISTRIBUTION OF ELECTRONS AND HOLES
+17
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+THE INTRINSIC FERMI LEVEL
+We have qualitatively argued that the Fermi energy level is located near the center of
+the forbidden band gap for the intrinsic semiconductor.
+Since the electron and hole concentrations are equal,
+
+
+
+
+−
+−
+=
+
+
+
+
+−
+−
+kT
+E
+E
+N
+kT
+E
+E
+N
+v
+Fi
+v
+Fi
+C
+C
+)
+(
+exp
+)
+(
+exp
+𝑛0 = 𝑝0
+
+
+
+
+
+
+
+
++
++
+=
+*
+*
+4
+3
+2
+1
+ln
+)
+(
+n
+p
+v
+C
+Fi
+m
+m
+kT
+E
+E
+E
+)
+(
+2
+1
+v
+C
+midgap
+E
+E
+E
+define
+We
++
+=
+18
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+
+
+
+
+
+
+
+
+=
+−
+*
+*
+4
+3
+ln
+n
+p
+midgap
+Fi
+m
+m
+kT
+E
+E
+If the electron and hole effective masses are equal so that then the intrinsic Fermi level 
+is exactly in the center of the band gap. 
+If mp* > mn* the intrinsic Fermi level is slightly above the center.
+If mp* < mn* the intrinsic Fermi level is slightly below the center.
+THE INTRINSIC FERMI LEVEL
+19
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: To calculate the position of the intrinsic Fermi level with respect to the 
+center of the bandgap in silicon at T = 300 K .
+The density of states effective carrier masses in silicon are mn* =1.08m0 and 
+mp*=0.56m0.
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+=
+−
+08
+.1
+56
+.0
+ln
+)
+0259
+.0
+(
+ln
+4
+3
+*
+*
+4
+3
+n
+p
+midgap
+Fi
+m
+m
+kT
+E
+E
+𝐸𝐹𝑖−𝐸𝑚𝑖𝑑𝑔𝑎𝑝= −0.0128𝑒𝑉
+THE INTRINSIC FERMI LEVEL
+20
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+THE INTRINSIC FERMI LEVEL
+21
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+DOPANT ATOMS AND ENERGY LEVELS
+The real power of semiconductors is realized by adding small, controlled amounts of 
+specific dopant or impurity atoms. 
+This doping process, can greatly alter the electrical characteristics of the 
+semiconductor. The doped semiconductor, called an extrinsic material.
+22
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+➢
+With a small amount of energy, such as thermal 
+energy the donor electron, can be elevated into 
+the conduction band, leaving behind a positively 
+charged ion.
+➢
+The electron in the conduction band can now 
+move through the crystal generating a current, 
+while the positively charged ion is fixed.
+➢
+This type of impurity atom donates an electron 
+to the conduction band and so is called a donor 
+impurity atoms (Group 5 elements).
+➢
+The donor impurity atoms add electrons to the 
+conduction band without creating holes in the 
+valence band. The resulting material is referred 
+to as a (n-type for the negatively charged 
+electron).(What about neutrality ?????)
+DOPANT ATOMS AND ENERGY LEVELS
+23
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+➢
+If an electron were to occupy the "empty" 
+position its energy would have to be greater 
+than that of the valence electrons(since atom is 
+negatively charged).
+➢
+Electrons may gain a small amount of thermal 
+energy and move about in the crystal. The 
+"empty“ position becomes occupied,and other 
+valence electron positions become vacated.
+➢
+The hole can move through the crystal 
+generating a current, while the negatively 
+charged atom is fixed in the crystal.
+➢
+The acceptor atom can generate holes in the 
+valence band without generating electrons in the 
+conduction band. The resulting material is 
+referred to as a (p-type for the positively 
+charged hole).
+DOPANT ATOMS AND ENERGY LEVELS
+24
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+➢
+In the previous example, since n0 > p0, the semiconductor is n type. 
+➢
+In an n-type semiconductor, electrons are referred to as the majority carrier and 
+holes as the minority carrier. (comparing the relative values of n0 and p0 )
+➢
+Similarly, in a p-type semiconductor where p0 > n0, holes are the majority carrier 
+and electrons are the minority carrier.
+
+
+
+
+−
++
+−
+−
+=
+kT
+E
+E
+E
+E
+N
+n
+Fi
+F
+i
+F
+C
+C
+)
+(
+)
+(
+exp
+0
+If we add and subtract an intrinsic Fermi energy in the exponent of Equation , we can 
+write
+
+
+
+
+−
+−
+=
+kT
+E
+E
+N
+n
+F
+C
+C
+)
+(
+exp
+0
+EXTRINSIC SEMICONDUCTORS
+25
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+
+
+
+
+−
+
+
+
+
+−
+−
+=
+kT
+E
+E
+kT
+E
+E
+N
+n
+or
+Fi
+F
+i
+F
+C
+C
+)
+(
+exp
+)
+(
+exp
+0
+The intrinsic carrier concentration is given as
+
+
+
+
+−
+−
+=
+kT
+E
+E
+N
+n
+Fi
+C
+C
+i
+)
+(
+exp
+
+
+
+
+−
+=
+
+kT
+E
+E
+n
+n
+Fi
+F
+i exp
+0
+
+
+
+
+−
+−
+=
+kT
+E
+E
+n
+p
+Similarly
+Fi
+F
+i
+)
+(
+exp
+0
+EXTRINSIC SEMICONDUCTORS
+26
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+2
+0
+0
+in
+p
+n
+=
+The product of n0 and p0 is always a constant for a given semiconductor material at a 
+given temperature.
+FREEZE-OUT
+➢ At T = 0 K, the Fermi energy is halfway between Ec and Ed for the n-type material 
+and halfway between Ea and Ev for the p-type material.
+➢In an n-type semiconductor, no electrons from the donor state are thermally elevated 
+into the conduction band; this effect is called freeze-out. 
+➢Similarly, in a p-type semiconductor, no electrons from the valance band are elevated 
+into the acceptor states, this effect is also called freeze-out.
+STATISTICS OF DONORS AND ACCEPTORS
+27
+Energy-band diagram at T = 0 K for (a) n-type and (b) p-type semiconductors. 
+(a)
+(b)
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Semiconductors in Equilibrium
+DOPANT ATOMS AND ENERGY LEVELS
+COMPLETE IONIZATION
+➢At room temperature, all of the electrons from the donor states are in the conduction 
+band, and all donor impurity atoms have donated an electron to the conduction band. 
+➢At room temperature, each acceptor atom has accepted an electron from the valence 
+band.
+ 
+STATISTICS OF DONORS AND ACCEPTORS
+28
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+➢
+A COMPENSATED SEMICONDUCTOR is one that contains both donor and 
+acceptor impurity atoms in the same region.
+➢
+A compensated semiconductor can be formed, by diffusing acceptor impurities 
+into an n-type material or by diffusing donor impurities into a p-type material. 
+If Nd  > Na → n-type compensated semiconductor
+If Na  > Nd → p-type compensated semiconductor
+If Nd  = Na → characteristics of an intrinsic semiconductor
+29
+COMPENSATED SEMICONDUCTOR
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+d
+o
+a
+o
+N
+p
+N
+n
++
+=
++
+From no* po= ni
+2
+d
+i
+a
+o
+N
+n
+n
+N
+n
++
+=
++
+0
+2
+➢
+Electron concentration is given as function of donors and acceptors 
+concentrations.
+➢
+Although above equation was derived for a compensated semiconductor, the 
+equation is also valid for Na=0.
+➢
+Similarly
+2
+2
+2
+2
+i
+a
+d
+a
+d
+o
+n
+N
+N
+N
+N
+n
++
+
+
+
+
+
+
+−
++
+−
+=
+30
+2
+2
+2
+2
+i
+d
+a
+d
+a
+o
+n
+N
+N
+N
+N
+p
++
+
+
+
+
+
+
+−
++
+−
+=
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE : Determine the thermal-equilibrium electron and hole concentrations  in 
+silicon at T =300 K for given doping concentrations. 
+(a) Let Nd =1016 cm-3and Na =0. (b) Let Nd =5 x 1015 cm-3 and Na =2 x 1015 cm-3.
+Use ni =1.5 x 1010 cm-3 in silicon at T = 300 K.
+𝑎).
+• 𝐸𝑙𝑒𝑐𝑡𝑟𝑜𝑛𝑠
+𝑛𝑜= 1016
+2
++
+1016
+2
+1016
+2
++ (1.5 × 1010)2
+≈1016𝑐𝑚−3
+3
+4
+16
+2
+10
+0
+2
+10
+25
+.
+2
+10
+)
+10
+5
+.
+1
+(
+−
+
+=
+
+=
+=
+•
+cm
+n
+n
+p
+Holes
+i
+o
+Reduced below 
+Intrinsic concn
+CHARGE NEUTRALITY
+31
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+𝑏).
+• 𝐸𝑙𝑒𝑐𝑡𝑟𝑜𝑛𝑠
+𝑛𝑜= (5 −2) × 1015
+2
++
+((5 −2) × 1015
+2
+((5 −2) × 1015
+2
++ (1.5 × 1010)2
+= 3 × 1015𝑐𝑚−3
+𝐻𝑜𝑙𝑒𝑠
+𝑝𝑜= 𝑛𝑖2
+𝑛0
+= (1.5 × 1010)2
+3 × 1015
+= 7.5 × 104𝑐𝑚−3
+Reduced below 
+Intrinsic concn
+CHARGE NEUTRALITY
+32
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: Calculate the thermal-equilibrium electron and hole concentrations in a
+compensated p-type semiconductor.
+Consider a silicon semiconductor at T =300 K in which Na=1016 cm-3 and Nd=3x1015   
+cm-3. Assume ni = 1.5 x1010 cm-3.
+Since Na > Nd, the compensated semiconductor is p-type and the thermal-equilibrium 
+majority carrier hole concentration is given by
+3
+15
+0
+2
+10
+2
+15
+16
+15
+16
+0
+10
+7
+)
+10
+5.1(
+2
+10
+3
+10
+2
+10
+3
+10
+−
+
+
+
++
+
+
+
+
+
+
+
+−
++
+
+−
+=
+cm
+p
+p
+3
+4
+15
+2
+10
+2
+10
+21
+.3
+10
+7
+)
+10
+5.1(
+−
+
+=
+
+
+=
+=
+cm
+p
+n
+n
+o
+i
+o
+CHARGE NEUTRALITY
+33
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Find the thermal-equilibrium electron and hole concentrations in silicon with 
+doping concentrations of Nd = 7 × 
+1015 cm-3 and Na = 3 × 1015 cm-3
+for (a) T =250 K and (b) T= 400 K.
+34
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+EXAMPLE: Find the thermal-equilibrium electron and hole concentrations in silicon 
+with doping concentrations of Nd = 7 × 
+1015 cm-3 and Na = 3 × 1015 cm-3
+for (a) T =250 K and (b) T= 400 K.
+35
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+POSITION OF FERMI ENERGY LEVEL
+➢
+We have discussed qualitatively how the electron and hole concentrations change 
+as the Fermi energy level moves through the band gap energy.
+➢
+We also calculated the electron and hole concentrations as a function of donor and 
+acceptor impurity concentrations.
+➢
+We can now determine the position of the Fermi energy level as a function of the 
+doping concentrations and as a function of temperature.
+36
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+
+
+
+
+−
+−
+=
+kT
+E
+E
+N
+n
+F
+C
+C
+)
+(
+exp
+0
+If we assume the Boltzmann approximation to be valid, then from
+We obtain
+
+
+
+
+
+
+=
+−
+0
+ln
+n
+N
+kT
+E
+E
+C
+F
+C
+If we consider an n-type semiconductor in which Nd >> ni, 
+d
+d
+C
+F
+C
+N
+n
+N
+N
+kT
+E
+E
+
+
+
+
+
+
+
+=
+−
+0
+ln
+POSITION OF FERMI ENERGY LEVEL (N-TYPE SC)
+37
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+•
+The distance between the bottom of the conduction band and the Fermi energy is a logarithmic 
+      function of the donor concentration.
+•
+As the donor concentration increases, the Fermi level moves closer to the conduction band. 
+•
+Conversely, if the Fermi level moves closer to the conduction band, then the electron
+      concentration in the conduction band is increasing. 
+POSITION OF FERMI ENERGY LEVEL
+38
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+If we have a compensated semiconductor, then the Nd  term in above equation is simply replaced 
+by Nd -Na, or the net effective donor concentration. 
+We may note that, if the net effective donor concentration is zero, that is, Nd - Na = 0 then n0 = ni 
+and EF = EFi. 
+A completely compensated semiconductor has the characteristics of an intrinsic material in 
+terms of carrier concentration and Fermi-level position. 
+get
+ 
+   we
+)
+(
+exp
+  
+from
+similarly 
+0
+
+
+
+
+−
+−
+=
+kT
+E
+E
+N
+p
+v
+F
+v
+
+
+
+
+
+
+=
+−
+0
+ln
+p
+N
+kT
+E
+E
+v
+v
+F
+Consider an p-type semiconductor ( Na >> ni,) 
+a
+a
+v
+v
+F
+N
+p
+N
+N
+kT
+E
+E
+
+
+
+
+
+
+
+=
+−
+0
+ln
+POSITION OF FERMI ENERGY LEVEL (P TYPE SC)
+39
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+•
+The distance between the Fermi level and the top of the valence-band energy for a p-type 
+semiconductor is a logarithmic function of the acceptor concentration
+•
+As the acceptor concentration increases, the Fermi level moves closer to the valence band. 
+POSITION OF FERMI ENERGY LEVEL
+40
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+If we have a compensated p-type semiconductor, then the Na  term in above equation is replaced
+ by Na -Nd, or the net effective acceptor concentration. 
+Note: 
+For an n-type semiconductor, n0 > ni and EF > EFi. The Fermi level for an n-type semiconductor is 
+above EFi. 
+For a p-type semiconductor, p0 > ni, and EFi >EF. The Fermi level for a p-type semiconductor is 
+below EFi. 
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+41
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+42
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+43
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+44
+Silicon at T = 300 K contains acceptor atoms at a concentration of Na= 5 x
+1015 cm-3). Donor atoms are added forming an n-type compensated semiconductor
+such that the Fermi level is 0.215 eV below the conduction band edge. What 
+concentration of donor atoms are added?
+45
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+(a)Determine the position of the Fermi level with respect to the intrinsic Fermi level
+in silicon at T = 300 K that is doped with phosphorus atoms at a concentration of
+10l5 cm-3. (b)Repeat part ( a )if the silicon is doped with boron atoms at a concentration 
+of 1015 cm-3? (c) Calculate the electron concentration in the silicon for parts
+(a) and (b)
+46
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+47
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+48
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+49
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+50
+➢
+Figure shows the Fermi energy level as a function of donor concentration (n-type) 
+and as a function of acceptor concentration (p-type) for silicon at T=300 K.
+➢
+ As the doping levels increase, the Fermi energy level moves closer to the conduction 
+band for the n-type material and closer to the valence band for the p-type material.
+VARIATION OF EF WITH DOPING CONCENTRATION
+51
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+VARIATION OF EF WITH TEMPERATURE
+➢
+As the temperature increases, ni increases, and EF moves closer to the intrinsic 
+Fermi level.
+➢
+At high temperature, the semiconductor material begins to lose its extrinsic 
+characteristics and begins to behave more like an intrinsic semiconductor. 
+➢
+At absolute zero degrees, all energy states below EF are full and all energy states 
+above EF are empty.
+52
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Figure shows the variation of the Fermi energy level in silicon with temperature for 
+several donor and acceptor concentrations.
+VARIATION OF EF WITH TEMPERATURE
+53
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+DEGENERATE AND NON-DEGENERATE 
+SEMICONDUCTORS
+➢
+Till now we have implicitly assumed that the concentration of dopant atoms added 
+is small when compared to the density of host or semiconductor atoms.
+➢
+The small number of impurity atoms are spread far enough apart so that there is no 
+interaction between dopant energy states.
+➢
+These types of semiconductors are referred to as non-degenerate semiconductors.
+54
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+➢
+If the impurity concentration increases, the distance between the impurity atoms
+decreases and a point will be reached when donor or acceptor states will begin
+to interact with each other. 
+➢
+As the donor concentration further increases, the band of donor states widens and 
+may overlap the bottom of the conduction band. This overlap occurs when the 
+donor concentration becomes comparable with the effective density of states.
+DEGENERATE AND NON-DEGENERATE 
+SEMICONDUCTORS
+55
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+56
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+57
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+58
+Monday, February 3, 2025
+POSD (Dr. Bhaskar Awadhiya)
+59

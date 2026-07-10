@@ -1,0 +1,25 @@
+DFT - convolution
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+• Method 1: Circular convolution – Time domain approach
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+3
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+•
+Same 4 operations of convolution – Fold, shift, multiply and add
+•
+Folding and shifting are circular in nature.
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+• Method 2: Circular convolution: DFT – IDFT approach
+1
+N
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6
+Circular convolution using matrix method
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7

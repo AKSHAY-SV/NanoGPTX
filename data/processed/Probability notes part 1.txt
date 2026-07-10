@@ -1,0 +1,478 @@
+Introduction to Probability
+Preliminaries
+We often encounter the use of the term probability in daily life, and it is
+used in di↵erent ways. Some examples:
+(i)
+In a cricket match, a fair coin is tossed in the beginning. The
+probability that this coin will show up heads is 1/2 and tails is 1/2.
+These are however theoretical values of probabilities given a fair coin.
+(ii) In the case above, it is usually believed that the coin is unbiased.
+However, we really don’t know whether that is the case. To verify
+this, we need to repeat the experiment (in this case coin tossing
+experiment) say n a number of times and take the limit of the ratio of
+successes to n, as n becomes large. The probability values are
+estimated here through repetition of the experiment.
+July 20, 2020
+2 / 38
+We call the ﬁrst kind “Classical probability” (or ”Priori probability” )
+We call the second kind “Frequentist probability” ( or ”Posteriori
+probability” ).
+The two kinds of perspectives given above are practically very highly
+restrictive.
+July 20, 2020
+3 / 38
+Some instances:
+The classical as well as frequentist perspectives have limitations when we
+have an inﬁnite number of possible outcomes. Examples:
+(i) You are picking a real number from the closed interval [0, ⇡].
+(ii) You are tossing a coin till head appears.
+(iii) You wish to model a coin that gives heads with probability say 1
+e .
+The problem is solved by unifying the two approaches by using the
+axiomatic deﬁnition of probability. The axiomatic approach not only
+handles both perspectives but also overcomes the limitations.
+July 20, 2020
+4 / 38
+First, let us solve one probability problem with inﬁnite
+sample space
+A fair coin is tossed until a head turns up for the ﬁrst time. Find the
+probability that
+(i) a head turns up for the ﬁrst time after an even number of tosses.
+(ii) a head turns up for the ﬁrst time after an odd number of tosses.
+July 20, 2020
+5 / 38
+Note that the number of tosses need not be ﬁnite.
+All possible outcomes of the experiment are given by the sample space
+S = {1, 2, 3, · · ·}
+Let E and O denote the events that for the ﬁrst time a head turns up
+after an even number of tosses and an odd number of tosses respectively.
+Then E, O are proper subsets of S and are given by
+E = {2, 4, 6, · · ·},
+O = {1, 3, 5, · · ·}.
+July 20, 2020
+6 / 38
+We have S = {1, 2, 3, · · ·}, E = {2, 4, 6, · · ·} and O = {1, 3, 5, · · ·}.
+(i) P[E] = 1
+4 + 1
+16 + 1
+64 + · · · (a convergent inﬁnite series)
+=
+1
+4
+1 −1
+4
+= 1
+3
+(ii) E [ O = S and the events E and O are disjoint, that is, E \ O = ;.
+Hence P[O] = 1 −1
+3 = 2
+3
+July 20, 2020
+7 / 38
+Deﬁnition (Axiomatic Deﬁnition of Probability)
+The set of all possible outcomes is the sample space, S. A subset of S is
+called an event. Then P : S ! [0, 1] has to satisfy the following
+Kolmogorov axioms:
+1 0 P(A) 1 for all events A.
+2 P(S) = 1.
+3 For any countable collection of events A1, A2, · · · which are disjoint,
+i.e. Ai \ Aj = ; for all i 6= j, we have
+P
+ 1
+[
+i=1
+Ai
+!
+=
+1
+X
+i=1
+P(Ai).
+July 20, 2020
+8 / 38
+Result
+P(;) = 0.
+Proof.
+By axiom 1, P(;) lies in the interval [0, 1]. As S and ; are disjoint, by
+axiom 2 and axiom 3 we have
+1 = P(S) = P(S [ ; [ ;...) = P(S) + P(;) + P(;) + . . .
+= 1 + P(;) + P(;) + · · ·
+Hence P(;) = 0.
+July 20, 2020
+9 / 38
+Now, it follows from axiom 3 that if A1 \ A2 = ; then
+P(A1 [ A2) = P(A1) + P(A2).
+Reason: Choose Ai = ; for i ≥3. Then
+P(A1 [ A2) = P
+ 1
+[
+i=1
+Ai
+!
+=
+1
+X
+i=1
+P(Ai)
+(by axiom 3)
+= P(A1) + P(A2) + P(;) + P(;) + · · ·
+= P(A1) + P(A2) + 0 + 0 + · · ·
+= P(A1) + P(A2)
+July 20, 2020
+10 / 38
+Result
+1 P(Ac) = 1 −P(A).
+2 A ✓B ) P(A) P(B).
+3 P(A [ B) = P(A) + P(B) −P(A \ B).
+July 20, 2020
+11 / 38
+1) P(A) + P(Ac) = P(S) = 1 because A and Ac are disjoint. This implies
+P(Ac) = 1 −P(A).
+July 20, 2020
+12 / 38
+A
+At
+S
+2) We have B = A [ (B \ Ac).
+Then P(B) = P(A) + P(B \ Ac) ≥P(A).
+July 20, 2020
+13 / 38
+B
+A
+Bn
+A
+'
+S
+3) P(A [ B) = P(A) + P(B \ Ac).
+P(B) = P(A \ B) + P(B \ Ac).
+Hence P(A [ B) = P(A) + P(B) −P(A \ B).
+July 20, 2020
+14 / 38
+A
+ANB
+'
+AAB
+BRAC
+.
+B
+8
+Exercise Problem
+Show that
+P(A [ B [ C) = P(A) + P(B) + P(C) −P(A \ B) −P(B \ C) −P(A \ C)
++P(A \ B \ C).
+Also, deduce the Boole’s inequality:
+P(A [ B [ C) P(A) + P(B) + P(C).
+July 20, 2020
+15 / 38
+Result (Inclusion-Exclusion formula in Probability)
+P
+ n[
+i
+Ai
+!
+=
+n
+X
+i=1
+P(Ai) −
+X
+1i<jn
+P(Ai \ Aj)
++
+X
+1i<j<kn
+P(Ai \ Aj \ Ak) −· · · + (−1)n−1P(A1 \ · · · \ An).
+July 20, 2020
+16 / 38
+Exercise: Hat Problem
+A group of n people enter a restaurant and give their hats to the
+hat-keeper. On return, the hat-keeper redistributes the hats back at
+random.
+(i) What is the probability Pn that no person gets his/her correct hat?
+(ii) What happens to Pn as n tends to inﬁnity? (Answer: 1
+e )
+July 20, 2020
+17 / 38
+Deﬁnition (Independent events)
+Two events A and B are independent if
+P(A \ B) = P(A)P(B).
+Otherwise, A and B are said to be dependent.
+July 20, 2020
+18 / 38
+Result
+If A and B are independent then A and Bc are independent.
+Proof.
+P(A \ Bc) = P(A) −P(A \ B)
+= P(A) −P(A)P(B)
+= P(A)(1 −P(B))
+= P(A)P(Bc)
+July 20, 2020
+19 / 38
+.
+Ani
+BE
+A
+ANB
+B
+Result
+If A and B are independent then Ac and Bc are independent.
+Proof.
+P(Ac \ Bc) = 1 −P(A [ B)
+= 1 −(P(A) + P(B) −P(A \ B))
+= 1 −(P(A) + P(B) −P(A)P(B))
+= (1 −P(A))(1 −P(B))
+= P(Ac)P(Bc)
+July 20, 2020
+20 / 38
+.
+A
+B
+.
+Acn
+B
+°
+S
+Example (Birthday problem)
+How many people are needed in a room for there to be a probability that
+two people have the same birthday to be at least 0.5? Ignore leap years
+and assume that all birthdays are equally likely.
+July 20, 2020
+21 / 38
+Let us assume that there are k people in the room.
+We solve this by ﬁnding the probability of no birthday match, 1 −P(k).
+From 365 possible birthdays, the total number of possibilities of birthday
+combinations is 365k.
+For nobody to have the same birthday, the ﬁrst person can have any
+birthday, the second has 364 else to choose, etc. Hence
+P(a shared birthday) = 1 −P(no shared birthdays)
+= 1 −365 · 364 · 363 · · · (365 −(k −1))
+365k
+= 1 −P(k).
+July 20, 2020
+22 / 38
+We have,
+1 −P(22) = 0.4757,
+1 −P(23) = 0.5073.
+The lowest k for which the probability exceeds 0.5 is, k = 23.
+Answer: 23
+July 20, 2020
+23 / 38
+Example
+A person has n keys in his pocket. He selects one at random once and tries
+to unlock. What is the possibility that he will succeed at the rth trial if
+(i) the process is done with replacement.
+(ii) the process is done without replacement.
+July 20, 2020
+24 / 38
+With replacement:
+The person has to fail in the ﬁrst r −1 trials and succeed in the rth. So
+the probability is
+(n −1)(n −1) · · · (n −1)(1)
+nr
+= (n −1)r−1
+nr
+.
+July 20, 2020
+25 / 38
+Without replacement: The probability is given by
+(n −1)(n −2) · · · (n −r + 1)(1)
+n(n −1) · · · (n −r + 1)
+= 1
+n.
+July 20, 2020
+26 / 38
+Conditional Probability
+If P[B] > 0 then
+P[A|B] = P[A \ B]
+P[B]
+.
+If P[A] > 0 then
+P[B|A] = P[A \ B]
+P[A]
+.
+The probability of an event A given that another event B has happened
+need not be same as the probability of B given that A has happened.
+There is a nice relation between the two conditional probabilities, and
+Bayes’ theorem presents it.
+July 20, 2020
+27 / 38
+Baye’s Theorem
+Suppose that B1, ..., Bn are events from sample space S. Let
+Bi 6= ; for all i ,
+Bi \ Bj = ; for all i 6= j, and
+Sn
+i=1 Bi = S. Then for any event A with P(A) > 0,
+P[Bj|A] = P[A \ Bj]
+P[A]
+=
+P[A|Bj] · P[Bj]
+Pn
+i=1 P[A|Bi] · P[Bi]
+July 20, 2020
+28 / 38
+Proof.
+Clearly, P[Bj|A] = P[A \ Bj]
+P[A]
+= P[A|Bj] · P[Bj]
+P[A]
+Now, it is enough to show that
+P[A] =
+n
+X
+i=1
+P[A|Bi] · P[Bi]
+(the statement above is known as the Theorem on Total Probability)
+July 20, 2020
+29 / 38
+July 20, 2020
+30 / 38
+B ,
+Bz
+Bn
+A
+Bina
+132nAc.
+Bnn
+A
+133nA
+B3
+,
+i
+By
+NA
+'
+-
+I
+i
+-
+-
+.
+-
+-
+'
+(
+By
+-
+ 
+-
+ 
+-
+ 
+.
+,
+-
+.
+-
+-
+S
+Proof.
+continued..
+We have, A = A \ S = A \ (
+n[
+i=1
+Bi) =
+n[
+i=1
+(A \ Bi)
+As (A \ Bi) \ (A \ Bj) = ; for all i 6= j, we get
+P[A] =
+n
+X
+i=1
+P[A \ Bi]
+=
+n
+X
+i=1
+P[A|Bi] · P[Bi]
+Thus, P[Bj|A] =
+P[A|Bj] · P[Bj]
+Pn
+i=1 P[A|Bi] · P[Bi]
+July 20, 2020
+31 / 38
+Example
+Suppose we have a screening test that tests whether a patient has a
+particular disease. We denote positive and negative results as positive and
+negative respectively, and D denotes the person having disease in the
+population. Suppose that the test is not absolutely accurate, and
+P(positive | D) = 95%
+P(positive | Dc) = 8%
+P(D) = 0.9%.
+What is the probability that a person has the disease given that he
+received a positive result?
+July 20, 2020
+32 / 38
+P(D | positive) =
+P(positive | D)P(D)
+P(positive | D)P(D) + P(positive | Dc)P(Dc)
+=
+0.95 · (0.009)
+0.95 · (0.009) + 0.08 · (1 −0.009)
+= 0.097347
+Note that the probability that a person has the disease given that he
+received a positive result is just 9.7347%.
+July 20, 2020
+33 / 38
+Problem
+A MNC has its branches at Ahmadabad, Bengaluru and Chennai wherein
+they have 1729, 4104 and 7999 employees respectively. For the purpose of
+dealing with transfer requests from employees, MNC has divided the
+employees broadly in to two categories Type I and Type II. At Ahmadabad,
+Bengaluru and Chennai 17%, 2% , 9% of the employees are of Type II
+(respectively). The company transfers an employee of Type II. What is the
+probability that the employee worked at Ahmadabad?
+July 20, 2020
+34 / 38
+Let II be the event that a Type II employee is transferred (from any
+location).
+Let A, B and C denote the event that a randomly selected employee works
+at Ahmadabad, Bengaluru and Chennai respectively. Then,
+P[A] = 1729/13382, P[B] = 4104/13382 and P[C] = 7999/13382.
+We have
+P[II|A] = 17/100, P[II|B] = 2/100, and P[II|C] = 9/100.
+July 20, 2020
+35 / 38
+P[A|II]
+=
+P(A \ II)
+P[II]
+=
+P[II|A]P[A]
+P[II|A]P[A] + P[II|B]P[B] + P[II|C]P[C]
+=
+(0.17)(1729/13382)
+(0.17)(1729/13382) + (0.02)(4104/13382) + (0.09)(7999/13382)
+=
+0.2682
+July 20, 2020
+36 / 38
+Problem
+A bag contains 90 fair coins (P(H) = 1
+2 = P(T)) and 10 unfair coins
+which ﬂip with P(H) = 3
+4, P(T) = 1
+4. A coin is picked at random and
+tossed n times and each one of the n tosses were heads.
+(i) What is the probability that the picked coin is the unfair coin?
+(ii) Find the least value of n that gives probability that the picked coin is
+the unfair is at least 90%?
+July 20, 2020
+37 / 38
+Let A denote the event that n tosses of the coin gave n heads.
+Let B1 denote the event that the coin is unfair and B2 denote the event
+that the coin is fair.
+(i) P[B1|A] =
+P[A|B1] · P[B1]
+P[A|B1] · P[B1] + P[A|B2] · P[B2]
+=
+( 3
+4)n · (0.1)
+( 3
+4)n · (0.1) + ( 1
+2)n · (0.9)
+(ii) When n = 10, we get P[B1|A] = 0.864997
+When n = 11, we get P[B1|A] = 0.905757
+Hence the least value of n is 11.
+July 20, 2020
+38 / 38

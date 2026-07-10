@@ -1,0 +1,82 @@
+Digital Signal Processing
+Introductory class
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+• kumar.sampath@manipal.edu
+• 9480575352
+•CR?
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+Syllabus
+• DFT
+• Realization of filters
+• IIR filters
+• FIR filters
+• Power Spectrum Estimation
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+3
+Textbooks
+1. Proakis J. G, Manolakis D. G. Mimitris D., “Introduction to Digital Signal
+Processing” Prentice Hall, India, 2007.
+2. Oppenheim A.V, Schafer R. W, “Discrete Time Signal Processing”, Pearson
+Education, 2004.
+3. Ifeachar, Jervis, “Digital Signal Processing - A Practical approach”, Pearson
+Education, Asia, 2003.
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+Why DSP?
+• Accurate, Cheaper and Programmable
+• Digital →Analog – Discretise (Sampling) – Quantization (ADC)
+• Signal →Information carrying entity
+• Processing →Obtain in more desirable form
+• Example – ECG powerline noise removal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+Advantages of DSP
+• Less sensitivity to component tolerance and environmental changes
+• Accuracy increases as word length increases
+• Time sharing  - multiple tasks
+• Easy storage
+• Exact linear phase
+• Accurate
+• Cheaper (due to advances in VLSI)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6
+Signals
+• Impulse
+• Step
+• Ramp
+• Exponential
+• Sinusoidal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7
+Signal classification
+• Even and Odd
+• Periodic and Non-periodic
+• Deterministic and Random
+• Energy and Power
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+Systems - properties
+• Linearity
+• Time invariance
+• Causality
+• Stability
+• Memory
+LTI systems - convolution
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+9
+Transforms:
+• Continuous time – Laplace transform
+• Stable and periodic – Fourier Series
+• Stable and non-periodic – Fourier Transform
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+10
+• Discrete time – Z transform
+• Stable and periodic – Discrete Time Fourier Series
+• Stable and non-periodic – Discrete Time Fourier Transform
+                                              
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+11

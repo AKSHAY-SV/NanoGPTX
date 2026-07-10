@@ -1,0 +1,1648 @@
+COMPUTER 
+ORGANIZATION AND ARCHITECTURE
+Dr. Bore Gowda S B
+Additional Professor
+Dept. of ECE
+MIT, Manipal
+Execution Unit
+Introduction
+❑A typical CPU model 
+• A typical CPU model is shown in figure
+• A conventional CPU consists of the 
+following:
+✓General purpose registers
+✓Dedicated registers
+✓An ALU
+✓Dedicated hardware or firmware elements 
+that perform a special operations such as 
+multiplication or division
+✓A control unit 
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+2
+Register Section
+• CPU with many register reduces the number of memory access 
+• General purpose register: may be configured as an accumulator, address pointer or a data 
+pointer 
+• Dedicated register: used for some specific tasks 
+• Commonly known special purpose registers and their tasks rre:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+3
+General Register Design
+❑Typical shift operations:
+• GPR is to store address or data, then to be able to retrieve the data when needed
+• GPR is also capable of manipulating the stored data by shift left or shift right operation 
+• Logical shift operations
+• Arithmetic shift operations
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+4
+General Register Design
+❑Basic cell for designing GPR
+• The hypothetical  instruction set of a computer consists of eight instructions, I0, I1, I2,,,,,,I7.  The 
+relative frequency of these instructions are as follows:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+5
+General Register Design
+❑4-bit GPR:
+• Parallel load, shift left, shift right, serial loading of data
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+6
+General Register Design
+❑4x4 Combinational shifter design:
+• The speed of a flip flop-based shifter is a function of the clock frequency
+• A high-speed shifter can be designed using combinational circuit components such as a 
+multiplexer 
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+7
+General Register Design
+❑4x4 Combinational shifter design:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+8
+General Register Design
+❑Combinational shifter capable of rotating 16-bit data to the left by 0, 1, 2 and 3 
+positions:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+9
+General Register Design
+❑16x16 Barrel shifter:
+• Capable of rotating the given 16-bit data to the left n position where   0 ≤𝑛≤15
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+10
+General Register Design
+❑Complete Logic diagram of full 16-bit Barrel shifter:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+11
+Adder Design
+❑Full adder:
+• Addition is the basic operation performed by an ALU
+• Operation is versatile 
+• A- B = A + 2's complement of B
+• B*C may be obtained by adding A to itself for C - 1 times 
+• The speed of the hardware unit is essential to the efficient operation 
+of execution unit
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+12
+Xi
+Yi
+Ci
+Si
+Ci+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+0
+1
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+1
+0
+1
+0
+1
+1
+1
+0
+0
+1
+1
+1
+1
+1
+1
+𝑠𝑖= 𝑥𝑖. 𝑦𝑖. 𝑐𝑖+ 𝑥𝑖. 𝑦𝑖. 𝑐𝑖+ 𝑥𝑖. 𝑦𝑖. 𝑐𝑖+ 𝑥𝑖. 𝑦𝑖. 𝑐𝑖
+𝑐𝑖+1 = 𝑥𝑖. 𝑦𝑖+𝑥𝑖. 𝑐𝑖+ 𝑦𝑖. 𝑐𝑖
+Adder Design
+❑Full adder:
+• To generate Ci+1 from Ci, 2 gate delays are required 
+• To generate sum Si from Ci, 3 gate delays are required 
+• Assume that the gate delay is ∆ time units and the actual value of it is decided by the 
+technology used
+• For example, TTL logic circuits have a ∆ will be 10 ns 
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+13
+Adder Design
+❑4-bit ripple carry adder/Carry Propagate Adder(CPA)
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+14
+Total delay = (n-1)* delay between each block + last block delay
+Wnere n is number of Full Adders
+For n = 4 and if gate delay is 0.5ns,  we get 
+Delay = (4 – 1 ) * 1 + 1.5 = 4.5 ns
+Adder Design
+❑16-bit adder using 4-bit ripple carry adder as basic block
+• Design of an n-bit CPA is straightforward the carry propagation time limits the speed of 
+operation
+• For example: 16-bit CPA when the addition operation is completed only when the sum bits S0 
+through are S15 available 
+• In the worst case carry propagate through 15 full adders
+• Total Time delay= Time taken for carry to propagate through 15 full adder + Time taken to 
+generate S15 from C14 = 15 ∗2∆+ 3∆= 33∆
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+15
+•
+Circuit is simple and easy to build
+•
+Ripple of carry is causing delay and 
+it increases as n increases.
+Fast Adder Design
+❑Carry Look-Ahead Adder (CLA) 
+• It  is a type of adder used in digital logic that improves the speed of arithmetic operations by 
+reducing the time it takes to calculate carry bits
+• Key Concepts:
+1. Carry Propagation: In a traditional ripple carry adder, each bit must wait for the carry bit 
+from the previous bit to be calculated, which can be slow.
+2. Carry Look-Ahead: The CLA adder speeds up this process by calculating the carry bits in 
+advance, using the concepts of generate and propagate.
+• How It Works:
+1. Carry Generate (G): A bit generates a carry if both of its input bits are 1.
+2. Carry Propagate (P): A bit propagates a carry if at least one of its input bits is 1.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+16
+Adder Design
+❑Carry Look-Ahead Adder (CLA) 
+• For Full adder, we know that:
+• Carry generate function
+• Carry propagate function
+• Carry function 
+• These equations show that a carry signal will be generated in two cases: 
+1. if both bits xi and yi are 1 
+2. if either xi or yi is 1 and the carry-in Ci is 1. 
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+17
+𝑐𝑖+1 = 𝑥𝑖. 𝑦𝑖+𝑥𝑖. 𝑐𝑖+ 𝑦𝑖. 𝑐𝑖
+𝐺𝑖= 𝑥𝑖. 𝑦𝑖
+𝑃𝑖= 𝑥𝑖+𝑦𝑖
+𝑐𝑖+1 = 𝐺𝑖+ 𝑃𝑖. 𝐶𝑖
+Adder Design
+❑4-bit Carry Look-Ahead Adder (CLA) 
+• Apply these equations for a 4-bit adder: 
+• These expressions show that C2, C3 and C4 do not depend on its previous carry-in.
+• Therefore C4 does not need to wait for C3 to propagate. 
+• As soon as C0 is computed, C4 can reach steady state. 
+• The same is also true for C2 and C3
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+18
+Adder Design
+❑4-bit Carry Look-Ahead Adder (CLA) 
+• Apply these equations for a 4-bit adder: 
+• These expressions show that C2, C3 and C4 do not depend on its previous carry-in.
+• Therefore C4 does not need to wait for C3 to propagate. 
+• As soon as C0 is computed, C4 can reach steady state. 
+• The same is also true for C2 and C3
+• For these reason, the equations are called carry look ahead equations
+• The hardware that implements these equations is called 4-stage carry-look ahead circuit (4 
+CLC)
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+19
+General Register Design
+❑4-stage Carry Look-Ahead circuit(4-CLC) 
+• A 4-CLC can be implemented as  a teo-level AND/OR logic 
+circuit
+• To generate C4, 5-input AND gate and 4-input OR gate 
+required
+• If 𝐺𝑖≤0 ≤𝑖≤3 is available, then all 𝐶𝑖’s with 1 ≤𝑖≤4 
+can be generated in 2 gate delays
+• The output G0 and P0 are useful to obtain a higher order look 
+ahead system
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+20
+General Register Design
+❑4-bit CLA using basic adder
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+21
+General Register Design
+❑16-bit CLA using 4-bit CLA
+• A 16-bit CLA is typically divided 
+into four 4-bit CLAs.
+• Each 4-bit CLA generates its own 
+carry-out signals, which are then 
+used to compute the carry-out 
+for the next higher level.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+22
+Multiplication of Binary numbers
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+23
+Basic Concept
+multiplicand
+multiplier
+1101   (13)
+1011   (11)
+1101
+1101
+0000
+1101
+*
+10001111
+(143)
+Partial products
+product of two 4-bit numbers
+is an 8-bit number
+It’s interesting to note that 
+binary multiplication is a 
+sequence of shifts and adds of 
+one number (depending on the 
+bits in the second number).
+Binary multiplication is easy
+0 × multiplicand = 0
+1 × multiplicand = multiplicand
+These partial 
+products are added 
+to get the final 
+product.
+Multiplication of Binary numbers
+❑4x4 array multiplication
+• Each cross-product term in this can be generated using an AND gate 
+• This requires 16 AND gate to generate all cross-product terms that are 
+summed by full adder arrays 
+• It is nonadditive multiplier(NM), since it does not include any additive inputs
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+24
+Multiplication of Binary numbers
+❑4x4 array multiplication
+• An additive multiplier(AM) includes an extra input, it computes products of the form
+P = M*Q + R
+• Both NM and an AM are available as standard IC blocks
+• Simple and repetitive structure
+• Can multiply only unsigned numbers
+• Need additional logic to multiply signed numbers
+• Too big circuit and utilization factor is too less
+• Delay grows as the number of bits to be multiplied increases
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+25
+Multiplication of Binary numbers
+❑Read Only Memory
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+26
+• Can perform any combinational 
+logic function
+• Address inputs = function 
+inputs
+• Data outputs = function 
+outputs
+ROM is a combinational circuit; it’s a truth-table 
+lookup.
+you give input numbers to be 
+multiplied and it will give you 
+the product!!
+Multiplication of Binary numbers
+❑Read Only Memory
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+27
+Look up 
+table
+A
+B
+P
+Address input
+Data output
+A
+B
+Product
+00
+00
+0000
+00
+01
+0000
+00
+10
+0000
+00
+11
+0000
+01
+00
+0000
+01
+01
+0001
+01
+10
+0010
+01
+11
+0011
+11
+00
+0000
+11
+01
+0011
+11
+10
+0110
+11
+11
+1001
+Consider A and B to be 2-bit numbers, How 
+many bits will be in product, P?
+What is the memory size of this ROM?
+8 bytes!!
+16 locations
+Multiplication of Binary numbers
+❑4x4 ROM based multiplier example
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+28
+What is the memory size 
+of this ROM?
+265 bytes
+How many address and data lines?
+00    01   02   03     04   05    06    07    08    09   0A   0B    0C   0D    0E   0F
+Multiplication of Binary numbers
+❑Sequential multiplier
+• Sequential multiplier use the fact that multiplication can be achieved using 
+repeated addition
+• It can multiply unsigned integers
+• Next slides has a flowchart that can multiply two 4-bit unsigned numbers 
+and a block diagram for implementing it
+• 4x4 unsigned sequential multiplier
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+29
+Multiplication of Binary numbers
+❑Sequential multiplier
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+30
+Start
+Size = 4
+M = Multiplicand
+Q= multiplier
+A = 0, C = 0
+is 
+Q[0] = 
+1
+C, A = A + M
+P
+P
+Shift Right (CAQ)
+Size = Size - 1
+is 
+Size = 0
+Stop
+NO
+YES
+YES
+NO
+Algorithm to multiply two unsigned 4-bit numbers
+Multiplication of Binary numbers
+❑Sequential multiplier
+• Example:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+31
+M = 1100, Q = 1001
+Description              C                   A 
+ 
+             Q        Q[0]
+Initialization             0   
+0000                             1001       1    
+Ite-1, A = A+M           0   
+1100                             1001        1
+SHR CAQ                    0                0110                             0100        0   
+Ite-2,  No add           0   
+0110                             0100        0
+SHR CAQ                    0                0011                             0010        0   
+Ite-3, No add            0   
+0011                             0010        0
+SHR CAQ                    0                0001                             1001        1   
+Ite-4, A=A+M             0   
+1101                             1001        1
+SHR CAQ                    0                0110                             1100        0     
+0xC*0x9 = 0x6C
+Multiplication of Binary numbers
+❑Sequential multiplier
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+32
+M = 01110, Q = 10100
+Description              C                   A 
+ 
+             Q          Q[0] 
+Initialization             0   
+00000                           10100       0  
+Ite-1, SHR CAQ        0               00000                            01010       0   
+Ite-2, SHR CAQ        0               00000                            00101      1   
+Ite-3 A=A+M               0   
+01110                            00101      1
+SHR CAQ                     0               00111                            00010      0   
+Ite-4, SHR CAQ        0               00011                            10000      1
+0x0E*0x14 = 0x118
+Ite- 5 A=A+M              0   
+10001                            10000      1
+SHR CAQ                     0               01000                            11000       0  
+Worst case: n additions and n right shift operations are needed
+                            Speed increased 
+Multiplication of Binary numbers
+❑Signed multiplication
+• There are three possible cases:
+1. M&Q are in signed magnitude form 
+2. M and Q are in one’s complement form 
+3. M and Q are in Two's complement form 
+• Case 1: 
+• Multiply the magnitudes either combinationally or sequentially
+• Sign of the product = sign of Multiplier XOR sig of Multiplicand
+• Case 2:
+• Step 1: if multiplicand is negative, then compute the 1’s complement of M 
+• Step 2: if multiplier is negative, then compute the 1’s complement of Q 
+• Step 3: multiply the (n – 1) bits of the multiplier and the multiplicand either combinnationally or 
+sequentially 
+• Step 4: sign of the product = sign of multiplier XOR sign of multiplicand 
+• Step 5: if sign of the product is negative, then compute the 1’s of the result obtained in Step 3 
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+33
+Multiplication of Binary numbers
+❑Signed multiplication
+• Case 3: 
+• When M & Q are in 2's complement form, the same procedure as in Case 2 is repeated with the 
+following exception:
+• Product must be 2’s complemented when 
+• both multiplicand and multiplier are negative or 
+• sign of Multiplicand XOR Sign of Multiplier = 1
+• Example: M=1100 and Q=0111,  take 2’c complement of M, then multiply with 
+Q. since sign of product is –ve, take 2’s complement of product. 
+• Result: 11100100
+• Demerits: 
+• extra processing when they are represented in 1’s or 2’s complement form
+• Overhead is maximum when multiplier and multiplicand are in 2’s complement form, since 
+incrementation is required besides the complementation.   
+• Overhead can be eliminated by recoded multiplication approach
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+34
+Multiplication of Binary numbers
+❑Booth’s Recoded multiplication approach
+• String property: 
+• In a binary sequence a block of consecutive K ones may be replaced with a block of k - 1 
+consecutive 0’s surrounded by the digits 1 and ഥ𝟏
+• If a weight of -1 is assigned to the digit ഥ𝟏(over bar), assuming that the original sequence 
+is in 2’s complement form, both represent same number
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+35
+• String property increases the density of 
+zeros in a given multiplier
+• number of additions operations to be 
+performed is reduced 
+• allows for quick multiplication
+Multiplication of Binary numbers
+❑Booth’s Recoded multiplication approach
+• Booth Observed that a String of 1’s May be Replaced as:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+36
+1
+1
+1
+2
+2
+2
+2
+2
+2
+j
+j
+i
+i
+j
+i
+−
++
++
++
++
++
++
+=
+−
+xn    xn-1    ...    xi    xi-1    ...    x0        (0)
+yn       ...      yi               ...       y0
+yi=xi-1 - xi
+xi 
+xi-1 
+Comments 
+yi 
+0 
+0 
+string of zeros 
+0 
+1 
+1 
+string of ones 
+0 
+1 
+0 
+beg. string of ones 
+-1 
+0 
+1 
+end string of ones 
+1 
+ 
+EXAMPLE:  0 0 1 1 1 1 0 0 1 1(0)
+        0 1 0 0 0 ഥ𝟏 0 1 0 ഥ𝟏
+Recode 15
+01111
+10001
+Booth’s Recoding Drawbacks
+•
+case can come up where number of 1s 
+originally will be less than the recoded 1’s
+Multiplication of Binary numbers
+❑Booth’s Recoded multiplier
+• Perform -6x7 using Booths multiplication
+• Multiplicand M=-6 = 1010 (2’s complement of 0110)
+• Multiplier Q=7=0111
+• Recoded multiplier = +1, 0, 0, -1
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+37
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+• Booth's Algorithm is a technique used in binary multiplication to optimize the process, 
+especially for signed numbers. 
+• It reduces the number of partial products, which can simplify and speed up the 
+multiplication.
+• Key Concepts
+• Recoding: Booth's Algorithm recodes the multiplier to reduce the number of partial 
+products. This is done by examining pairs of bits in the multiplier.
+• Handling Signed Numbers: It efficiently manages both positive and negative multipliers by 
+using 2's complement representation.
+• Efficiency with Consecutive Ones: The algorithm is particularly effective when the 
+multiplier has consecutive ones, converting them into fewer operations.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+38
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+1.
+Initialization:
+• Set up the multiplicand (A) and the multiplier (B).
+• Compute the negative of the multiplicand (-A) using 2's complement.
+2.
+Recoding:
+• Examine pairs of bits in the multiplier (B) along with an extra bit (initially 0).
+• Depending on the pair of bits, decide whether to add, subtract, or do nothing with the 
+multiplicand.
+3.
+Partial Product Generation:
+• Generate partial products based on the recoding step.
+• Shift the partial products appropriately.
+4.
+Summation:
+• Sum the partial products to get the final result.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+39
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+40
+• Starting from right to left, look at two adjacent bits of the 
+multiplier
+• Before starting, place a zero at the right of the LSB
+• If bits = 00, do nothing
+• If bits = 10 [read from LSB side], subtract the 
+multiplicand from the product
+• Beginning of a string of 1’s
+• If bits = 11, do nothing
+• Middle of a string of 1’s
+• If bits = 01 [read from LSB side], add the multiplicand to 
+the product
+• End of a string of 1’s
+• apply arithmetic right shift by one bit on product register
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+• Example: Multiply the numbers -- M = 0101, Q = 0111
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+41
+Description                                  A 
+ 
+           Q         q-1 
+Initialization            
+   
+0000                           0111      0   
+1: A = A - M  (subtract)            1011                           0111      0
+     ASR AQ                                      1101                           1011      1   
+2: ASR AQ                
+   
+ 1110                           1101      1
+3: ASR AQ               
+   
+ 1111                           0110      1
+4: A = A + M  (Addition) 
+ 0100                           0110      1
+     ASR AQ                                      0010                            0011      0     
+5*7 = 23H
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+• Example: Multiply M=-9 and Q=-13
+• 2’s complement of -13 = 10011      and  2’s complement of -9 = 10111      
+• Product : 0001110101 = (117)10
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+42
+A
+Q
+Q--1
+M
+Operation
+00000
+10011
+0
+10111
+initial stage
+01001
+10011
+0
+10111
+A<-A-M
+00100
+11001
+1
+10111
+ASR (1st iteration)
+00010
+01100
+1
+10111
+ASR (2nd  iteration)
+11001
+01100
+1
+10111
+A<-A+M
+11100
+10110
+0
+10111
+ASR (3rd iteration)
+11110
+01011
+0
+10111
+ASR (4th iteration)
+00111
+01011
+0
+10111
+A<-A-M
+00011
+10101
+1
+10111
+ASR (5th iteration)
+Multiplication of Binary numbers
+❑Booth’s Algorithm
+• Example: Multiply -8 and 12
+• 2’s complement of -8 = 11000      and  12 = 01100      
+• Product : 2’s complement of (1110100000)2 = (-96)10
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+43
+A
+Q
+Q-1
+M
+operation
+00000
+01100
+0
+11000
+initial stage
+00000
+00110
+0
+11000
+ASR (1st  iteration)
+00000
+00011
+0
+11000
+ASR (2nd iteration)
+01000
+00011
+0
+11000
+A<-A-M
+00100
+00001
+1
+11000
+ASR (3rd iteration)
+00010
+00000
+1
+11000
+ASR (4th iteration)
+11010
+00000
+1
+11000
+A<-A+M
+11101
+00000
+0
+11000
+ASR (5th iteration)
+Multiplication of Binary numbers
+❑Drawbacks to Booth's Algorithm
+• Variable number of add/subtract operations and of shift operations between two 
+consecutive add/subtract operations
+o Inconvenient when designing a synchronous multiplier
+• Algorithm inefficient with isolated 1's
+• Example:
+•                                  recoded as                            , requiring 8 instead of 4 operations
+• Situation can be improved by examining 3 bits at a time rather than 2
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+44
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Instead of considering 2-bits of the multiplier at a time, 3-bits are considered, hence the 
+number of computations are reduced
+• Booth algorithm is modified to produce at most (n/2)+1 partial products, n is the number 
+of bits
+• It is also called as Radix-4/Bit pair Re-coding algorithm
+• Algorithm: (for unsigned numbers)
+1. Pad the LSB with one zero.
+2. Pad the MSB with 2 zeros if n is even and 1 zero if n is odd.
+3. Divide the multiplier into overlapping groups of 3-bits.
+4. Determine partial product scale factor from modified booth encoding table.
+5. Compute the Multiplicand Multiples and get partial products
+6. Sum partial products to get final product
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+45
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+46
+Modified Booths Encoding Table
+Multiplier 
+Multiplicand selected
+i+1
+i
+i-1
+0
+0
+0
+0 x Multiplicand
+0
+0
+1
++1 x Multiplicand
+0
+1
+0
++1 x Multiplicand
+0
+1
+1
++2 x Multiplicand
+1
+0
+0
+-2 x Multiplicand
+1
+0
+1
+-1 x Multiplicand
+1
+1
+0
+-1 x Multiplicand
+1
+1
+1
+0 x Multiplicand
+• Can encode the digits by looking at 
+three bits at a time
+• Hardware must be able to add 
+multiplicand  times –2, -1, 0, 1 and 2
+• Since it is having only doubling 
+operation, generating partial 
+products is not that hard (shifting 
+and negating)
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Multiply 20 and 8 assuming n = 8-bits and unsigned
+1.
+Pad LSB with 1 zero
+2.
+n is even then pad the MSB with two zeros
+3.
+Form 3-bit overlapping groups for n=8 we have 5 groups
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+47
+X3
+X2
+X1
+X0
+0
+X7
+X6
+X5
+X4
+X3
+X2
+X1
+X0
+0
+X7
+X6
+X5
+X4
+0
+0
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Multiply 20 and 8 assuming n = 8-bits and unsigned
+4.
+Determine partial product scale factor from modified booth encoding table
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+48
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Multiply 20 and 8 assuming n = 8-bits and unsigned
+5.
+Compute the Multiplicand Multiples
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+49
+Groups
+Coding
+0
+0
+0
+0 × Y
+0
+1
+0
+1 × Y
+0
+1
+0
+1 × Y
+0
+0
+0
+0 × Y
+0
+0
+0
+0 × Y
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Multiply 20 and 8 assuming n = 8-bits and unsigned
+5.
+Sum Partial Products
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+50
+0 0 0 0 1 0 0 0
+8
+×
+0 0 0 1 0 1 0 0
+20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 × Y
+0 0 0 0 0 0 0 0 0 0 1 0 0 0
+1 × Y
++ 0 0 0 0 0 0 0 0 1 0 0 0
+1 × Y
+0 0 0 0 0 0 0 0 0 0
+0 × Y
+0 0 0 0 0 0 0 0
+0 × Y
+0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0
+160
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Algorithm: (for signed numbers)
+1.
+Pad the LSB with one zero.
+2.
+If n is even don’t pad the MSB ( n/2 PP’s) and if n is odd sign extend the MSB by 1 bit 
+((n+1)/2 PP’s).
+3.
+Divide the multiplier into overlapping groups of 3-bits.
+4.
+Determine partial product scale factor from modified booth encoding table.
+5.
+Compute the Multiplicand Multiples
+6.
+Sum Partial Products
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+51
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+• Multiply -107 with 105
+1.
+Pad LSB with 1 zero
+2.
+n is even then do not pad the MSB
+3.
+Form 3-bit overlapping groups for n=8 we have 4 groups
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+52
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+4.
+Determine partial product scale factor from modified booth encoding table
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+53
+Xi+1
+Xi
+Xi-1
+Action
+0
+0
+0
+0 × Y
+0
+0
+1
+1 × Y
+0
+1
+0
+1 × Y
+0
+1
+1
+2 × Y
+1
+0
+0
+-2 × Y
+1
+0
+1
+-1 × Y
+1
+1
+0
+-1 × Y
+1
+1
+1
+0 × Y
+Multiplication of Binary numbers
+❑Modified Booth's Algorithm
+5.
+Compute the Multiplicand Multiples
+Note:
+• Multiplication with   0 –> 0
+• Multiplication with +1 –> Multiplicand
+• Multiplication with  -1 – >2’s complement of Multiplicand
+• Multiplication with  +2  –> shift Multiplicand left by 1-bit
+• Multiplication with   -2 –> 2’s complement of shifted Multiplicand
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+54
+Groups
+Coding
+0
+1
+0
+1 × Y
+1
+0
+0
+-2 × Y
+1
+0
+1
+-1 × Y
+0
+1
+1
+2 × Y
+1 0 0 1 0 1 0 1 -107 =Y
+×
+0 1 1 0 1 0 0 1 105 = X
+1 1 1 1 1 1 1 1 1 0 0 1 0 1 0 1
+1 × Y
+0 0 0 0 0 0 1 1 0 1 0 1 1 0
+-2 × Y
+0 0 0 0 0 1 1 0 1 0 1 1
+-1 × Y
+1 1 0 0 1 0 1 0 1 0
+2 × Y
+1 1 0 1 0 1 0 0 0 0 0 1 1 1 0 1 -11235
+Binary Division
+❑Restoring Division Algorithm for unsigned 
+number
+• The restoring division algorithm is a slow division 
+algorithm that calculates the quotient digit by 
+digit. 
+• Algorithm will generate a quotient and a 
+remainder after the division
+• Division algorithm uses registers for storing the 
+numbers and calculations. 
+• Assumption: dividend is greater than the divisor. 
+• This division algorithm uses three registers. 
+• Register A is initialized to 0, 
+• Register Q stores the dividend, and 
+• Register M stores the divisor. 
+• N is used as a counter and stores the number of 
+bits present in the dividend.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+55
+Binary Division
+❑Restoring Division Algorithm for unsigned number
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+56
+Step Involved:
+•
+Step-1: First the registers are initialized with corresponding values (Q = 
+Dividend, M = Divisor, A = 0, n = number of bits in dividend)
+•
+Step-2: The content of register A and Q is shifted left as a single unit
+•
+Step-3: The content of register M is subtracted from A and result is stored in A
+•
+Step-4: The MSB of the A is checked, 
+o if it is 0, the LSB of Q is set to 1, otherwise, the LSB of Q is set to 0 and 
+value of register A is restored i.e the value of A before the subtraction 
+with M
+•
+Step-5: The value of counter n is decremented
+•
+Step-6: If the value of n becomes ‘0’, we get out of the loop, otherwise we 
+repeat from step 2
+•
+Step-7: Finally, the register Q contain the quotient and A contain remainder
+Binary Division
+❑Restoring Division Algorithm for unsigned number
+• Example: Divide 7/3   Dividend=0111(7) and Divisor=0011(3)
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+57
+N
+M
+A
+Q
+Operation
+4
+0011
+0000
+0111
+Initialization
+0011
+0000
+111_
+SHL AQ
+0011
+1101
+111_
+A= A-M
+0011
+0000
+1110
+Q[0]=0 and restore A
+3
+0011
+0001
+110_
+SHL AQ
+0011
+1110
+110_
+A=A-M
+0011
+0001
+1100
+Q[0]=0 and restore A
+2
+0011
+0011
+100_
+SHL AQ
+0011
+0000
+100_
+A=A-M
+0011
+0000
+1001
+Q[0]=1
+1
+0011
+0001
+001_
+SHL AQ
+0011
+1110
+001_
+A=A-M
+0011
+0001
+0010
+Q[0]= 0 and restore A
+Result:
+quotient = Q = 0010 (2) and 
+remainder = A = 0001 (1)
+Binary Division
+❑Non-Restoring Division Algorithm for unsigned number
+• It is a division technique for unsigned binary values that simplifies the procedure by eliminating 
+the restoring phase. 
+• The non-restoring division is simpler and more effective than restoring division
+• It just employs addition and subtraction operations instead of restoring division
+• Restoring requires extra steps to restore the original result after a failed subtraction.
+• The non-restoring division algorithm is more complex as compared to the restoring division 
+algorithm
+• It has an advantage that it contains only one decision and addition/subtraction per quotient 
+bit.
+• After performing the subtraction operation, there will not be any restoring steps.
+• Due to this, the numbers of operations basically cut down up to half. 
+• Due to reduced number of operation, the execution of this algorithm will be fast.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+58
+Binary Division
+❑Non-Restoring Division Algorithm for unsigned number
+• Step-1: 
+Initialize registers
+ 
+ 
+Q = Dividend, M = Divisor, A = 0, n = number of bits in dividend
+• Step-2: 
+If sign bit of register A is 1 then shift left content of AQ and A=A+M,
+ 
+ 
+otherwise shift left content of AQ and A=A-M (means add 2's complement of M to A 
+ 
+and store it to A)
+• Step-3: 
+If sign bit of register A is 1
+ 
+ 
+ 
+then least significant bit of Q, i.e. Q[0]=0
+ 
+ 
+ 
+otherwise Q[0]=1
+• Step-4: 
+The value of counter n is decremented by 1
+• Step-5: 
+If value of n becomes 0 then goto next step otherwise repeat from step-2
+• Step-6: 
+If sign bit of register A is 1
+ 
+ 
+ 
+then A=A+M
+• Step-7: 
+Now register Q contains Quotient value and A contains Remainder value
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+59
+Binary Division
+❑Non-Restoring Division Algorithm for unsigned number: Divide 11 by 3
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+60
+n
+M
+A
+Q
+Operation
+4
+00011
+00000
+1011
+initialize
+4
+00011
+00001
+011_
+shift left AQ
+11110
+011_
+A=A-M
+11110
+0110
+Q[0]=0
+3
+00011
+11100
+110_
+shift left AQ
+11111
+110_
+A=A+M
+11111
+1100
+Q[0]=0
+2
+00011
+11111
+100_
+shift left AQ
+00010
+100_
+A=A+M
+00010
+1001
+Q[0]=1
+1
+00011
+00101
+001_
+shift left AQ
+00010
+001_
+A=A-M
+00010
+0011
+Q[0]=1
+Result:
+Quotient in register Q =3 
+Remainder in register A=2
+Binary Division
+❑Non-Restoring Division Algorithm for unsigned number
+• Example: divide 13 by 4
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+61
+n
+M
+A
+Q
+Operation
+4
+00100
+00000
+1101
+initialize
+4
+00100
+00001
+101_
+shift left AQ
+11101
+101_
+A=A-M
+11101
+1010
+Q[0]=0
+3
+00100
+11011
+010_
+shift left AQ
+11111
+010_
+A=A+M
+11111
+0100
+Q[0]=0
+2
+00100
+11110
+100_
+shift left AQ
+00010
+100_
+A=A+M
+00010
+1001
+Q[0]=1
+1
+00100
+00101
+001_
+shift left AQ
+00001
+001_
+A=A-M
+00001
+0011
+Q[0]=1
+Result:
+Register Q = 3 (quotient)
+Register A = 1(remainder)
+Design Examples
+❑Design an adder or subtractor circuit with one selection variable ‘K’ and two inputs X and Y. 
+When K=0 the circuit performs X+Y. When K=1, the circuit performs X-Y by taking 2’s 
+complement of Y?
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+62
+Design Examples
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+63
+Binary Division
+❑Design an 1-bit ALU that performs AND, OR logic operations and ADD, SUB arithmetic 
+operations  
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+64
+M1
+M0
+Operation
+0
+0
+ADD
+0
+1
+SUB
+1
+0
+AND
+1
+1
+OR
+Binary Division
+❑Design a combinational circuit which perform operations given in the table:  
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+65
+S1
+S0
+Output
+Operation
+0
+0
+F=A AND B
+Logical AND
+0
+1
+F=A OR B
+Logical OR
+1
+0
+F= A XOR B
+Logical EX-OR
+1
+1
+F= complement A
+Inverting a bit
+Control Unit
+• Reference: 
+• Chapter 15: Control Unit Operation
+William Stallings, “COMPUTER ORGANIZATION AND ARCHITECTURE DESIGNING FOR PERFORMANCE”, 
+EIGHTH EDITION
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+66
+Control Unit
+❑Introduction
+• A CPU is the most important component of a computer system. 
+• A control unit is a part of the CPU. 
+• A control unit controls the operations of all parts of the computer, but it does not carry out any 
+data processing operations.
+• The execution of an instruction involves the execution of a sequence of substeps, generally 
+called cycles. 
+• Example: an execution may consist of fetch, indirect, execute, and interrupt cycles. 
+• Each cycle is in turn made up of a sequence of more fundamental operations, called micro-
+operations.
+• A single micro-operation generally involves:
+o a transfer between registers
+o a transfer between a register and an external bus, or 
+o a simple ALU operation.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+67
+Control Unit
+❑Introduction
+• The control unit of a processor performs two tasks: 
+1. It causes the processor to step through a series of micro-operations in the proper 
+sequence, based on the program being executed, and
+2. it generates the control signals that cause each micro-operation to be executed..
+• The control signals generated by the control unit cause the opening and closing of logic gates, 
+resulting in the transfer of data to and from registers and the operation of the ALU.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+68
+Control Unit
+❑Functions of the Control Unit
+• It coordinates the sequence of data movements into, out of, and between a processor’s many 
+sub-units.
+• It interprets instructions.
+• It controls data flow inside the processor.
+• It receives external instructions or commands to which it converts to sequence of control 
+signals.
+• It controls many execution units(i.e.ALU , data buffers and registers ) contained within a CPU.
+• It also handles multiple tasks, such as fetching, decoding, execution handling and storing 
+results.
+The control unit of a CPU fetches and executes instructions, playing a critical role in system 
+performance. Its design ensures smooth operation of various components.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+69
+Control Unit
+❑Micro-operations 
+• The operation of a computer, in executing a program, consists of a sequence of instruction 
+cycles, with one machine instruction per cycle
+• Each instruction cycle is made up of a number of smaller units. 
+• One subdivision is fetch, indirect, execute, and interrupt, with only fetch and execute cycles 
+always occurring.
+• Each of the smaller cycles involves a series of steps known as Micro-operations
+• Micro-operations are the functional, or atomic, operations of a processor
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+70
+Control Unit
+❑Micro-operation – Example -The Fetch Cycle
+• Occurs at the beginning of each instruction cycle and causes an instruction to be fetched from 
+memory
+• Four registers are involved:
+o Memory address register (MAR): connected to the address lines of the system bus. It 
+specifies the address in memory for a read or write operation.
+o Memory buffer register (MBR): connected to the data lines of the system bus. It contains 
+the value to be stored in memory or the last value read from memory.
+o Program counter (PC): Holds the address of the next instruction to be fetched.
+o Instruction register (IR): Holds the last instruction fetched.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+71
+Control Unit
+❑Micro-operation – Example -The Fetch Cycle
+• At beginning: the address of the next 
+instruction to be executed is in the program 
+counter (PC)
+• First step: move that address to the memory 
+address register (MAR) because this is the only 
+register connected to the address lines of the 
+system bus.
+• Second step: bring in the instruction
+• The desired address (in the MAR) is placed on 
+the address bus, the control unit issues a READ 
+command on the control bus, and the result 
+appears on the data bus and is copied into the 
+memory buffer register (MBR).
+• Third step: move the contents of the MBR to 
+the instruction register (IR).This frees up the 
+MBR for use during a possible indirect cycle.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+72
+Control Unit
+❑Micro-operation – Example -The Fetch Cycle
+• Each clock pulse defines a time unit. 
+• All time units are of equal duration. 
+• Each micro-operation can be performed within the time of a single time unit.
+• The notation(t1, t2, t3) represents successive time units.
+• Symbolical representation of sequence of events as follows:
+• micro-operation could have been grouped without affecting the fetch operation:
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+73
+Control Unit
+❑Micro-operation – 
+• The Indirect Cycle
+• The address field of the instruction is transferred to the MAR. This is then used to fetch the 
+address of the operand. Finally, the address field of the IR is updated from the MBR
+• The Interrupt Cycle
+• In the first step, the contents of the PC are transferred to the MBR, so that they can be saved 
+for return from the interrupt. Then the MAR is loaded with the address at which the contents 
+of the PC are to be saved, and the PC is loaded with the address of the start of the interrupt-
+processing routine.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+74
+Control Unit
+❑Micro-operation
+• The Execute Cycle
+• The fetch, indirect, and interrupt cycles are simple and predictable. 
+• Each involves a small, fixed sequence of micro-operations and, in each case, the same micro-
+operations are repeated each time around.
+• This is not true of the execute cycle. 
+• Because of the variety opcodes, there are a number of different sequences of micro-
+operations that can occur.
+• Examples:              ADD R1, X                                                                  ISZ X
+                       (add memory content X to R1)                              (increment and skip if zero)
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+75
+Control Unit
+❑Micro-operation
+• The Instruction Cycle
+• 2-bit register called the instruction cycle code (ICC) designates the state of the processor in 
+terms of which portion of the cycle it is in:
+00: Fetch
+01: Indirect
+10: Execute
+11: Interrupt
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+76
+Control of the processor
+❑Functional Requirements
+• The decomposing of behavior or functioning of the processor into elementary operations, 
+called micro-operations.
+• By reducing the operation of the processor to its most fundamental level, we are able to define 
+exactly what it is that the control unit must cause to happen.
+• Thus, we can define the functional requirements for the control unit: those functions that the 
+control unit must perform. 
+• A definition of these functional requirements is the basis for the design and implementation of 
+the control unit.
+• The following three-step process leads to a characterization of the control unit:
+1. Define the basic elements of the processor.
+2. Describe the micro-operations that the processor performs.
+3. Determine the functions that the control unit must perform to cause the micro-operations to be 
+performed.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+77
+Control of the processor
+❑Basic functional elements of the processor
+• ALU: the functional essence of the computer
+• Registers: 
+o used to store data internal to the processor. 
+o Some registers contain status information needed to manage instruction sequencing (e.g., 
+a program status word). 
+o Others contain data that go to or come from the ALU, memory, and I/O modules
+• Internal data paths: used to move data between registers, between register and ALU
+• External data paths: links registers to memory and I/O modules, often by means of a system 
+bus.
+• Control unit: causes operations to happen within the processor.
+• The execution of a program consists of operations involving these processor elements.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+78
+Control of the processor
+❑micro-operations that the processor performs
+• All micro-operations fall into one of the following categories:
+o Transfer data from one register to another.
+o Transfer data from a register to an external interface (e.g., system bus).
+o Transfer data from an external interface to a register.
+o Perform an arithmetic or logic operation, using registers for input and output
+• All of the micro-operations to execute every instruction in the instruction set, fall into one of 
+these categories
+• The control unit performs two basic tasks:
+o Sequencing: The control unit causes the processor to step through a series of micro-
+operations in the proper sequence, based on the program being executed.
+o Execution: The control unit causes each micro-operation to be performed.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+79
+Control Unit
+❑Control signals
+• External specifications of the control unit: Control unit to perform its function, it must have 
+inputs that allow it to determine the state of the system and outputs that allow it to control the 
+behavior of the system.
+• Internal specifications of the control unit: the control unit must have the logic required to 
+perform its sequencing and execution functions.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+80
+Control Unit
+❑Control signals
+• The inputs are
+o Clock: This is how the control unit “keeps time.” The 
+control unit causes one micro-operation to be performed 
+for each clock pulse.
+o Instruction register: The opcode and addressing mode of 
+the current instruction are used to determine which 
+micro-operations to perform during the execute cycle.
+o Flags: These are needed to determine the status of the 
+processor and the outcome of previous ALU operations. 
+o Control signals from control bus: The control bus portion 
+of the system bus provides signals to the control unit. 
+• The outputs are as follows:
+o Control signals within the processor: These are two 
+types: 
+✓those that cause data to be moved from one register to 
+another, and 
+✓those that activate specific ALU functions.
+o Control signals to control bus: These are also of two 
+types: 
+✓control signals to memory, and 
+✓control signals to the I/O modules.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+81
+Control Unit
+❑Types of control signals
+• Three types of control signals are used: 
+1. Signals that activate an ALU function,
+2. Signal that activate a data path, and 
+3. Signals that are on the external system bus or other external interface.
+• All of these signals are ultimately applied directly as binary inputs to individual logic 
+gates.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+82
+Control Unit
+❑Example: Fetch Cycle:  
+• First step: To transfer the contents of the PC to the MAR. The control unit does this by 
+activating the control signal that opens the gates between the bits of the PC and the bits of the 
+MAR. 
+• Second step: To read a word from memory into the MBR and increment the PC. The control 
+unit does this by sending the following control signals simultaneously:
+✓A control signal that opens gates, allowing the contents of the MAR onto the address bus
+✓A memory read control signal on the control bus
+✓A control signal that opens the gates, allowing the contents of the data bus to be stored in 
+the MBR
+✓Control signals to logic that add 1 to the contents of the PC and store the result back to the 
+PC
+• Following this, the control unit sends a control signal that opens gates between the MBR and 
+the IR.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+83
+Control Unit
+❑Data Paths and Control Signals
+• Example: simple processor with a single accumulator
+• The control unit receives inputs from the clock, the instruction register, and flags.
+• With each clock cycle, the control unit reads all of its inputs and emits a set of control signals. 
+• Control signals go to three separate destinations:
+• Data paths: The control unit controls the internal flow of data.
+• ALU: The control unit controls the operation of the ALU by a set of control signals.
+• System bus: The control unit sends control signals out onto the control lines of the system bus (e.g., 
+memory READ).
+• The control unit must maintain knowledge of where it is in the instruction cycle. 
+• Using this knowledge, and by reading all of its inputs, the control unit emits a sequence of 
+control signals that causes micro-operations to occur. 
+• It uses the clock pulses to time the sequence of events, allowing time between events for 
+signal levels to stabilize.
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+84
+Control Unit
+❑Data Paths and Control Signals
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+85
+Control Unit
+❑Micro-operations and Control Signals
+Dr. Bore Gowda S B, Additional Professor, Dept. of ECE, MIT, Manipal
+86

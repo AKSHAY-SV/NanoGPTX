@@ -1,0 +1,185 @@
+Thursday, April 10, 2025
+1
+POSD (Dr. Bhaskar Awadhiya)
+Metal Semiconductor Junction
+Basics of Schottky Diode
+Thursday, April 10, 2025
+2
+POSD (Dr. Bhaskar Awadhiya)
+➢
+It is a metal-semiconductor diode, also called a point contact diode.
+➢
+The ideal energy-band diagram for a particular metal and n-type semiconductor 
+before making contact is shown.
+The parameter ϕm is the metal work function (measured in volts), ϕs is the semiconductor 
+work function, and χ is known as the electron affinity 
+(a) Energy-band diagram of a metal and semi-conductor before contact; (b) ideal energy-band diagram of a metal–n-
+semiconductor junction for ϕm > ϕs
+Basics of Schottky Diode
+Thursday, April 10, 2025
+3
+POSD (Dr. Bhaskar Awadhiya)
+➢
+Before contact, the Fermi level in the semiconductor was above that in the metal. 
+➢
+In order for the Fermi level to become a constant through the system in thermal 
+equilibrium, electrons from the semiconductor flow into the lower energy states in 
+the metal. 
+➢
+Positively charged donor atoms remain in the semiconductor, creating a space charge 
+region.
+➢
+The parameter ϕB0 is the ideal barrier height of the semiconductor contact, the
+potential barrier seen by electrons in the metal trying to move into the semiconductor.
+This barrier is known as the Schottky barrier.
+➢
+This barrier is known as the Schottky barrier
+➢
+On the semiconductor side, Vbi is the built-in potential barrier. This barrier, similar to 
+the case of the pn junction, is the barrier seen by electrons in the conduction band 
+trying to move into the metal. The built-in potential barrier is given by
+Basics of Schottky Diode
+Thursday, April 10, 2025
+4
+POSD (Dr. Bhaskar Awadhiya)
+Basics of Schottky Diode
+Thursday, April 10, 2025
+5
+POSD (Dr. Bhaskar Awadhiya)
+➢
+If we apply a positive voltage to the semiconductor with respect to the metal, the
+semiconductor-to-metal barrier height increases, while ϕB0 remains constant in this
+idealized case. This bias condition is the reverse bias.
+➢
+If a positive voltage is applied to the metal with respect to the semiconductor, the 
+semiconductor-to-metal barrier Vbi is reduced.
+➢
+In this situation, electrons can more easily flow from the semiconductor into the 
+metal since the barrier has been reduced. This bias condition is the forward bias. 
+Basics of Schottky Diode
+Thursday, April 10, 2025
+6
+POSD (Dr. Bhaskar Awadhiya)
+➢
+The current mechanism here, however, is due to the flow of majority
+carrier electrons.
+➢
+In forward bias, the barrier seen by the electrons in the semiconductor is reduced, so 
+majority 
+carrier 
+electrons 
+flow 
+more 
+easily 
+from 
+the 
+semiconductor
+into the metal.
+➢
+The forward-bias current is in the direction from metal to semiconductor: It is an 
+exponential function of the forward-bias voltage Va .
+➢
+The electric field can then be written as
+➢
+Electric field is a linear function of distance, for the uniformly doped semiconductor, 
+and reaches a peak value at the metal–semiconductor interface i.e. at x=0.
+➢
+The space charge region width, W, may be calculated as
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+7
+Basics of Schottky Diode
+Thursday, April 10, 2025
+8
+POSD (Dr. Bhaskar Awadhiya)
+Thursday, April 10, 2025
+9
+POSD (Dr. Bhaskar Awadhiya)
+Prob: Calculate the semiconductor doping concentration and Schottky barrier height for W-Si 
+diode. Assume T=300K
+Thursday, April 10, 2025
+10
+POSD (Dr. Bhaskar Awadhiya)
+Prob: A Schottky diode with n-type GaAs at T=300 K yields the following plot, where C’ is the 
+capacitance per cm2. Determine (a) Vbi, (b) Nd(c) ϕn, and (d) ϕB0.
+Comparison of the Schottky Barrier Diode and the p-n Junction Diode 
+ 
+Thursday, April 10, 2025
+11
+POSD (Dr. Bhaskar Awadhiya)
+➢The current in a p-n junction is determined by the diffusion of minority carriers while the 
+current in a Schottky barrier diode is determined by the thermionic emission of majority 
+carriers over a potential barrier.
+➢Reverse saturation current in the Schottky diode is higher as compared to normal p-n 
+junction diode.
+➢The effective turn-on voltage of the Schottky diode is less than that of the p-n junction 
+diode. 
+➢The Schottky barrier diode, is a majority carrier 
+device.
+➢When switching a Schottky diode from forward to 
+reverse bias, there is no minority carrier stored charge 
+to remove, as is the case in the p-n junction diode. 
+Since there is no minority carrier storage time,
+the Schottky diodes can be used in fast-switching 
+applications 
+➢A typical switching time for a Schottky diode is in the 
+picosecond range, while for a p-n junction it is 
+normally in the nanosecond range. 
+N-type Semiconductor (ϕm > ϕs) 
+ 
+Schottky and Ohmic Contact
+Thursday, April 10, 2025
+12
+POSD (Dr. Bhaskar Awadhiya)
+(a) Energy-band diagram of a metal and semi-conductor before contact; (b) ideal energy-band diagram of a metal–n-
+semiconductor junction for ϕm > ϕs 
+➢To achieve thermal equilibrium in this junction, electrons flow from the semiconductor into 
+the lower energy states in the metal, which makes the surface of the semiconductor less n-
+type. 
+➢If a positive voltage is applied to the metal with respect to the semiconductor, electrons can 
+easily flow from the semiconductor into the metal since the barrier has been reduced
+➢If positive voltage to the semiconductor with respect to the metal, the semiconductor-to-metal 
+barrier height increases
+Schottky Contact
+N-type Semiconductor (ϕs > ϕm)
+ 
+Schottky and Ohmic Contact
+Thursday, April 10, 2025
+13
+POSD (Dr. Bhaskar Awadhiya)
+(a) Energy-band diagram of a metal and semi-conductor before contact; (b) ideal energy-band diagram of a metal–n-
+semiconductor junction for ϕs > ϕm 
+➢To achieve thermal equilibrium in this junction, electrons flow from the metal into the lower 
+energy states in the semiconductor, which makes the surface of the semiconductor more n-
+type. 
+➢If a positive voltage is applied to the metal, there is no barrier to electrons flowing from the 
+semiconductor into the metal. 
+➢If a positive voltage is applied to the semiconductor, the effective barrier height for electrons 
+flowing from the metal into the semiconductor will be small and, electrons can easily flow 
+from the metal into the semiconductor. 
+Ohmic Contact
+Schottky and Ohmic Contact
+Thursday, April 10, 2025
+14
+POSD (Dr. Bhaskar Awadhiya)
+Semiconductor
+Work Function
+Contact
+N-Type
+ϕm > ϕs
+Schottky
+ϕm < ϕs
+Ohmic
+P-Type
+ϕm > ϕs
+Ohmic
+ϕm < ϕs
+Schottky
+FISAC ASSIGNMENT: MESFET AND JFET
+Thursday, April 10, 2025
+15
+POSD (Dr. Bhaskar Awadhiya)
+FISAC ASSIGNMENT: MESFET AND JFET
+Thursday, April 10, 2025
+16
+POSD (Dr. Bhaskar Awadhiya)

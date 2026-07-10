@@ -1,0 +1,28 @@
+Goertzel Algorithm
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Inverse FFT
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+IDFT using DIT-FFT algorithm
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+IDFT using DIF-FFT algorithm
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+IDFT using DIF-FFT algorithm
+Linear filtering approach to computation of DFT
+• Geortzel Algorithm
+• Exploits the periodicity of the phase factors 𝑊𝑁
+𝑘
+• DFT is computed as a linear convolution operation
+We know that 𝑊𝑁
+−𝑁𝑘= 1. We multiply this to DFT expression and we get
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+12
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+13
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+14

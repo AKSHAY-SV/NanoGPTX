@@ -1,0 +1,100 @@
+Efficient Computation of the 
+DFT: Fast Fourier Transform 
+Algorithms
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+DFT plays an important role in many applications of Digital Signal Processing
+•
+Linear Filtering
+•
+Correlation Analysis
+•
+Spectrum analysis
+Efficient algorithms are available for DFT computation
+Complexity in Direct computation of DFT:
+Each DFT point direct computation of X(k) involves 
+•
+N complex multiplications (4N real multiplications)
+•
+N-1 complex additions (4N-2 real additions)
+•
+To compute All N points of the DFT we require 𝑵𝟐 complex 
+multiplications and 𝑵𝟐−𝑵 complex additions
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+3
+Two approaches for efficient computation:
+1. Divide and Conquer approach (for composite N)
+ Decomposition of an N-point DFT into successively smaller DFTs
+Decimation In Time FFT (DITFFT) Algorithm
+Decimation In Frequency (DIFFFT) Algorithm
+2. Formulation of the DFT as a linear filtering operation on the data
+Goertzel Algorithm
+Chirp-z Transform
+Radix-2 FFT Algorithms
+Decimation In Time FFT (DITFFT) Algorithm
+• Decompose the computation into successively smaller DFT computations.
+• We exploit both the symmetry and periodicity property of the complex exponential 𝑊𝑁
+𝑛𝑘= 𝑒−𝑗2𝜋
+𝑁𝑛𝑘
+• In this algorithm the decomposition is based on the sequence 𝑥(𝑛) into successively smaller 
+subsequences
+N-point DFT
+N/2 point  
+DFT
+N/2 point  
+DFT
+N/4 
+Point 
+DFT
+N/4 
+Point 
+DFT
+N/4 
+Point 
+DFT
+N/4 
+Point 
+DFT
+N/4 
+Point 
+DFT
+𝑥0
+𝑥4
+𝑥2
+𝑥6
+𝑥3
+𝑥7
+𝑥5
+𝑥1
+X 0
+X 1
+X 2
+𝑋3
+X 6
+X 7
+X 5
+X 4
+𝑥0
+𝑥4
+𝑥2
+𝑥6
+𝑥3
+𝑥7
+𝑥5
+𝑥1
+X 0
+X 1
+X 2
+𝑋3
+X 6
+X 7
+X 5
+X 4
+Adder
+Multiplier
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+12

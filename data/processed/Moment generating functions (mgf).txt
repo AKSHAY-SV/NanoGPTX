@@ -1,0 +1,558 @@
+Moment generating functions (mgf)  
+Reference: 1. Meyer PL. Introductory probability and statistical applications. Oxford and IBH Publishing; 1965. 
+                    2. Johnson, Richard A., Irwin Miller, and John E. Freund. "Probability and statistics for engineers." (2000). 
+ 
+ 
+ 
+NOTE: 
+1. 𝐸(𝑋) is coefficient of t In 𝑀𝑋(𝑡). 
+2. 𝐸(𝑋2) is coefficient of 
+𝑡2
+2! In 𝑀𝑋(𝑡). 
+3. 𝐸(𝑋𝑛) is coefficient of 
+𝑡𝑛
+𝑛! In 𝑀𝑋(𝑡). 
+4. 𝐸(𝑋𝑛) = 𝑀𝑋
+𝑛(0) 
+ 
+ 
+Example: 
+1. Suppose that X has pdf 𝑓(𝑥) =
+𝑒−|𝑥|
+2 , −∞< 𝑥< ∞ then find E(X) and V(X) using mgf. 
+Solution: 
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 
+∞
+−∞
+𝑓(𝑥) 𝑑𝑥 
+= ∫
+𝑒𝑡𝑥 
+∞
+−∞
+𝑒−|𝑥|
+2 𝑑𝑥 
+= ∫
+𝑒𝑡𝑥 
+0
+−∞
+𝑒𝑥
+2 𝑑𝑥 + ∫
+𝑒𝑡𝑥 
+∞
+0
+𝑒− 𝑥
+2 𝑑𝑥= ∫
+𝑒(1+𝑡)𝑥
+2
+0
+−∞
+ 𝑑𝑥 + ∫
+𝑒−(1−𝑡)𝑥
+2
+ 
+∞
+0
+𝑑𝑥 
+ 
+𝑀𝑋(𝑡) =
+1
+1−𝑡2, -1< t <1 
+𝑀𝑋
+1(0) = 0 
+𝑀𝑋
+2(0) = 2 
+E(X)= 0 and V(X)=2. 
+Or:  𝑀𝑋(𝑡) =
+1
+1−𝑡2 = 1 + 𝑡2 + 𝑡4 + 𝑡6 + ⋯= 1 +
+2𝑡2
+2 + 𝑡4 + 𝑡6 + ⋯ 
+Cofficient of “t” E(X)= 0. Cofficient of “
+𝑡2
+2 ” V(X)= 2-0=2 
+2. Let X be a random variable taking the values 0,1,2,… and 𝑓(𝑥) = 𝑎𝑏𝑥, 𝑎, 𝑏> 0 & a+b=1. Find mgf 
+of X. If 𝐸(𝑋) = 𝑚1, 𝐸(𝑋2) = 𝑚2 then S.T 𝑚2=𝑚1(2𝑚1 + 1).  
+Solution: 
+𝑀𝑋(𝑡) = ∑
+𝑎𝑏𝑥
+∞
+0
+𝑒𝑡𝑥= 𝑎∑(𝑏𝑒𝑡)𝑥
+∞
+0
+= a 
+1
+1−𝑏𝑒𝑡= 
+𝑎
+1−𝑏𝑒𝑡 
+𝐸(𝑋) = 𝑀𝑋
+1(0) =
+𝑎𝑏
+(1 −𝑏)2 
+𝐸(𝑋2) = 𝑀𝑋
+2(0) = (1 + 𝑏)𝑎𝑏
+(1 −𝑏)3 
+Given,  
+𝐸(𝑋) = 𝑚1, 𝐸(𝑋2) = 𝑚2 
+To Prove, 𝑚2=𝑚1(2𝑚1 + 1). 
+Consider, 𝑚1(2𝑚1 + 1) = 
+𝑎𝑏
+(1−𝑏)2 (2
+𝑎𝑏
+(1−𝑏)2 + 1) = 
+𝑎𝑏
+(1−𝑏)2 (
+2𝑎𝑏+1+𝑏2−2𝑏
+(1−𝑏)2
+) 
+     = 
+𝑎𝑏
+(1−𝑏)4 (2𝑏(𝑎−1) + 1 + 𝑏2)= = 
+𝑎𝑏
+(1−𝑏)4 (2𝑏(−𝑏) + 1 + 𝑏2)= 𝑚2. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Moment generating function for Gamma Distribution 
+ 
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 
+∞
+−∞
+𝑓(𝑥) 𝑑𝑥=
+𝛼𝑟
+Γ(𝑟) ∫
+𝑒−(𝛼−𝑡)𝑥 
+∞
+0
+ 𝑥𝑟−1 𝑑𝑥 
+Substitute, 𝑥(𝛼−𝑡) = 𝑣 then 𝑑𝑥=
+𝑑𝑣
+𝛼−𝑡 
+𝑀𝑋(𝑡) =
+𝛼𝑟
+Γ(𝑟) ∫
+𝑒−𝑣 
+∞
+0
+ (
+𝑣
+𝛼−𝑡)
+𝑟−1 𝑑𝑣
+𝛼−𝑡 
+= 
+𝛼𝑟
+Γ(𝑟)(𝛼−𝑡)𝑟 ∫
+𝑒−𝑣 
+∞
+0
+ (𝑣)𝑟−1 𝑑𝑣 
+=
+𝛼𝑟
+Γ(𝑟)(𝛼−𝑡)𝑟Γ(𝑟) = (
+𝛼
+𝛼−𝑡)
+𝑟
+ 
+𝐸(𝑋) = 𝑟
+𝛼 
+𝐸(𝑥2)= 
+𝑟(𝑟+1)
+𝛼2 
+V(X)= 
+𝑟
+𝛼2 
+Moment generating function for Exponential Distribution 
+Note: When we sub r=1 in gamma distribution we get exponential distribution. 
+ 
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 
+∞
+0
+𝑓(𝑥) 𝑑𝑥= 𝜆 ∫
+𝑒−(𝜆−𝑡)𝑥 
+∞
+0
+𝑑𝑥 
+ 
+𝑀𝑋(𝑡) = (
+𝜆
+𝜆−𝑡), 𝑡< 𝜆 
+𝐸(𝑋) = 1
+𝜆 
+𝑉(𝑋) = 1
+𝜆2 
+Or:  
+ 
+Moment generating function for chi square Distribution 
+ 
+ Special case of Gamma distribution: 𝒓=
+𝒏
+𝟐 and 𝜶=
+𝟏
+𝟐 in 𝚪 function we get 𝝌𝟐distribution. 
+A continuous random variable X is said to have a chi-square distribution if its PDF is given by. 
+ 
+ 
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 
+∞
+−∞
+𝑓(𝑥) 𝑑𝑥 
+                                                                                             =
+𝛼𝑟
+Γ(𝑛
+2)2
+𝑛
+2 ∫
+𝑒(𝑡−1
+2)𝑥 
+∞
+−∞
+ 𝑥
+𝑛
+2 −1 𝑑𝑥 
+𝑀𝑋(𝑡) = (1 −2𝑡)−𝑛
+2 
+ 
+𝐸(𝑋) =n and V(X)= 2n 
+Moment generating function for Uniform Distribution 
+𝒇(𝒙) = {
+𝟏
+(𝒃−𝒂)
+𝒂≤𝒙≤𝒃
+𝟎
+𝒆𝒍𝒔𝒆 𝒘𝒉𝒆𝒓𝒆
+ 
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 
+∞
+−∞
+𝑓(𝑥) 𝑑𝑥 
+                                                                          = 
+1
+𝑏−𝑎 ∫
+𝑒𝑡𝑥 
+∞
+−∞
+ 𝑑𝑥 
+     = 
+1
+𝑡(𝑏−𝑎) (𝑒𝑏𝑡−𝑒𝑎𝑡) 
+Expand and get the suitable coefficient in the expanssion to find E(X) and V(X). 
+Mean E(X) = 
+(𝒂+𝒃)
+𝟐
+  
+E(𝑿𝟐) = 
+(𝒂𝟐+ 𝒃𝟐+𝒂𝒃)
+𝟑
+ 
+Variance  V(X) = E(𝑿𝟐) – [𝑬(𝑿)]𝟐  = 
+(𝒃−𝒂)𝟐
+𝟏𝟐 
+ 
+ 
+ 
+By substituting, 𝑣= [
+[𝑥−(𝑡σ2+μ]
+2
+𝜎2
+] 𝑎𝑛𝑑 𝑑𝑥= 𝜎2𝑑𝑣 and ∫
+𝑒−𝑥2𝑑𝑥= Γ(
+1
+2)
+∞
+−∞
+= √𝜋 
+ 
+Solution: 
+ 
+ 
+ 
+Properties of mgf 
+ 
+ 
+ 
+ 
+ 
+Reproductive Properties of mgf 
+ 
+ 
+ 
+ 
+ 
+Problems:  
+1. Find the mgf of random variable X which is uniformly distributed with an interval  
+(-a, a) and hence find 𝐸(𝑋2𝑛). 
+Solution: 𝑋~ 𝑈(−𝑎, 𝑎) = 
+𝑒𝑎𝑡−𝑒−𝑎𝑡
+(𝑎+𝑎)𝑡                
+ 
+we know, 𝑀𝑋(𝑡) = 
+1
+𝑡(𝑏−𝑎) (𝑒𝑏𝑡−𝑒𝑎𝑡)               
+                                = 
+𝑒𝑎𝑡−𝑒−𝑎𝑡
+(2𝑎)𝑡, by expanding 
+𝐸(𝑋2𝑛) = 𝑐𝑜𝑒𝑓𝑓𝑖𝑐𝑖𝑒𝑛𝑡 𝑜𝑓
+𝑡2𝑛
+(2𝑛)! =
+𝑎2𝑛
+(2𝑛+1)  
+ 
+2. If X is normally distributed with mean 𝜇 and variance, 𝜎2 then show that 
+𝐸(𝑋−𝜇)2𝑛= 1.3.5 … . (2𝑛−1)𝜎2𝑛. 
+Solution: Given 𝑋~𝑁(𝜇, 𝜎2), 𝑀𝑋(𝑡) = 𝑒𝜇𝑡+ 𝜎2𝑡2
+2 
+Let Y= (𝑋−𝜇) 
+To get E(𝑌2𝑛)= The coefficient of 
+𝑡2𝑛
+(2𝑛)!  in 𝑀𝑌(𝑡). 
+𝑀𝑌(𝑡) = 𝐸 (𝑒𝑡𝑦)= 𝐸(𝑒𝑡(𝑥−𝜇)) 
+           = 𝐸(𝑒𝑡𝑥)𝐸(𝑒−𝜇𝑡) 
+           = 𝑀𝑋(𝑡) 𝐸(𝑒−𝜇𝑡) 
+𝑀𝑌(𝑡) = 𝑒𝜇𝑡+ 𝜎2𝑡2
+2  𝑒−𝜇𝑡= 𝑒
+𝜎2𝑡2
+2
+= 1 + (
+𝜎2𝑡2
+2 ) +
+1
+2! (
+𝜎2𝑡2
+2 )
+2
++
+1
+3! (
+𝜎2𝑡2
+2 )
+3
++ ⋯  
+E(𝑌2𝑛)= The coefficient of 
+𝑡2𝑛
+(2𝑛)!  in 𝑀𝑌(𝑡)= 
+𝜎2𝑛(2𝑛)!
+2𝑛𝑛! = 
+(2𝑛)!
+2𝑛𝑛! * 𝜎2𝑛 
+= 
+(2𝑛)(2𝑛−1)(2𝑛−2)…(3)(2)(1)
+(2𝑛)(2𝑛−2)(2𝑛−4)…(6)(4)(2) * 𝜎2𝑛 
+= 1.3.5 … . (2𝑛−1)𝜎2𝑛. 
+ 
+3. Let 𝑋1~𝜒2(3), 𝑋2~𝜒2(5) and Z= 𝑋1 + 𝑋2 where 𝑋1 𝑎𝑛𝑑 𝑋2 𝑖𝑛𝑑𝑒𝑝𝑒𝑛𝑑𝑒𝑛𝑡 random 
+variables. Find 𝑀𝑍(𝑡) and 𝑉(𝑍) 𝑎𝑛𝑑 𝑝𝑑𝑓 𝑜𝑓 𝑍. 
+Solution: 
+𝑋1~𝜒2(3) gives 𝑀𝑋1 (𝑡) = (1 −2𝑡) − 3
+2  
+𝑋2~𝜒2(5) gives 𝑀𝑋2 (𝑡) = (1 −2𝑡) – 5
+2  
+𝑀𝑍(𝑡) = 𝑀𝑋1 (𝑡)𝑀𝑋2 (𝑡) =  (1 −2𝑡) − 8
+2~𝜒2(8) 
+Therefore, 𝑉(𝑍) = 2𝑛= 2 (8) = 16. Where 𝑛= 8. 
+ 
+f(Z)= {
+𝑍
+𝑛
+2−1 𝑒− 𝑍
+ 2  
+2
+𝑛
+2Γ(𝑛/2)
+   ,   𝑍> 0
+0,    𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+=  {
+𝑍3𝑒− 𝑍
+ 2  
+24Γ(4)   ,   𝑍> 0
+0,    𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+     
+4. Let 𝑋1, 𝑋2 𝑎𝑛𝑑 𝑋3 𝑎𝑟𝑒 3 independent random variable having normal distributions 
+with parameter (4, 1), (5,2), (7, 3) respectively. Let 𝑌= 2𝑋1 + 2𝑋2 + 𝑋3. Find the pdf 
+of 𝑉= (
+𝑌−𝜇
+𝜎)
+2
+, where 𝜇 𝑎𝑛𝑑 𝜎 are the mean and standard deviation of Y. 
+Solution: 
+𝑀𝑋(𝑡) = 𝑒𝜇𝑡+ 𝜎2𝑡2
+2 
+𝑌~𝑁(2 ∗4 + 2 ∗5 + 1 ∗7,
+22 ∗1 + 22 ∗2 + 1 ∗3) 
+𝑌~𝑁(25, 15) 
+𝑀𝑌(𝑡) = 𝑒25𝑡+ 15𝑡2
+2 
+We have, 
+ 
+Therefore,𝑉= (
+𝑌−25
+√15 )
+2
+= 𝑍2~𝜒2(1)          
+ 
+ 
+f(V)= {
+𝑒− 𝑣
+ 2     𝑣− 1
+2
+2
+1
+2Γ(1
+2)
+   ,   𝑣> 0
+0,    𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+= {
+𝑒− 𝑣
+ 2     𝑣− 1
+2
+√𝜋  2
+1
+2
+   ,   𝑣> 0
+0,    𝑂𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+ 
+5. If a random variable X has mgf 𝑀𝑋(𝑡) =
+3
+3−𝑡 then find the standard deviation of the 
+random variable X. 
+Solution: 
+ 
+𝑀𝑋(𝑡) =
+3
+3−𝑡= 
+3
+3(1−𝑡
+3)= 
+1
+(1−𝑡
+3)= (1 −
+𝑡
+3)
+−1
+= 1 +
+𝑡
+3 + (
+𝑡
+3)
+2
++ ⋯ 
+𝐸(𝑋) = 𝑐𝑜𝑒𝑓 𝑜𝑓 𝑡 𝑖𝑛 𝑀𝑋(𝑡) = 1
+3 
+𝐸(𝑋2) = 𝑐𝑜𝑒𝑓 𝑜𝑓𝑡2
+2! 𝑖𝑛 𝑀𝑋(𝑡) = 1
+9 2! = 2
+9 
+𝑉(𝑋) = 1
+9 . 𝐻𝑒𝑛𝑐𝑒, 𝜎= 1
+3 
+6. Let X be random variable having probability mass function p(x=k) = p(1 −𝑝)𝑘−1, 
+ 𝑘= 1,2,3 … 𝑛. Find 𝑀𝑋(𝑡) and V(X).  
+Solution: 
+ 𝑀𝑋(𝑡) = ∑𝑒𝑡𝑥𝑝(𝑋= 𝑥) 
+𝑛
+1
+ 
+ 
+ 
+  = ∑𝑒𝑡𝑥p(1 −𝑝)𝑥−1
+𝑛
+1
+ 
+ 
+            =
+𝑝
+𝑝−1 ∑𝑒𝑡𝑥(1 −𝑝)𝑥
+𝑛
+1
+ 
+    
+                       = 
+𝑝
+1−𝑝∑(𝑒𝑡(1 −𝑝))𝑥
+𝑛
+1
+, Expanding  
+              = 
+𝑝
+1 −𝑝 {(𝑒𝑡(1 −𝑝)) + (𝑒𝑡(1 −𝑝))2 + ⋯} 
+            = 
+𝑝
+1−𝑝 (𝑒𝑡(1 −𝑝)){1 + (𝑒𝑡(1 −𝑝)) + (𝑒𝑡(1 −𝑝))2 + ⋯} 
+𝑀𝑋(𝑡) =
+𝑝
+1 −𝑝∗(𝑒𝑡(1 −𝑝)) ∗
+1
+1 −𝑒𝑡(1 −𝑝) = 
+𝑝𝑒𝑡
+1 −𝑒𝑡(1 −𝑝) 
+𝑀𝑋
+1(𝑡) =
+𝑝𝑒𝑡
+[1−𝑒𝑡(1−𝑝)]2,  
+at t=o, E(X)=
+1
+𝑝  
+and  
+𝐸(𝑋2) = 1
+𝑝+ 2(1 −𝑝)
+𝑝2
+ 
+𝑉(𝑋) = 1 −𝑝
+𝑝2 
+7. If X has pdf f(x)= 𝜆𝑒−𝜆(𝑥−𝑎), 𝑋≥𝑎, find the mgf of X and hence find V(X). 
+Ans: Given is an exponential distribution.  
+𝑀𝑋(𝑡) = ∫
+𝑒𝑡𝑥 𝑓(𝑥) 𝑑𝑥
+∞
+−∞
+ 
+= ∫𝑒𝑡𝑥 𝜆𝑒−𝜆(𝑥−𝑎) 𝑑𝑥
+∞
+𝑎
+ 
+= 𝜆∫𝑒𝑡𝑥 𝑒−𝜆(𝑥−𝑎) 𝑑𝑥
+∞
+𝑎
+ 
+= 𝜆𝑒𝜆𝑎∫
+ 𝑒−(𝜆−𝑡)𝑥 𝑑𝑥
+∞
+𝑎
+ 
+= 𝜆𝑒𝜆𝑎 𝑒−(𝜆−𝑡)𝑥
+−(𝜆−𝑡) 
+= 𝜆𝑒𝜆𝑎 
+𝑒−(𝜆−𝑡)𝑎
+(𝜆−𝑡) = 
+𝜆𝑒𝑎𝑡
+𝜆−𝑡, 𝜆> 𝑡 
+ E(X)= 𝑎+
+1
+𝜆 and V(X)= 
+1
+𝜆2 
+8. If the mgf of discrete random variable is 𝑒4(𝑒𝑡−1) then find P(𝑋= 𝜇+ 𝜎) where 𝜇 and 
+𝜎 are the mean and S.D of X. 
+Solution:                                           𝑀𝑋(𝑡) = 𝑒4(𝑒𝑡−1) 
+𝑋~𝑝(𝛼) where 𝛼= 4  
+Therefore E(X)= V(X)= 4,  
+Which gives 𝜇= 4 𝑎𝑛𝑑 𝜎= 2.  
+P(X=k)= 
+𝑒−𝛼 𝛼𝑘
+𝑘!
+, k= 0,1,2,….,n 
+For, 𝛼= 4, 
+P(X=k)= 
+𝑒−4 4𝑘
+𝑘! 
+To find P(𝑋= 𝜇+ 𝜎)= P(𝑋= 6)= 
+𝑒−4 46
+6! = 0.1042. 
