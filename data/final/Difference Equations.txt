@@ -1,0 +1,643 @@
+DIFFERENCE EQUATIONS 
+ 
+Many problems in Probability give rise to difference equations. Difference equations relate to 
+differential equations as discrete mathematics relates to continuous mathematics. Anyone 
+who has made a study of differential equations will know that even supposedly elementary 
+examples can be hard to solve. By contrast, elementary difference equations are relatively 
+easy to deal with. 
+Aside from Probability, Computer Scientists take an interest in difference equations for a 
+number of reasons. For example, difference equations frequently arise when determining the 
+cost of an algorithm in big-O notation. Since difference equations are readily handled by 
+program, a standard approach to solving a nasty differential equation is to convert it to an 
+approximately equivalent difference equation. 
+ 
+Recall: 
+Given a set of values 
+(x0, y0), (x1, y1),…,(xn, yn) 
+satisfying y = f(x), with 
+xi = x0 + ih, h > 0, i = 1, 2, …,n. 
+the differences 
+y1 – y0, y2 – y1,…,yn – yn-1 
+are called first order forward differences of y and are respectively denoted by 
+0
+1
+2
+,
+,
+,...,
+n
+y
+y
+y
+y
+
+
+
+
+. We call ‘’, the forward difference operator. The differences of the first 
+order forward differences are called second order forward differences and are denoted by
+2
+2
+2
+2
+0
+1
+2
+1
+, 
+, 
+, ... , 
+n
+y
+y
+y
+y 
+
+
+
+
+. Thus 
+2y0= y1  y0 = y2 – 2y1 + y0, 2y1= y2  y1 = y3 – 2y2 + y1 
+and so on. Similarly, one can define the rth order forward differences recursively as, 
+ 
+-1
+-1
+1
+ 
+r
+r
+r
+k
+k
+k
+y
+y
+y
+
+
+
+
+, r = 1, 2, … 
+Shift Operator: 
+The shift operator, denoted by E, is defined by the equation 
+Eyk = yk+1. 
+The operator shifts the functional value yk to the next higher value yk+1. 
+Again operating by E, we get 
+E2yk = E(Eyk) = E(yk+1) = yk+2. 
+In general 
+Eryk = yk + r. 
+ 
+Definition: A difference equation is a relation between the differences of an unknown 
+function at one or more general values of the argument. 
+Examples: 
+ yn+1 + yn = 2 ……. (1) 
+ yn+1 + 2yn-1 = 1 ………… (2) 
+Since yn+1 = yn+2 – yn+1, 2yn-1 = yn+1 – 2yn + yn-1, (1) and (2) can be written as 
+yn+2- yn+1 + yn = 2 ………….. (3) 
+yn+2 – 2yn + yn-1 = 1 ……… (4) 
+ 
+Order of a Difference Equation is the difference between the largest and the smallest 
+arguments occurring in the difference equation divided by the unit of increment. 
+For example, 
+ (3) above is the second order, for 
+largest argument −smallest argument
+unit of increment
+=
+(n + 2) −n
+1
+= 2 
+and (4) is of the third order, for 
+ 
+(𝑛+2)−(𝑛−1)
+1
+= 3 
+ 
+Note: While finding the order of a difference equation, it must always be expressed in a form 
+free of the operator . 
+ 
+Solution of a difference equation is an expression for yn which satisfies the given difference 
+equation. 
+The general solution of a difference equation is that in which the number of arbitrary 
+constants is equal to the order of the difference equation. 
+A particular solution or particular integral is that solution which is obtained from the 
+general solution by giving particular values to the constants. 
+ 
+Formation of Difference Equations: 
+Example 1:- From the difference equation corresponding to the family of curves y = ax + bx2 
+Solution: We have 
+y = ax + bx2 ….(i) 
+y = a(x) + b(x2) = a(x + 1- x) + b[(x + 1)2 – x2] 
+ = a + b(2x + 1) …….. (ii) 
+ 2y = 2b[(x + 1) - x] = 2b …….. (iii) 
+To eliminate a and b, we have 
+from (iii), b = ½ 2y 
+and from (ii), a = y – b (2x + 1) = y – ½ 2y (2x + 1) 
+Substituting these values of a and b in (i), we get 
+𝑦= [𝑦−1
+2 2𝑦(2𝑥+ 1)] 𝑥+ 1
+2 2𝑦. 𝑥2 
+Or 
+(x2 + x)2y – 2x y + 2y = 0 
+This is the desired difference equation which can also be written as 
+ (x2 + x)yx+2 – (2x2 + 4x)yx+1 + (x2 + 3x + 2)yx = 0 
+ 
+Example 2: From yn = A2n + b(-3)n, obtain difference equation by eliminating the constants. 
+Solution: 
+We have 
+yn = A . 2n + b(- 3)n, 
+yn+1= 2A .2n – 3b (- 3)n 
+and 
+ 
+yn+2 = 4A . 2n + 9B (-3)n 
+Eliminating A and B, from the above three equations, we get 
+|
+𝑦𝑛
+1
+1
+𝑦𝑛+1
+2
+−3
+𝑦𝑛+2
+4
+9
+| = 0 i.e., yn+2 + yn+1 - 6yn = 0 
+Exercises: 
+1. Find the difference equation satisfied by y = ax2 – bx 
+2. Derive the difference equations in each of the following cases: 
+ i) yn = A.3n + B.5n 
+ii) yx = (a + bx)2x 
+ 
+Linear Difference Equations 
+Definition: A linear difference equation is that in which yn+1, yn+2, etc occur in first degree 
+only and are not multiplied together. 
+A linear difference equation with constant coefficient is of the form 
+yn + r + a1yn + r - 1 + a2yn + r - 2 + …… + aryn = f(n) …………. (1) 
+where a1, a2, …. ar are constants. 
+ 
+If u1(n), u2(n),……. ur(n) are r independent solutions of the equation 
+yn + r + a1y n + r - 1 + …. + aryn = 0 ……….(2) 
+then, its solution is 
+un = c1 u1 (n) + ….. + crur (n) …………….. (3) 
+where c1, c2, …., cr are arbitrary constants. 
+If vn is a particular solution of (1), then the complete solution of(1) is 
+ yn = un + vn. 
+The part un is called the complementary function (CF) and the part vn is called the particular 
+integral (P.I) of (1). 
+Thus the complete solution of (1) is 
+ yn = CF + PI 
+ 
+Rules for finding Complementary Function 
+Consider 
+ yn+r +a1yn+r + …. + aryn = 0 
+ i.e, (Er + a1Er-1 + …+ar)yn = 0 
+The auxiliary equation is 
+ mr + a1mr-1 + … + ar = 0. 
+Let m1, m2, …,mr be the roots. 
+Case 1:- Suppose that all roots are real and distinct. Then the solution is 
+ yn = c1 m1n + c2m2n + …. + crmrn 
+Case 2:- If two roots are real and equal, say m1=m2, and all other roots real and distinct, 
+then 
+ yn = (c1 + c2n)m1n + c3m3n + … + crmrn 
+If m1 = m2 = m3, then 
+ yn = (c1 + c2n+c3n2)m1n + c4m4n + … + crmrn 
+Case 3:- Suppose that two roots are complex, say, m1 =  + i, m2 =  - i 
+then, the solution is 
+ yn = rn (c1 cosn + c2 sinn) + c3 m3n + … + crmrn where r = √α2 + β2,  = sin−1 (
+β
+α) 
+ 
+Example 1: Solve the difference equation un+3 – 2un+2 – 5un+1 + 6un = 0 
+Solution: Given equation in symbolic form is 
+ (E3 – 2E2 – 5E + 6)un = 0 
+ Its auxiliary equation is 
+ m3 – 2m2 – 5m + 6 = 0 
+(m – 1)(m + 2)(m – 3) = 0 
+Roots are 1, - 2, 3. 
+Thus the solution is un = c1(1)n + c2(-2)n + c3(3)n 
+ 
+Example 2:- Solve un+2 – 2un+1 + un = 0 
+Solution: Given equation in symbolic form is (E2 – 2E + 1)un = 0 
+ Its auxiliary equation is m2 – 2m + 1 = 0 Or (E – 1)2 = 0. 
+Roots are 1, 1. 
+Thus the required solution is 
+un = (c1 + c2n)(1)n, i.e. un = c1 + c2n 
+ 
+Example 3:- Solve yn+1 – 2yn cos  + yn-1 = 0 
+Solution:- 
+(E2 – 2E cos  +1)yn-1 = 0 
+ Its auxiliary equation is m2 – 2mcos  + 1 = 0 
+ m = 2 cos α  √4 cos2 α −4
+4
+= cos α ± i sin α 
+Thus the solution is 
+yn-1 = (1)n-1 [c1 cos (n – 1) + c2 sin (n -1)] 
+Or 
+yn = c1 cos n + c2 sin n 
+ 
+Example 4:- The integers 0, 1, 1, 2, 3, 5, 8, 13, 21,…, are said to form a Fibonacci sequence. 
+Form the Fibonacci difference equation and solve it. 
+Solution: In this sequence, each number beyond the second, is the sum of its two previous 
+number. If yn be the nth number, then yn = yn-1 + yn-2 for n > 2. 
+Or 
+yn+2 – yn+1 – yn = 0 (for n > 0) 
+ 
+(E2 – E – 1) yn = 0 is the difference equation. 
+It’s A.E is 
+m2 – m – 1 = 0 which gives m = ½ (1  5) 
+Thus the solution is 
+ yn = c1 (
+1+√5
+2 )
+n
++ c2 (
+1−√5
+2 )
+n
+, for n = 0, 1, 2, 3, 
+ 
+y0 =0 gives c1 + c2 = 0. 
+ 
+y1 = 1 gives 1 = c1
+1+√5
+2
++ c2
+1−√5
+2 
+ 
+Solving we get c1 = 1/5, c2 = -1/5. 
+Hence the solution (or nth Fibonacci number) is 
+ 
+yn =
+1
+√5 (
+1+√5
+2 )
+n
+−
+1
+√5 (
+1−√5
+2 )
+n
+ 
+Exercise: 
+Solve the following difference equations:- 
+1. ux+2 – 4 ux + 1 + 4 ux = 0 given u0 = 1, u1 = 0 
+2. 2 un + 2un + un = 0 
+3. (2 + 3+ 2) yn = 0 
+4. yn+3 – 3 yn+2 + 3yn+1 – yn = 0 
+ 
+ 
+Rules for finding the Particular Integral:- 
+Consider equation 
+yn+r + a1yn+r-1 + … + aryn = f(n), 
+which in symbolic form is 
+ (E) yn = f(n), where (E) = Er + a1Er-1 + …. + ar 
+Then the particular integral is given by P. I. = 
+1
+(E) f(n) 
+Case I:- When f(n) = an 
+P. I. = 
+1
+(E) 𝑎𝑛, 
+ = 
+1
+(a) 𝑎𝑛, provided (a) 0 
+If (a) = 0, then for the equation 
+i) (E – a) yn = 𝑎𝑛, P. I =
+1
+𝐸−𝑎𝑎𝑛= 𝑛𝑎𝑛−1 
+ii) (E – a)2 yn = 𝑎𝑛, P. I =
+1
+(𝐸−𝑎)2 𝑎𝑛=
+𝑛(𝑛−1)
+2!
+𝑎𝑛−2 
+iii) (E – a)3 yn = 𝑎𝑛, P. I =
+1
+(𝐸−𝑎)3 𝑎𝑛=
+𝑛(𝑛−1)(𝑛−2)
+3!
+𝑎𝑛−3 
+and so on 
+ 
+Example 1:- Solve yn+2 – 4yn+1 + 3yn = 5n 
+Solution:- 
+Given equation in symbolic form is (E2 – 4E + 3)yn = 5n 
+ The auxiliary equation is m2 – 4m + 3 = 0 
+Roots are 1, 3 
+ C.F = c1(1)n + c2(3)n = c1 + c2 . 3n 
+And 
+ 
+P. I. = 
+1
+E2 – 4E + 3 5𝑛 [put E = 5] 
+ = 
+1
+25−4.5+3 5𝑛=
+1
+8 . 5𝑛 
+Thus the complete solution is yn = c1 + c2 .3n + 5n/8 
+ 
+Example 2:- Solve un+2 – 4un+1 + 4yn = 2n 
+Solution:- 
+Given equation in symbolic form is (E2 – 4E + 4)un = 2n 
+ The auxiliary equation is m2 – 4m+ 4 = 0 
+  Roots are 2, 2 
+ C.F = (c1 + c2n)2n 
+P. I. = 
+1
+(𝐸−2)2 . 2𝑛 
+ = 𝑛(𝑛−1)
+2!
+. 2𝑛−2 = 𝑛(𝑛−1)2𝑛−3 
+Thus the complete solution is 
+un = (c1 + c2n)2n + n(n – 1) 2n-3 
+ 
+Case II: (i) When f(n) = sinkn 
+ 𝑃. 𝐼=
+1
+(𝐸) 𝑠𝑖𝑛𝑘𝑛 
+ =
+1
+(𝐸) (𝑒𝑖𝑘𝑛−𝑒−𝑖𝑘𝑛
+2𝑖
+) 
+ =
+1
+2𝑖[
+1
+(𝐸) 𝑎𝑛−
+1
+(𝐸) 𝑏𝑛], where a = eik and b = e-ik 
+Now proceed as in case I. 
+(ii) when f(n) = coskn, 
+P. I. = 
+1
+(E) coskn 
+ =
+1
+(E) (eikn + e−ikn
+2
+) 
+ =
+1
+2 [
+1
+(E) an +
+1
+(E) bn], as before. 
+Now proceed as in case I 
+ 
+Example 3:- Solve yn+2 – 2 cos  . yn+1 + yn = cosn 
+Given equation in symbolic form is 
+E2 - 2 cos  . E + 1 = 0 
+ m =
+2 cosα ± √(4 cos2α−4)
+2
+= cosα ± i sin α 
+𝑟= √𝑐𝑜𝑠2+ 𝑠𝑖𝑛2 = 1,  =𝑡𝑎𝑛−1 (
+𝑠𝑖𝑛𝛼
+𝑐𝑜𝑠𝛼) = 𝛼 
+ C.F = (1)n [c1 cosn + c2 sinn] i.e. CF = c1 cos n + c2 sin n 
+ 
+P. I. =
+1
+𝐸2 −2𝐸 𝑐𝑜𝑠𝛼+ 1 cos αn 
+ = 
+1
+𝐸2−𝐸(𝑒𝑖𝛼+𝑒−𝑖𝛼)+1 (
+𝑒𝑖𝑎𝑛+𝑒−𝑖𝑎𝑛
+2
+) 
+ =
+𝟏
+𝟐[
+𝟏
+(𝑬−𝒆𝒊𝜶)(𝑬−𝒆−𝒊𝜶) 𝒆𝒊𝜶𝒏+ 
+𝟏
+(𝑬−𝒆𝒊𝜶)(𝑬−𝒆−𝒊𝜶) 𝒆−𝒊𝜶𝒏] 
+ =
+𝟏
+𝟐[
+𝟏
+(𝑬−𝒆𝒊𝜶) .
+𝟏
+𝒆𝒊𝜶−𝒆−𝒊𝜶𝒆𝒊𝜶𝒏+ 
+𝟏
+𝑬−𝒆−𝒊𝜶.
+𝟏
+𝒆−𝒊𝜶−𝒆𝒊𝜶𝒆−𝒊𝜶𝒏], eiα −e−iα = 2isin 
+ =
+𝟏
+𝟒𝒊𝒔𝒊𝒏𝜶[
+𝟏
+𝑬−𝒆𝒊𝜶𝒆𝒊𝜶𝒏−
+𝟏
+𝑬−𝒆−𝒊𝜶𝒆−𝒊𝜶𝒏] =
+𝟏
+𝟒𝒊𝒔𝒊𝒏𝜶 [𝒏. 𝒆𝒊𝜶(𝒏−𝟏) −𝒏𝒆−𝒊𝜶(𝒏−𝟏)] 
+ =
+𝒏
+𝟐𝒔𝒊𝒏 𝜶[
+𝒆𝒊𝜶(𝒏−𝟏)−𝒆−𝒊𝜶(𝒏−𝟏)
+𝟐𝒊
+] =
+𝒏𝒔𝒊𝒏(𝒏−𝟏)𝜶
+𝟐𝒔𝒊𝒏𝜶
+ 
+Hence the complete solution is 
+yn = c1 cos n + c2 sin n + 
+𝑛 𝑠𝑖𝑛(𝑛−1)𝛼
+2 𝑠𝑖𝑛𝛼
+ 
+Case III:- when f(n) = np, 
+𝑃. 𝐼=
+1
+(𝐸) 𝑛𝑝=
+1
+(1+) 𝑛𝑝 
+1) Expand [(1 + )]-1 in ascending powers of  by binomial theorem as far as the term in p. 
+2) Write np in the factorial form and operate on it with each term of the expansion. 
+Note: While expanding in ascending powers, the following formulae are useful. 
+1
+1 −z = 1 + z + z2 + z3 + ⋯ 
+1
+(1 −z)2 = 1 + 2z + 3z2 + 4z3 + ⋯ 
+ 
+Factorial Notation: 
+A product of the form x(x-1)(x-2)…(x-r+1) is denoted by [x]r and is called a factorial. 
+Thus 
+ 
+[x] = x 
+ 
+[x]2 = x(x-1) 
+ 
+[x]3 = x(x-1)(x-2) and so on. 
+The operator  is used similar to D, when a polynomial is written in factorial notation. 
+For example 
+ 
+[x] =1 
+ 
+[x]2 = 2[x], 2[x]2 = 2[x]=2 
+ 
+[x]3 = 3[x]2, 2[x]3=6[x], 3[x]3=6. 
+ 
+ 
+Example 4:- Solve yn+2 – 4yn = n2 + n – 1 
+Solution:- 
+Given equation is (E2 – 4)yn = n2 + n – 1 
+The auxiliary equation m2 – 4 = 0,  m =  2 
+C.F = c1 (2)n + c2(- 2)n 
+P. I =
+1
+E2 −4 (n2 + n −1) 
+ =
+1
+(1 + )2 −4 [n(n −1) + 2n −1] 
+ = 
+1
+2+2−3 ([n]2 + 2[n] −1) = −
+1
+3 [1 −(
+2
+3 +
+2
+3 )]
+−1
+{[n]2 + 2[n] −1} 
+ = −
+1
+3 [1 + (
+2
+3 +
+2
+3 ) + (
+2
+3 +
+2
+3 )
+2
++ ⋯] {[n]2 + 2[n] −1} 
+ = −
+1
+3 {1 +
+2
+3 +
+7
+9 2 + ⋯} {[n]2 + 2[n] −1} = −
+1
+3 {[n]2 + 2[n] −1 +
+2
+3 (2[n] + 2) +
+7
+9 × 2} 
+ = −
+1
+3 {[n]2 +
+10
+3 [n] +
+17
+9 } = −
+n2
+3 −
+7
+9 n −
+17
+27 
+Hence the complete solution is 
+yn = −
+𝑛2
+3 −
+7
+9 𝑛−
+17
+27 . 
+ 
+Example 6: Solve yn+2 + 5yn+1 + 6yn = n + 2n 
+Solution: Given equation in symbolic form is 
+(E2 + 5E +6)yn = n +2n 
+Auxiliary equation c12n + c2(-2)n is 
+ 
+m2 + 5m + 6 = 0 
+Roots are -2, -3. 
+ 
+CF = 
+ P.I. = 
+1
+E2 + 5E +6 (𝑛+ 2𝑛) 
+ 
+= 
+1
+E2 + 5E +6 𝑛+ 
+1c1(−3)n + c2(−2)n
+E2 + 5E +6
+2𝑛 
+ 
+= 
+1
+(1+)2 + 5(1+) +6[𝑛] + 
+1
+22+52+6 2𝑛 
+ 
+=
+1
+(∆2+7∆+12) [𝑛] + 
+1
+20 2𝑛 
+ 
+= 
+𝑛
+12 −
+7
+144 +
+1
+20 2𝑛 
+The complete solution is 
+ 
+yn= c1(-3)n + c2(-2)n+ 
+𝑛
+12 −
+7
+144 +
+1
+20 2𝑛 
+ 
+Case IV:- When f(n) = an F(n), F(n) being polynomial of finite degree in n. 
+P. I. =
+1
+(𝐸) 𝑎𝑛𝐹(𝑛) 
+ = 𝑎𝑛
+1
+(𝑎𝐸) 𝐹(𝑛) 
+Now F(n) being a polynomial in n, proceed as in case III. 
+ 
+ 
+Example 6:- Solve yn+2 - 2yn+1 + yn = n2 . 2n 
+Solution:- Given equation is 
+ (E2 – 2E + 1)yn = n2 . 2n 
+C.F = c1 + c2n 
+ P. I =
+1
+(𝐸−1)2 2𝑛. 𝑛2 
+ = 2𝑛
+1
+(2𝐸−1)2 𝑛2 
+ = 2𝑛
+1
+(1 + 2)2 𝑛2 
+ = 2n (1 + 2)-2 {n(n – 1) + n} 
+ = 2n (1 - 4 + 12 2 - …){[n]2 + [n]} 
+ = 2n {[n]2 + [n] – 4(2[n] + 1) + 12  2} 
+ = 2n ([n]2 – 7[n] + 20) = 2n (n2 – 8n + 20) 
+Hence the complete solution is 
+ 
+yn = c1 + c2n + 2n (n2 – 8n + 20) 
+Exercises: 
+Solve the following difference equation 
+ 
+1. yn+2 – 5yn+1 – 6yn = 4n, y0 = 0, y1 = 1 
+ 
+2. yn+2 + 6yn+1 + 9yn = 2n, y0 = y1 = 0 
+ 
+3. (4E2 – 4E + 1)y = 2n + 2-n

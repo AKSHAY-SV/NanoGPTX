@@ -1,0 +1,37 @@
+Linear Filtering based on DFT
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+• Product of 2 DFTs is equivalent to circular convolution
+• Not a linear convolution
+• But output of an LTI system is y[n] = x(n) * h[n] (Linear convolution of input with 
+impulse response)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+• In frequency domain
+• If y(n) is represented by spectrum Y(ω), the number of samples must 
+be equal or exceed L+M-1
+• Therefore, DFT of size N ≥ L+M-1 is required
+• DFT of length N is increased to L+M-1 by zero padding
+• Thus, DFT can be used for linear filtering
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+3
+• L = 3, M = 4, therefore N = 3+4-1 = 6 . We can take 8-point DFT for the 
+convenance (Fast algorithm exists – Next chapter)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+Homework: Try this using matrix method
+Matrix method:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6
+Observe – last 2 digits are 
+zero
+Also, note: Same result can 
+be obtained using circular 
+and linear convolutions
+Problem contd from slide 4: h(n) = {1,2,3}
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7

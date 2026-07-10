@@ -1,0 +1,868 @@
+SOLUTION OF BOUNDARY VALUE PROBLEMS IN ORDINARY DIFFERENTIAL EQUATIONS
+Consider a second order differential equation 𝐹𝑥, 𝑦, 𝑦′, 𝑦′′ = 0.
+Its general solution contains two arbitrary constants. To determine these constants we need to
+prescribe two conditions.
+The conditions are called initial conditions if 𝑦and 𝑦′ are specified at a certain value of 𝑥.
+The differential equation together with the initial conditions is called the initial value problem.
+If 𝑦or 𝑦′ or their combination is prescribed at two different values of 𝑥, then the conditions
+are called boundary conditions.
+The differential equation together with the boundary conditions is called a boundary value
+problem.
+1
+The solution of an initial value problem, in general, exists and is unique, but the solution of a
+boundary value problem may exist or may not.
+The following simple examples will illustrate this-
+(1) 𝒚′′ + 𝒚= 𝟎, 𝒚𝟎= 𝟎, 𝒚𝝅= 𝟏
+Auxiliary equation, 𝑚2 + 1 = 0 ⇒𝑚= ±𝑖
+The general solution of DF is,
+𝑦= 𝐴𝑐𝑜𝑠𝑥+ 𝐵𝑠𝑖𝑛𝑥
+𝑦0 = 0 ⇒A = 0; solution is 𝑦= 𝐵𝑠𝑖𝑛𝑥
+𝑦(𝜋) = 1 ⇒1 = 𝐵0 , which is not possible.
+Hence the boundary value problem does not have a solution.
+2
+𝟐𝒚′′ + 𝒚= 𝟎,
+𝒚𝟎= 𝟎,
+𝒚𝝅= 𝟎
+The general solution of DF is,
+𝑦= 𝐴𝑐𝑜𝑠𝑥+ 𝐵𝑠𝑖𝑛𝑥
+𝑦0 = 0 ⇒A = 0; and solution is 𝑦= 𝐵𝑠𝑖𝑛𝑥
+𝑦(𝜋) = 1 ⇒0 = 𝐵0 .
+Here 𝐴= 0 𝑎𝑛𝑑𝐵is undeterminable.
+Hence the boundary value problem has an infinite number of solutions, 𝒚= 𝑩𝒔𝒊𝒏𝒙, Where 𝐵
+is an arbitrary constant.
+3
+𝟑𝒚′′ + 𝒚= 𝟎,
+𝒚𝟎= 𝟎,
+𝒚𝝅/𝟐
+= 𝟏
+The general solution of DF is,
+𝑦= 𝐴𝑐𝑜𝑠𝑥+ 𝐵𝑠𝑖𝑛𝑥
+𝑦0 = 0 ⇒A = 0; and solution is 𝑦= 𝐵𝑠𝑖𝑛𝑥
+𝑦
+𝜋
+2
+= 1 ⇒𝐵= 1.
+Hence the boundary value problem has the unique solutios, 𝒚= 𝒔𝒊𝒏𝒙
+4
+To solve the boundary value problem of the form,
+𝑝𝑥𝑦′′ + 𝑞𝑥𝑦′ + 𝑟𝑥𝑦= 𝑓(𝑥) with boundary conditions 𝑦𝑎= 𝑦𝑎and 𝑦𝑏= 𝑦𝑏,
+we use finite difference method.
+Method of finite differences:
+Divide the interval 𝑎, 𝑏into 𝑛sub-intervals, each of length ℎ=
+𝑏−𝑎
+𝑛.
+Let 𝑥𝑖= 𝑎+ 𝑖ℎ, 𝑖= 0, 1, 2, … , 𝑛, and let us use the following notation:-
+𝑦𝑥𝑖= 𝑦𝑖,
+𝑦′ 𝑥𝑖= 𝑦𝑖
+′,
+𝑦′′ 𝑥𝑖= 𝑦𝑖
+′′.
+𝑝𝑥𝑖= 𝑝𝑖,
+𝑞𝑥𝑖= 𝑞𝑖,
+𝑟𝑥𝑖= 𝑟𝑖,
+𝑓𝑥𝑖= 𝑓𝑖
+𝑥0 = 𝑎
+𝑥1
+𝑥2
+𝑥𝑖
+𝑥𝑖+1
+𝑥𝑛−1 𝑥𝑛= b
+5
+By Taylor’s series expansion,
+𝑦𝑖+1 = 𝑦𝑥𝑖+1 = 𝑦𝑥𝑖+ ℎ= 𝑦𝑖+ ℎ𝑦𝑖
+′ +
+ℎ2
+2! 𝑦𝑖
+′′ +
+ℎ3
+3! 𝑦𝑖
+′′′ + … ______ (1)
+𝑦𝑖−1 = 𝑦𝑥𝑖−1 = 𝑦𝑥𝑖−ℎ= 𝑦𝑖−ℎ𝑦𝑖
+′ +
+ℎ2
+2! 𝑦𝑖
+′′ −
+ℎ3
+3! 𝑦𝑖
+′′′ + … ______ (2)
+Eqn(1) gives 𝑦′ 𝑥𝑖=
+1
+ℎ𝑦𝑥𝑖+ ℎ−𝑦𝑥𝑖
+−
+ℎ
+2 𝑦′′ 𝑥𝑖−⋯
+i.e., 𝑦′ 𝑥𝑖=
+1
+ℎ𝑦𝑥𝑖+ ℎ−𝑦𝑥𝑖
++ 𝑂ℎ
+which is the forward difference approximation of 𝑦′(𝑥𝑖) with an error of the order ℎ.
+Similarly eqn(2) gives 𝑦′ 𝑥𝑖=
+1
+ℎ𝑦𝑥𝑖−𝑦𝑥𝑖−ℎ
++ 𝑂ℎ
+which is the backward difference approximation of 𝑦′(𝑥𝑖) with an error of the order ℎ.
+6
+Eqn(1)-Eqn(2) ⟹𝑦′ 𝑥𝑖=
+1
+2ℎ𝑦𝑥𝑖+ ℎ−𝑦𝑥𝑖−ℎ
++ 𝑂(ℎ2)
+which is the central-difference approximation of 𝑦′(𝑥𝑖) with an error of the order ℎ2.
+Clearly this central difference approximation to 𝑦′(𝑥𝑖) is better than the forward or
+backward difference approximations and hence should be preferred.
+Yielding approximation,
+𝒚𝒊
+′ =
+𝒚𝒊+𝟏−𝒚𝒊−𝟏
+𝟐𝒉
+with an error of the order ℎ2.
+(3)
+7
+Eqn(1)+eqn(2) ⟹𝑦𝑖+1 + 𝑦𝑖−1 = 2𝑦𝑖+ ℎ2𝑦𝑖
+′′ +
+ℎ4
+12 𝑦𝑖
+′′′′ + ⋯,
+We get approximation as
+𝒚𝒊
+′′ =
+𝒚𝒊+𝟏−𝟐𝒚𝒊+𝒚𝒊−𝟏
+𝒉𝟐
+with an error of the order ℎ2
+(4)
+which is the central difference approximation of 𝑦′′ 𝑥𝑖.
+In finite difference method 𝑦′ and 𝑦′′ are replaced by the finite differences using eqns (3) and
+(4).
+8
+Consider the two cases that arise while solving linear boundary value problems.
+Case (1): The boundary conditions dot not involve 𝒚′
+To solve the boundary value problem (BVP),
+𝑝𝑥𝑦′′ + 𝑞𝑥𝑦′ + 𝑟𝑥𝑦= 𝑓(𝑥) with boundary conditions 𝑦𝑎= 𝑦𝑎and 𝑦𝑏= 𝑦𝑏.
+We set 𝑥= 𝑥𝑖in BVP and replace 𝑦𝑖′ and 𝑦𝑖′′ by the approximations eqn(3) and (4) and we get
+the system of equations
+𝑝𝑖𝑦𝑖
+′′ + 𝑞𝑖𝑦𝑖
+′ + 𝑟𝑖𝑦𝑖= 𝑓𝑖
+⟹𝑝𝑖
+𝑦𝑖+1−2𝑦𝑖+𝑦𝑖−1
+ℎ2
++ 𝑞𝑖
+𝑦𝑖+1−𝑦𝑖−1
+2ℎ
++ 𝑟𝑖𝑦𝑖= 𝑓𝑖_______ (5)
+with 𝑖= 1, 2, 3, … , 𝑛−1 for the 𝑛−1 unknowns 𝑦1, 𝑦2, … , 𝑦𝑛−1.
+9
+The system (5) involves 𝑦0 for 𝑖= 1 and 𝑦𝑛for 𝑖= 𝑛−1. However these are known from the
+boundary conditions as 𝑦0 = 𝑦𝑎= 𝑦𝑎and 𝑦𝑛= 𝑦𝑏= 𝑦𝑏.
+Examples:
+1) Solve 𝒙𝒚′′ + 𝒚=0, 𝒚𝟏= 𝟏, 𝒚𝟐= 𝟐with 𝒉= 𝟎. 𝟐𝟓by finite difference method.
+Answer: With ℎ= 0.25, 𝑛= 4
+i.e., Divide the interval [1, 2] into 4 equal parts
+We find the unknowns 𝑦1, 𝑦2, 𝑦3 from the system,
+𝑥𝑖
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+ℎ2
++ 𝑦𝑖= 0
+𝑥0 = 1
+𝑥1 = 1.25 𝑥2 = 1.5
+𝑥3 = 1.75 𝑥4 = 2
+𝑦0 = 1
+𝑦4 = 2
+𝑦1 =?
+𝑦2 =?
+𝑦3 =?
+10
+𝑥𝑖
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+1
+4
+2
++ 𝑦𝑖= 0
+16𝑥𝑖𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1 + 𝑦𝑖= 0,
+𝑖= 1, 2, 3
+At 𝑖= 1,
+16𝑥1 𝑦2 −2𝑦1 + 𝑦0 + 𝑦0 = 0
+16 1.25
+𝑦2 −2𝑦1 + 1
++ 1 = 0
+⟹𝟑𝟗𝒚𝟏−𝟐𝟎𝒚𝟐= 𝟐𝟎
+_____ (1)
+11
+At 𝑖= 2,
+16𝑥2 𝑦3 −2𝑦2 + 𝑦1 + 𝑦1 = 0
+16 1.5
+𝑦3 −2𝑦2 + 𝑦1
++ 𝑦1 = 0
+⟹𝟐𝟒𝒚𝟏−𝟒𝟕𝒚𝟐+ 𝟐𝟒𝒚𝟑= 𝟎
+_____ (2)
+At 𝑖= 3,
+16𝑥3 𝑦4 −2𝑦3 + 𝑦2 + 𝑦2 = 0
+16 1.75
+2 −2𝑦3 + 𝑦2
++ 𝑦2 = 0
+⟹𝟐𝟖𝒚𝟐−𝟓𝟓𝒚𝟑= −𝟓𝟔
+_____ (3)
+Solving equations (1), (2) and (3), We get 𝒚𝟏= 𝟏. 𝟑𝟓𝟏𝟑, 𝒚𝟐= 𝟏. 𝟔𝟑𝟒𝟗, 𝒚𝟑= 𝟏. 𝟖𝟓𝟎𝟖
+12
+2) Solve
+𝟏
+𝟒𝒚′′ −𝒙𝒚′ + 𝒚= 𝟏, 𝒚𝟎= 𝟎, 𝒚𝟏=0 with 𝒉=
+𝟏
+𝟑by finite difference method.
+Answer: With ℎ=
+1
+3 , 𝑛= 3
+i.e., Divide the interval [0, 1] into 3 equal parts
+We find the unknowns 𝑦1, 𝑦2 from the system,
+1
+4 𝑦′′ −𝑥𝑦′ + 𝑦= 1 ⟹𝑦𝑖
+′′ −4𝑥𝑖𝑦𝑖
+′ + 4𝑦𝑖= 4
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+ℎ2
+−4𝑥𝑖
+𝑦𝑖+1 −𝑦𝑖−1
+2ℎ
++ 𝑦𝑖= 4
+𝑥0 = 0
+𝑥1 = 1
+3
+𝑥2 = 2
+3
+𝑥3 = 1
+𝑦0 = 0
+𝑦1 =?
+𝑦2 =?
+𝑦3 = 0
+13
+⟹𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+1
+9
+−4𝑥𝑖
+𝑦𝑖+1 −𝑦𝑖−1
+2
+3
++ 𝑦𝑖= 4
+⟹9 𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1 −6𝑥𝑖𝑦𝑖+1 −𝑦𝑖−1 + 4𝑦𝑖= 4,
+𝑖= 1, 2
+When 𝑖= 1,
+9 𝑦2 −2𝑦1 + 𝑦0 −6 1
+3
+𝑦2 −𝑦0 + 4𝑦1 = 4
+9 𝑦2 −2𝑦1 + 0 −2 𝑦2 −0 + 4𝑦1 = 4
+−𝟏𝟒𝒚𝟏+ 𝟕𝒚𝟐= 𝟒________ (1)
+14
+When 𝑖= 2,
+9 𝑦3 −2𝑦2 + 𝑦1 −6 2
+3
+𝑦3 −𝑦1 + 4𝑦2 = 4
+9 𝑦2 −2𝑦1 + 0 −2 𝑦2 −0 + 4𝑦1 = 4
+𝟏𝟑𝒚𝟏−𝟏𝟒𝒚𝟐= 𝟒________ (2)
+Solving equations (1) and (2), We get 𝒚𝟏= −
+𝟒
+𝟓, 𝒚𝟐= −
+𝟑𝟔
+𝟑𝟓
+15
+Case (2): The boundary conditions involve 𝒚′
+Examples:
+(1) Solve 𝒚′′ + 𝒙𝒚= 𝟏, 𝒚𝟎= 𝟎, 𝒚′ 𝟏= 𝟏with 𝒉= 𝟎. 𝟓by finite difference method
+Answer: With ℎ= 0.5, 𝑛= 2
+i.e., Divide the interval [0, 1] into 2 equal parts
+We find the unknowns 𝑦1, 𝑦2 from the system,
+𝑦𝑖
+′′ + 𝑥𝑖𝑦𝑖= 1,
+𝑖= 1, 2
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+ℎ2
++ 𝑥𝑖𝑦𝑖= 1
+𝑥0 = 0
+𝑥1 = 0.5
+𝑥2 = 1
+𝑦0 = 0
+𝑦1 =?
+𝑦2 =?
+16
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+1
+2
+2
++ 𝑥𝑖𝑦𝑖= 1
+4 𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1 + 𝑥𝑖𝑦𝑖= 1,
+𝑖= 1, 2
+When 𝑖= 1
+4 𝑦2 −2𝑦1 + 𝑦0 + 𝑥1𝑦1 = 1
+4 𝑦2 −2𝑦1 + 0 + (0.5)𝑦1 = 1
+−7.5𝑦1 + 4𝑦2 = 1 _______ (1)
+When 𝑖= 2
+4 𝑦3 −2𝑦2 + 𝑦1 + 𝑥2𝑦2 = 1
+17
+4 𝑦3 −2𝑦2 + 𝑦1 + 1 𝑦2 = 1
+_______ (2)
+Here the problem involves 𝑦3, the value of 𝑦outside the given interval.
+Equation (2) will enable us to find 𝑦3 in terms of 𝑦1 𝑎𝑛𝑑𝑦2 as follows,
+Given the boundary condition 𝑦′ 1 = 1 ⟹𝑦′ 𝑥2 = 1
+(∵𝑥2 = 1)
+⟹𝑦2
+′ = 1
+We know that,
+𝑦𝑖
+′ =
+𝑦𝑖+1−𝑦𝑖−1
+2ℎ
+⟹𝑦2
+′ =
+𝑦3−𝑦1
+2 1
+2
+⟹1 = y3 −y1
+or 𝑦3 = 1 + 𝑦1
+18
+Now equation (2)⟹4 1 + 𝑦1 −2𝑦2 + 𝑦1 + 1 𝑦2 = 1
+8𝑦1 −7𝑦2 = −3 _____ (3)
+Solving equations (1) and (3), we get, 𝑦1 =
+10
+41 , 𝑦2 =
+29
+41
+(2) Solve 𝒚′′ + 𝟏+ 𝒙𝒚′ −𝒚= 𝟎, 𝒚𝟎= 𝒚′ 𝟎,
+𝒚𝟏+ 𝒚′ 𝟏= 𝟏with 𝒉= 𝟎. 𝟓by finite
+difference method.
+Answer: With ℎ= 0.5, 𝑛= 2
+i.e., Divide the interval [0, 1] into 2 equal parts
+𝑥0 = 0
+𝑥1 = 0.5
+𝑥2 = 1
+𝑦0 =?
+𝑦1 =?
+𝑦2 =?
+19
+We find the unknowns 𝑦1, 𝑦2 from the system,
+𝑦𝑖
+′′ + 1 + 𝑥𝑖𝑦𝑖
+′ −𝑦𝑖= 0,
+𝑖= 0, 1, 2
+𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1
+ℎ2
++ 1 + 𝑥𝑖
+𝑦𝑖+1 −𝑦𝑖−1
+2ℎ
+−𝑦𝑖= 0
+4(𝑦𝑖+1 −2𝑦𝑖+ 𝑦𝑖−1) + (1 + 𝑥𝑖) [𝑦𝑖+1 −𝑦𝑖−1] −𝑦𝑖= 0, 𝑖= 0, 1, 2
+When 𝑖= 0,
+4(𝑦1 −2𝑦0 + 𝑦−1) + (1 + 𝑥0) [𝑦1 −𝑦−1] −𝑦0 = 0 ---- (1)
+Here the problem involves 𝑦−1, the value of 𝑦outside the given interval.
+Given boundary condition 𝑦0 = 𝑦′ 0
+𝑦𝑥0 = 𝑦′ 𝑥0
+∵𝑥0 = 0
+𝑦0 = 𝑦0
+′
+20
+We know that, 𝑦𝑖
+′ =
+𝑦𝑖+1−𝑦𝑖−1
+2ℎ
+𝑦0 =
+𝑦1−𝑦−1
+2(0.5)
+𝑦0 = 𝑦1 −𝑦−1 ⟹𝑦−1 = 𝑦1 −𝑦0
+Now equation (1) ⟹4(𝑦1 −2𝑦0 + 𝑦1 −𝑦0) + (1 + 0) [𝑦1 −(𝑦1 −𝑦0)] −𝑦0 = 0
+𝟐𝒚𝟏−𝟑𝒚𝟎= 𝟎_______ (2)
+When 𝑖= 1,
+4(𝑦2 −2𝑦1 + 𝑦0) + (1 + 𝑥1) [𝑦2 −𝑦0] −𝑦1 = 0
+4(𝑦2 −2𝑦1 + 𝑦0) + (1 + 0.5) [𝑦2 −𝑦0] −𝑦1 = 0
+𝟏𝟏𝒚𝟐−𝟏𝟖𝒚𝟏+ 𝟓𝒚𝟎= 𝟎---- (3)
+21
+When 𝑖= 2,
+4(𝑦3 −2𝑦2 + 𝑦1) + (1 + 𝑥2) [𝑦3 −𝑦1] −𝑦2 = 0
+4(𝑦3 −2𝑦2 + 𝑦1) + (1 + 1) [𝑦3 −𝑦1] −𝑦2 = 0 ---- (4)
+Here the problem involves 𝑦3, the value of 𝑦outside the given interval.
+Given another boundary condition 𝑦1 + 𝑦′ 1 = 1
+𝑦𝑥2 + 𝑦′ 𝑥2 = 1
+∵𝑥2 = 1
+𝑦2 + 𝑦2
+′ = 1
+𝑦2 + 𝑦3 −𝑦1
+2 0.5
+= 1
+𝑦3 = 1 + 𝑦1 −𝑦2
+∵𝑦𝑖
+′= 𝑦𝑖+1 −𝑦𝑖−1
+2ℎ
+22
+Now equation (4) ⟹
+4(1 + 𝑦1 −𝑦2 −2𝑦2 + 𝑦1) + (1 + 1) [1 + 𝑦1 −𝑦2 −𝑦1] −𝑦2 = 0
+𝟏𝟓𝒚𝟐−𝟖𝒚𝟏= 𝟔−−−(𝟓)
+Solving equations (2), (3) and (5), we get,
+𝒚𝟎= 𝟏
+𝟑,
+𝒚𝟏= 𝟏
+𝟐,
+𝒚𝟐= 𝟐
+𝟑
+23
+Exercises:
+Solve the following boundary value problems by finite difference method.
+1. 𝑦′′ −3𝑦′ + 2𝑦= 1 + 2𝑥, 𝑦1 = 𝑦2 = 0, ℎ= 0.25
+2. 𝑦′′ + 𝑦= 0, 𝑦0 = 0, 𝑦
+𝜋
+2
+= 1, ℎ=
+𝜋
+8
+3. 𝑦′′ + 𝑥𝑦′ −2𝑦= 0, 𝑦1 = 𝑦′ 1 , 𝑦2 = 5, ℎ=
+1
+2
+4. 𝑦′′ = 𝑥𝑦, 𝑦0 + 𝑦′ 0 = 1, 𝑦1 = 1, ℎ=
+1
+2
+24
+Partial Differential Equations
+Boundary value problems governed by linear second order partial differential equations:
+Over a two dimensional Cartesian domain, let 𝑢be the dependent variable. Then a general second
+order partial differential equation may be written as,
+𝐴
+𝜕2𝑢
+𝜕𝑥2 + 𝐵
+𝜕2𝑢
+𝜕𝑥𝜕𝑦+ 𝐶
+𝜕2𝑢
+𝜕𝑦2 + 𝐹𝑥, 𝑦, 𝑢, 𝑢𝑥, 𝑢𝑦+ 𝐺= 0
+----------------------(1)
+where 𝐴, 𝐵, 𝐶are functions of (𝑥, 𝑦) and 𝐹may be non-linear function, then equation (1) is called a
+quasi-linear partial differential equation. If 𝐹is also a linear function then equation (1) is called a
+linear partial differential equation. If 𝐺= 0 then equation (1) is homogeneous otherwise non-
+homogeneous.
+Classification of PDE:
+Equation (1) at a point or in a domain is said to be,
+Elliptic if 𝐵2 −4𝐴𝐶< 0; Parabolic if 𝐵2 −4𝐴𝐶= 0; Hyperbolic if 𝐵2 −4𝐴𝐶> 0.
+Examples:
+1.
+𝜕2𝑢
+𝜕𝑥2 +
+𝜕2𝑢
+𝜕𝑦2 = 𝑓𝑥, 𝑦is called Poisson equation is an elliptic equation
+2.
+𝜕2𝑢
+𝜕𝑡2 = 𝑐2 𝜕2𝑢
+𝜕𝑥2 , is called wave equation is hyperbolic equation
+3.
+𝜕u
+𝜕t = c2 𝜕2u
+𝜕x2, is called heat equation is parabolic equation
+4.
+𝜕2𝑢
+𝜕𝑥2 + 4
+𝜕2𝑢
+𝜕𝑥𝜕𝑦+ 4
+𝜕2𝑢
+𝜕𝑦2 −
+𝜕𝑢
+𝜕𝑥+ 2
+𝜕𝑢
+𝜕𝑦= 0, is parabolic equation
+5.
+1 + 𝑥2
+𝜕2𝑢
+𝜕𝑥2 + 5 + 2𝑥2
+𝜕2𝑢
+𝜕𝑥𝜕𝑡+ 4 + 𝑥2
+𝜕2𝑢
+𝜕𝑡2 = 0, is Hyperbolic equation.
+Finite Difference Methods for Partial Differential Equation:
+Consider a rectangular region 𝑅in the 𝑋𝑌−plane. Divide the region into rectangular network 
+of sides Δ𝑥= ℎand Δ𝑦= 𝑘by drawing lines 𝑥= 𝑖ℎand 𝑦= 𝑗𝑘, where 𝑖, 𝑗= 0,1,2,3, …
+Points of intersection are called nodal points or mesh points or grid points.
+Writing 𝑢𝑥, 𝑦= 𝑢(𝑖ℎ, 𝑗𝑘) as simply 𝑢𝑖,𝑗, the finite difference approximations for the first order
+partial derivatives can be derived using Taylor series expansion for 2 variables as follows.
+We have, 𝑢𝑥+ ℎ, 𝑦= 𝑢𝑖+1,𝑗= 𝑢𝑥, 𝑦+ ℎ𝑢𝑥𝑥, 𝑦+
+ℎ2
+2! 𝑢𝑥𝑥𝑥, 𝑦+ ⋯
+-----------(2)
+Thus, the forward difference formula can be written as,
+𝜕𝑢
+𝜕𝑥𝑖,𝑗=
+1
+ℎ𝑢𝑖+1,𝑗−𝑢𝑖,𝑗+ 𝑂ℎ
+-----------(3)
+Similarly, 𝑢𝑥−ℎ, 𝑦= 𝑢𝑖−1,𝑗= 𝑢𝑥, 𝑦−ℎ𝑢𝑥𝑥, 𝑦+
+ℎ2
+2! 𝑢𝑥𝑥𝑥, 𝑦+ ⋯
+-----------(4)
+Thus, the backward difference formula can be written as,
+𝜕𝑢
+𝜕𝑥𝑖,𝑗=
+1
+ℎ𝑢𝑖,𝑗−𝑢𝑖−1,𝑗+ 𝑂ℎ
+-----------(5)
+The central difference formula can be obtained by Eq.(2) –Eq.(4) as,
+𝜕𝑢
+𝜕𝑥𝑖,𝑗=
+1
+2ℎ𝑢𝑖+1,𝑗−𝑢𝑖−1,𝑗+ 𝑂ℎ2
+-----------(6)
+The finite difference approximations for the second order partial derivatives can be obtained by adding
+Eq.(2) and (4).
+𝜕2𝑢
+𝜕𝑥2 𝑖,𝑗=
+1
+ℎ2 𝑢𝑖+1,𝑗−2𝑢𝑖,𝑗+ 𝑢𝑖−1,𝑗+ 𝑂ℎ2
+-----------(7)
+Similarly,
+Forward:
+𝜕𝑢
+𝜕𝑦𝑖,𝑗
+=
+1
+𝑘𝑢𝑖,𝑗+1 −𝑢𝑖,𝑗+ 𝑂(𝑘)
+-----------(8)
+Backward:
+𝜕𝑢
+𝜕𝑦𝑖,𝑗
+=
+1
+𝑘𝑢𝑖,𝑗−𝑢𝑖,𝑗−1 + 𝑂𝑘
+-----------(9)
+Central:
+𝜕𝑢
+𝜕𝑦𝑖,𝑗
+=
+1
+2𝑘𝑢𝑖,𝑗+1 −𝑢𝑖,𝑗−1 + 𝑂𝑘2
+----------(10)
+And
+𝜕2𝑢
+𝜕𝑦2 𝑖,𝑗
+=
+1
+𝑘2 𝑢𝑖,𝑗+1 −2𝑢𝑖,𝑗+ 𝑢𝑖,𝑗−1 + 𝑂𝑘2
+----------(11)
+Replacing the derivatives in any partial differential equation by their corresponding difference
+approximation, we obtain the finite-difference analogues of the given equation.
+Elliptic partial differential equation:
+Most relevant examples of elliptic PDE are Laplace equation and Poisson equation.
+The Poisson equation in Cartesian coordinate system is
+𝜕2𝑢
+𝜕𝑥2 +
+𝜕2𝑢
+𝜕𝑦2 = 𝑓𝑥, 𝑦
+or 𝛻2𝑢= 𝑓𝑥, 𝑦, 𝑎≤𝑥≤𝑏, 𝑐≤𝑦≤𝑑
+Subject to boundary condition: 𝑢(𝑥, 𝑦) = 𝑔(𝑥, 𝑦) (Dirichlet boundary condition).
+The Laplace equation is a special case of Poisson equation with 𝑓𝑥, 𝑦= 0.
+Solution for Laplace Equation
+𝜕2𝑢
+𝜕𝑥2 +
+𝜕2𝑢
+𝜕𝑦2 = 0
+----------(12)
+Consider a rectangular region 𝑅for which 𝑢(𝑥, 𝑦) is known at the boundary. Divide this region into
+a network of square mesh of side ℎ(assuming that an exact division of 𝑅is possible.
+Figure-2. 
+Figure-3.
+Replacing the derivatives in (12) by their difference approximations, we have
+1
+ℎ2 𝑢𝑖+1,𝑗−2𝑢𝑖,𝑗+ 𝑢𝑖−1,𝑗+ 1
+ℎ2 𝑢𝑖,𝑗+1 −2𝑢𝑖,𝑗+ 𝑢𝑖,𝑗−1 = 0
+Or
+𝑢𝑖,𝑗=
+1
+4 𝑢𝑖+1,𝑗+ 𝑢𝑖−1,𝑗+ 𝑢𝑖,𝑗+1 + 𝑢𝑖,𝑗−1
+----------(13)
+This shows that the value of 𝑢at any interior mesh point is the average of its values at four
+neighboring points to the left, right, above and below. Equation (13) is called standard 5-point
+formula as shown in figure-2.
+Sometimes a formula similar to this is used which is given by,
+𝑢𝑖,𝑗=
+1
+4 (𝑢𝑖−1,𝑗+1 + 𝑢𝑖+1,𝑗−1 + 𝑢𝑖+1,𝑗+1 + 𝑢𝑖−1,𝑗−1)
+----------(14)
+Which shows that the value of 𝑢at any interior mesh point is the average of its values at four
+neighboring diagonal mesh points. Equation (14) is also called the diagonal 5-point formula as
+shown in figure-3. Although this is less accurate than the standard 5-point formula, it is used in
+getting a good approximation for the starting values at the mesh points.
+By applying 5-point formula at each interior mesh point, we arrive at linear equations in the nodal
+values 𝑢𝑖,𝑗. These equations can be solved by Jacobi’s iterative method or Gauss-Seidal iterative
+method. The iterative methods are repeated till the difference between two consecutive iterates become
+negligible.
+1. Jacobi’s method: Denoting the 𝑛𝑡ℎiterative value of 𝑢𝑖,𝑗by 𝑢𝑖,𝑗
+𝑛, the iterative formula to solve is,
+𝑢𝑖,𝑗
+(𝑛+1) =
+1
+4 𝑢𝑖+1,𝑗
+(𝑛)
++ 𝑢𝑖−1,𝑗
+(𝑛)
++ 𝑢𝑖,𝑗+1
+(𝑛)
++ 𝑢𝑖,𝑗−1
+(𝑛)
+----------(15)
+It gives improved values of 𝑢𝑖,𝑗at the interior mesh points.
+1. Gauss-Seidal method or Leibmann’s method: In this method, the iteration formula is,
+𝑢𝑖,𝑗
+(𝑛+1) =
+1
+4 𝑢𝑖+1,𝑗
+(𝑛)
++ 𝑢𝑖−1,𝑗
+(𝑛+1) + 𝑢𝑖,𝑗+1
+(𝑛+1) + 𝑢𝑖,𝑗−1
+(𝑛)
+----------(16)
+This utilizes the latest iterative values available and evaluates the mesh points symmetrically from
+left to right along successive rows.
+Note:
+The accuracy of the calculations depends on the mesh-size i.e. smaller the 𝒉, better the
+accuracy. But if 𝒉is too small, it increases the computations.
+The error in solving Laplace and Poisson’s equations by finite-difference method is of the
+order 𝒐𝒉𝟐.
+Solution:
+Solution
+is
+symmetric
+about
+principal
+diagonal as shown in figure. Using 5-point formula at
+each of the unknown mesh points, we have,
+4𝑎= 𝑏+ 𝑑+ 2
+4𝑏= 2𝑎+ 4
+4𝑑= 2𝑎
+Solving for unknowns,
+𝑎= 𝑐= 1; 𝑏= 1.5; 𝑑= 0.5
+Solved examples:
+1. Solve
+𝝏𝟐𝒖
+𝝏𝒙𝟐+
+𝝏𝟐𝒖
+𝝏𝒚𝟐= 𝟎, with 𝒉=
+𝟏
+𝟑, 𝒖𝒙, 𝟏= 𝒖𝟎, 𝒚= 𝟎, 𝟎< 𝒙, 𝒚< 𝟏and also 𝒖𝒙, 𝟎= 𝟗𝒙−𝒙𝟐,
+𝒖𝟏, 𝒚= 𝟗𝒚−𝒚𝟐.
+2.
+Solve
+𝝏𝟐𝒖
+𝝏𝒙𝟐+
+𝝏𝟐𝒖
+𝝏𝒚𝟐= 𝟎,
+with 𝒉=
+𝟏
+𝟒, 𝒖𝒙, 𝟎= 𝒖𝒙, 𝟏= 𝟎, 𝟎< 𝒙, 𝒚< 𝟏and also 𝒖𝟎, 𝒚=
+𝟏𝟎𝟎, 𝒖𝟏, 𝒚= 𝟎using Leibmann’s method.
+Solution: With reference to the figure, we have equations 
+in 6 unknowns.
+4𝑎= 100 + 𝑏+ 𝑑
+4𝑏= 𝑎+ 𝑒+ 𝑐
+4𝑐= 𝑏+ 𝑓
+4𝑑= 100 + 2𝑎+ 𝑒
+4𝑒= 2𝑏+ 𝑑+ 𝑓
+4𝑓= 2𝑐+ 𝑒
+Solving using Leibmann’s method or Gauss seidal
+method(3 iterations),
+𝑎
+𝑏
+𝑐
+𝑑
+𝑒
+𝑓
+0
+0
+0
+0
+0
+0
+25
+6.25
+1.5625
+37.5
+12.5
+0.78125
+35.9375 12.5
+3.3203
+46.09375
+17.96875
+6.1523
+and so on.
+Exercise problems:
+1. Solve
+Laplace
+equation
+𝛁𝟐𝒖= 𝟎, 𝟎< 𝒙, 𝒚< 𝟐, with
+𝒉=
+𝟏
+𝟐, 𝒖𝒙, 𝟎= 𝟎, 𝒖𝒙, 𝟐= 𝟔,
+𝒖𝟎, 𝒚= 𝟏, 𝒖𝟐, 𝒚= 𝟏.
+2. Solve 𝛁𝟐𝒖= 𝟎, 𝒙< 𝟏, 𝒚< 𝟏, 𝒉=
+𝟏
+𝟐. Also, 𝒖±𝟏, 𝒚= 𝒚𝟐, 𝒖𝒙, ±𝟏= 𝒙𝟐.
+3. Solve 𝛁𝟐𝒖= 𝟎, 𝟎< 𝒙, 𝒚< 𝟒, with 𝒉= 𝟏,𝒖𝒙, 𝟎= 𝒙𝟐+ 𝟐𝒙, 𝒖𝟎, 𝒚= −𝟐𝒚−𝒚𝟐, 𝒖𝟒, 𝒚=
+𝟐𝟒−𝒚𝟐−𝟐𝒚, 𝒖𝒙, 𝟒= 𝒙𝟐+ 𝟐𝒙−𝟐𝟒.
+(Hint: Negative symmetry to be considered. Number of variables reduces to six.)
+Poisson Equation
+The Poisson equation is an elliptic partial differential equation that frequently
+emerges when modeling electromagnetic systems. However, like many other partial
+differential equations, exact solutions are difficult to obtain for complex
+geometries. This motivates the use of numerical methods in order to provide
+accurate results for real-world systems. One very simple algorithm is the Finite-
+Difference Method (FDM), which works by replacing the continuous derivative
+operators with approximate finite differences. Although the Finite-Difference
+Method is one of the oldest methods ever devised, comprehensive information is
+difficult to find compiled in a single reference.
+• Poisson differential equation is
+𝜕2𝑢
+𝜕𝑥2 +
+𝜕2𝑢
+𝜕𝑦2 = 𝑓𝑥, 𝑦
+---------- (1)
+• Its method of solution is similar to that of Laplace equation. Here the 
+standard 5-point formula takes the form, 
+𝑢𝑖−1,𝑗+ 𝑢𝑖+1,𝑗+ 𝑢𝑖,𝑗+1 + 𝑢𝑖,𝑗−1 −4𝑢𝑖,𝑗= ℎ2𝑓(𝑖ℎ, 𝑗ℎ)
+---------- (2)
+By applying formula (2) at each interior mesh point, we arrive at linear 
+equations in the nodal values 𝑢𝑖,𝑗. These equations can be solved by 
+Gauss-Seidal iterative method. The iterative methods are repeated till the 
+difference between two consecutive iterates become negligible. 
+Examples:
+1) With 𝒉= 𝟏, solve 
+𝝏𝟐𝒖
+𝝏𝒙𝟐+
+𝝏𝟐𝒖
+𝝏𝒚𝟐= −𝟏𝟎𝒙𝟐+ 𝒚𝟐+ 𝟏𝟎, 𝟎< 𝒙, 𝒚< 𝟑and 
+𝒖= 𝟎on the boundary. 
+Solution: 
+x
+0
+1
+2
+3
+y
+0
+1
+2
+3
+By five point formula,
+𝑢1 = 1
+4
+𝑢2 + 𝑢3 + 150
+−−−−−1
+𝑢2 = 1
+4 𝑢1 + 𝑢4 + 180
+−−−−−(2)
+𝑢3= 1
+4 𝑢1 + 𝑢4 + 120
+−−−−−3
+𝑢4 = 1
+4 𝑢2 + 𝑢3 + 150
+−−−−−(4)
+From equation (1) and (4), 𝑢1 = 𝑢4.
+Hence equations becomes 
+4𝑢1 −𝑢2 −𝑢3 = 150, 4𝑢2 −2𝑢1 = 180, 4𝑢3 −2𝑢1 = 120.
+By solving these equations we get, 
+𝑢1 = 𝑢4 = 75, 𝑢2 = 82.5, 𝑢3 = 67.5.
+2) Solve 𝛁𝟐𝒖= −𝟖𝟏𝒙𝒚, 𝟎< 𝒙, 𝒚< 𝟏, 𝒉=
+𝟏
+𝟑. Also, 𝒖𝟎, 𝒚= 𝒖𝒙, 𝟎= 𝟎, 
+𝒖𝟏, 𝒚= 𝒖𝒙, 𝟏= 𝟏𝟎𝟎.
+Solution: 
+x
+0
+1/3
+2/3
+1
+y
+0
+1/3
+2/3
+1
+By standard five point formula,
+𝑢1 = 1
+4
+𝑢2 + 𝑢3 + 102
+−−−−−(1)
+𝑢2 = 1
+4 𝑢1 + 𝑢4 + 204
+−−−−−(2)
+𝑢3= 1
+4 𝑢1 + 𝑢4 + 1
+−−−−−3
+𝑢4 = 1
+4 𝑢2 + 𝑢3 + 102
+−−−−−(4)
+From equation (1) and (4), 𝑢1 = 𝑢4.
+Hence equations are:
+4𝑢1 −𝑢2 −𝑢3 = 102, 2𝑢1 −4𝑢2 = −204, 2𝑢1 −4𝑢3 = −1
+Solving theses equations, we get 𝑢1 = 𝑢4 = 51, 𝑢2 = 76, 𝑢3 = 26.
+• Exercise problems:
+1) Solve 𝛻2𝑢= −1, 𝑥< 2, 𝑦< 2, ℎ= 1. 
+Also, 𝑢−2, 𝑦= 𝑢𝑥, 2 =𝑢2, 𝑦= 𝑢𝑥, −2 = 0.
+2) Solve 𝛻2𝑢= −1, 𝑥< 2, 𝑦< 2, ℎ= 1. 
+Also, 𝑢−2, 𝑦= 𝑢𝑥, 2 =𝑢2, 𝑦= 𝑢𝑥, −2 = 0.
+3) Solve 𝛻2𝑢= −1, 𝑥< 1, 𝑦< 1, ℎ=
+1
+2. Also, 𝑢±1, 𝑦= 𝑢𝑥, ±1 = 0.
+Wave Equation
+The wave equation is a second-order linear hyperbolic PDE that 
+describes the propagation of a variety of waves, such as sound or water 
+waves. It arises in different fields such as acoustics, electromagnetics, 
+or fluid dynamics.
+The wave equation one dimension is of the form 
+𝜕2𝑢
+𝜕𝑡2=𝑐2 𝜕2𝑢
+𝜕𝑡2
+46
+Numerical Solution of Wave Equation
+Consider the initial value problem
+𝜕2𝑢
+𝜕𝑡2=𝑐2 𝜕2𝑢
+𝜕𝑡2, a < x < b, t > 0 --------- (1)
+u(x , 0) = f(x), 𝑢
+𝑡𝑥, 0 = 𝑔𝑥−−−−−−−−(2)
+ut(a,t) = (x), u(b, t) = (x) -------- (3)
+To solve by finite difference method, we divide the interval [a, b] into n 
+equal parts each of breadth h, i.e. h = 
+𝑏−𝑎
+𝑛
+47
+Let 𝑥𝑖= 𝑥0 + 𝑖ℎ
+[𝑥0=a], i = 1, 2, …., n --------- (4)
+If k is the time internal size, let
+𝑡𝑗= 𝑗𝑘−−−−−−−(5)
+Denote u(𝑥𝑖, 𝑡𝑗)=𝑢𝑖𝑗
+We have
+2𝑢
+𝑥2 =
+𝑢𝑖+1𝑗−2𝑢𝑖𝑗+𝑢𝑖−1𝑗
+ℎ2
+-------------------(6)
+2𝑢
+𝑡2 =
+𝑢𝑖𝑗+1−2𝑢𝑖𝑗+𝑢𝑖𝑗−1
+𝑘2
+----------------------(7)
+48
+Using (6) and (7) in (1), we get,
+𝑢𝑖𝑗+1−2𝑢𝑖𝑗+𝑢𝑖𝑗−1
+𝑘2
+= 𝑐2 𝑢𝑖+1𝑗−2𝑢𝑖𝑗+𝑢𝑖−1𝑗
+ℎ2
+----------------(8)
+If k = h/c, (8) simplifies to 
+𝑢𝑖𝑗+1=𝑢𝑖+1𝑗+ 𝑢𝑖−1𝑗−𝑢𝑖𝑗−1 ----------------------(9)
+This is the finite difference scheme for the wave equation.
+If we know u at two consecutive time steps 𝑡𝑗and 𝑡𝑗+1, (9) gives u at 
+time t = 𝑡𝑗+1
+49
+From the initial conditions (2)
+𝑢𝑖0 = 𝑓𝑖, 𝑢𝑖1=
+1
+2 𝑓𝑖−1 + 𝑓𝑖+1 + 𝑘𝑔𝑖
+From the boundary conditions (3) 
+𝑢0𝑗= 𝜑𝑗, 𝑢𝑛𝑗= 𝑗
+50
+Evaluate the pivotal values of the equation utt=16uxx, taking h =1 upto
+t = 1.25. The boundary and initial conditions are 
+u(0, t)=u(5, t) = 0, u(x, 0)=x2(5-x), ut(x,0)=0.
+Here c2= 16, h=1. We choose k = h/c=1/4
+Finite difference scheme is 
+𝑢𝑖𝑗+1=𝑢𝑖+1𝑗+ 𝑢𝑖−1𝑗−𝑢𝑖𝑗−1
+51
+52

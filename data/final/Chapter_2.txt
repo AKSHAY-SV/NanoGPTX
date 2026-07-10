@@ -1,0 +1,818 @@
+Carrier Transport Phenomena 
+By Dr. Bhaskar Awadhiya
+1
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+Tuesday, February 18, 2025
+2
+DRIFT CURRENT DENSITY
+Drift applicable to electrons can be expressed as:
+where Jn|drf is the drift current density due to electrons and vdn is the average drift 
+velocity of electrons. The net charge density of electrons is negative.
+Since the electron is negatively charged, the net motion of the electron is opposite to 
+the electric field direction.
+The conventional drift current due to electrons is also in the same direction as the 
+applied electric field even though the electron movement is in the opposite direction. 
+Similarlly
+Since both electrons and holes contribute to the drift current, the total drift current 
+density is the sum of the individual electron and hole drift current densities, so we may 
+write
+)
+(
+|
+en
+v
+J
+dn
+drf
+n
+−
+=
+E
+v
+n
+dn
+
+−
+=
+same direction as the 
+applied electric field
+nE
+e
+E
+en
+J
+n
+n
+drf
+n
+
+
+=
+−
+−
+=
+)
+)(
+(
+|
+E
+p
+n
+e
+J
+p
+n
+drf
+)
+(
+
+
++
+=
+POSD (Dr. Bhaskar Awadhiya)
+Tuesday, February 18, 2025
+3
+DRIFT CURRENT DENSITY
+Consider a gallium arsenide sample at 300 K with doping concentrations of Na= 0 and 
+Nd =1016 cm-3. Assume complete ionization and assume electron and hole mobilities 
+given. Calculate the drift current density if the applied electric field is E = 10 V/cm.
+3
+16
+2
+2
+10
+2
+2
+−
+
++
+
+
+
+
+
+
+−
++
+−
+=
+cm
+n
+N
+N
+N
+N
+n
+i
+a
+d
+a
+d
+3
+4
+16
+2
+6
+2
+10
+24
+.3
+10
+)
+10
+8.1(
+−
+−
+
+=
+
+=
+=
+cm
+n
+n
+p
+i
+POSD (Dr. Bhaskar Awadhiya)
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+4
+Tuesday, February 18, 2025
+5
+POSD (Dr. Bhaskar Awadhiya)
+CONDUCTIVITY
+The drift current density, may be written as
+E
+E
+p
+n
+e
+J
+p
+n
+drf
+
+
+
+=
++
+=
+)
+(
+where σ is the conductivity of the semiconductor material. The conductivity is
+given in units of ( ohm-cm)-1 and is a function of the electron and hole concentrations 
+and mobilities. 
+The reciprocal of conductivity is resistivity, which is denoted by ρ and is given in units 
+of ohm-cm. We can write the formula for resistivity as
+)
+(
+1
+1
+p
+n
+e
+p
+n
+
+
+
+
++
+=
+=
+i
+p
+n
+i
+n
+e
+)
+(
+ 
+as
+ written 
+be
+can 
+ty 
+conductivi
+ 
+ the
+material,
+ 
+intrinsic
+For 
+
+
+
++
+=
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+6
+Tuesday, February 18, 2025
+7
+POSD (Dr. Bhaskar Awadhiya)
+CONDUCTIVITY
+If we have a bar of semiconductor material as shown in Figure with a voltage applied 
+that produces a current I, then we can write
+L
+V
+E
+A
+I
+J
+=
+=
+ 
+and
+ 
+
+
+
+
+
+
+=
+
+=
+L
+V
+A
+I
+J
+
+E
+ 
+IR
+I
+A
+L
+I
+A
+L
+V
+=
+
+
+
+
+
+
+=
+
+
+
+
+
+
+=
+
+
+Above equation is Ohm’s law for a semiconductor. The resistance is a function of
+resistivity, or conductivity, as well as the geometry of the semiconductor.
+Tuesday, February 18, 2025
+8
+POSD (Dr. Bhaskar Awadhiya)
+CONDUCTIVITY
+A silicon semiconductor at 300 K is initially doped with donors at a concentration
+of Nd = 5 X1015 cm-3. The resistor is to have a resistance of 10K Ohm and handle a 
+current density of 50 A/cm2 when 5V is applied. E= 100V/cm
+mA
+R
+V
+I
+5.0
+10
+5 =
+=
+=
+If the current density is limited to 50 A/cm2, then the cross-sectional area is
+2
+5
+3
+10
+50
+10
+5.0
+cm
+J
+I
+A
+−
+−
+=
+
+=
+=
+Electric field = 100 V/cm, then the length of the resistor is
+cm
+E
+V
+L
+2
+10
+5
+100
+5
+−
+
+=
+=
+=
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+9
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+10
+Tuesday, February 18, 2025
+11
+POSD (Dr. Bhaskar Awadhiya)
+CARRIER DIFFUSION
+➢
+There is a second mechanism, in addition to drift, that can induce a current in a
+semiconductor. 
+➢
+We may consider a classic physics example in which a container, as
+shown in Figure is divided into two parts by a membrane.
+➢
+The left side contains gas molecules at a particular temperature and the right side 
+is initially empty. 
+➢
+The gas molecules are in continual random thermal motion so that, when the 
+membrane is broken, the gas molecules flow into the right side of the container.
+Diffusion is the process whereby particles flow from a region of high concentration 
+toward a region of low concentration. If the gas molecules were electrically charged, 
+the net flow of charge would result in a diffusion current.
+Tuesday, February 18, 2025
+12
+POSD (Dr. Bhaskar Awadhiya)
+DIFFUSION CURRENT DENSITY
+dx
+dn
+eD
+J
+n
+dif
+nx
+=
+|
+Dn is called the electron diffusion coefficient, has units of cm2/s, and is a +ve quantity.
+The hole diffusion current density is proportional to the hole density gradient and to the 
+electronic charge, so we may write
+dx
+dp
+eD
+J
+p
+dif
+px
+−
+=
+|
+Dp is called the hole diffusion coefficient, has units of cm2/s, and is a positive quantity. 
+Tuesday, February 18, 2025
+13
+POSD (Dr. Bhaskar Awadhiya)
+DIFFUSION CURRENT DENSITY
+EXAMPLE: Calculate the diffusion current density given a density gradient.
+Assume that, in an n-type gallium arsenide semiconductor at 300 K, the electron 
+concentration varies linearly from 1 X 1018 to 7 X 1017 cm-3 over a distance of 0.10 cm. 
+Calculate the diffusion current density if Dn=225cm2/s
+x
+n
+eD
+dx
+dn
+eD
+J
+n
+n
+dif
+nx
+
+
+
+=
+|
+𝐽𝑛𝑥|𝑑𝑖𝑓= (1.6 × 10−19)(225) 1 × 1018 −7 × 1017
+0.10
+= 108𝐴/𝑐𝑚2
+A significant diffusion current density can be generated in a semiconductor material 
+with only a modest density gradient.
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+14
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+15
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+16
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+17
+Tuesday, February 18, 2025
+18
+POSD (Dr. Bhaskar Awadhiya)
+TOTAL CURRENT DENSITY
+We now have four possible independent current mechanisms in a semiconductor.
+ 
+Electron Drift 
+ 
+ 
+ 
+Hole Drift
+ 
+Electron Diffusion 
+ 
+ 
+Hole Diffusion
+The total current density is the sum of these four components.
+
+
+
+
+
+
+
+
+
+
+
+
+Diffusion
+Hole
+p
+Diffusion
+Electron
+n
+Drift
+Hole
+x
+p
+Drift
+Electron
+x
+n
+dx
+dp
+eD
+dx
+dn
+eD
+E
+ep
+E
+en
+J
+−
++
++
+=
+
+
+p
+eD
+n
+eD
+E
+ep
+E
+en
+J
+p
+n
+p
+n
+
+−
+
++
++
+=
+
+
+This equation may be generalized to three dimensions as
+➢
+The mobility gives an indication of how well a charge carrier moves in a 
+semiconductor as a result of the force of an electric field. 
+➢
+The diffusion coefficient gives an indication of how well a charge carrier moves in 
+a semiconductor as a result of a density gradient. 
+➢
+The electron mobility and diffusion coefficient are not independent parameters.
+Tuesday, February 18, 2025
+19
+POSD (Dr. Bhaskar Awadhiya)
+➢
+As the mobilities are strong functions of temperature because of the scattering 
+processes, the diffusion coefficients are also strong functions of temperature.
+➢
+The specific temperature dependence given in Equation is only a small fraction of 
+the real temperature characteristic.
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+20
+Tuesday, February 18, 2025
+21
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+The Hall effect is a consequence of the forces that are exerted on moving charges by 
+electric and magnetic fields.
+Applications of Hall Effect are :
+•
+Used to distinguish whether a semiconductor is n type or p type.
+•
+Used to measure the majority carrier concentration.
+•
+Used to measure majority carrier mobility. 
+•
+Used in engineering applications as a magnetic probe.
+•
+Used in Current sensing applications.
+The force on a particle having a charge q and moving in a magnetic field is given by
+B
+qv
+F
+
+=
+where the cross product is taken between velocity and magnetic field so that the force
+vector is perpendicular to both the velocity and magnetic field.
+Tuesday, February 18, 2025
+22
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+➢
+Electrons and holes flowing in the semiconductor will experience a force as 
+indicated in the figure. 
+➢
+The force on both electrons and holes is in the (-y) direction. 
+➢
+In a p-type semiconductor ( p0 > n0), there will be a buildup of positive charge on 
+the y = 0 surface of the semiconductor
+➢
+In a n-type semiconductor (n0 > p0), there will be a buildup of negative charge on 
+the y = 0 surface.
+➢
+Figure illustrates the Hall effect.
+ 
+➢
+A semiconductor with a current Ix is 
+placed 
+in 
+a 
+magnetic 
+field 
+perpendicular to the current. 
+➢
+In this case, the magnetic field is in 
+the z direction. 
+Tuesday, February 18, 2025
+23
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+This net charge induces an electric field in 
+the y direction as shown in the figure.
+In steady state, the magnetic field force 
+will be exactly balanced by the induced 
+electric field force. This balance may be 
+written as
+𝐹= 𝑞[𝐸+ 𝑣× 𝐵] = 0
+⇒
+𝑞𝐸𝑦= 𝑞𝑣𝑥𝐵𝑧
+The induced electric field in the y direction is called the Hall field. The Hall field
+produces a voltage across the semiconductor which is called the Hall voltage. We
+can write
+W
+E
+V
+H
+H
++
+=
+where EH is assumed positive in the +y direction and VH is positive with the polarity
+shown.
+Carrier Transport Phenomena
+THE HALL EFFECT
+Tuesday, February 18, 2025
+24
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+➢
+In a p-type semiconductor, the Hall 
+voltage will be positive as defined in 
+Figure.
+➢
+In an n-type semiconductor, the Hall 
+voltage will have the opposite 
+polarity.
+➢
+The polarity of the Hall voltage is 
+used 
+to 
+determine 
+whether 
+an 
+extrinsic semiconductor is n type or p 
+type.
+z
+x
+H
+H
+H
+z
+x
+y
+WB
+v
+V
+W
+E
+V
+B
+qv
+qE
+From
+=
+
++
+=
+=
+ 
+and
+For a p-type semiconductor, the drift velocity of holes can be written as
+𝑣𝑑𝑥= 𝐽𝑥
+𝑒𝑝=
+𝐼𝑥
+(𝑒𝑝)(𝑊. 𝑑)
+Tuesday, February 18, 2025
+25
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+epd
+B
+I
+V
+z
+x
+H =
+H
+z
+x
+edV
+B
+I
+p =
+For n-type semiconductor, the VH is given by
+ned
+B
+I
+V
+z
+x
+H
+−
+=
+H
+z
+x
+edV
+B
+I
+n
+−
+=
+Note that the Hall voltage is negative for the n-type semiconductor; therefore, the
+electron concentration determined from Equation is actually positive quantity.
+Tuesday, February 18, 2025
+26
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+Once the majority carrier concentration has been determined, we can calculate the low-
+field majority carrier mobility. For a p-type semiconductor, we can write
+x
+p
+x
+E
+ep
+J
+
+=
+L
+V
+ep
+Wd
+I
+x
+p
+x
+
+=
+x
+x
+p
+epWdV
+L
+I
+=
+
+x
+x
+n
+enWdV
+L
+I
+=
+
+Tuesday, February 18, 2025
+27
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+EXAMPLE: Determine the majority carrier concentration and mobility, given Hall 
+effect parameters.
+Consider the geometry shown in Figure. Let L=10-1 cm, W=10-2 cm, and
+d = 10-3 cm. Also assume that Ix = 1.0 mA, Vx = 12.5 V, Bz = 500 gauss = 5x10-2 tesla,
+and VH = - 6.25 mV.
+A negative Hall voltage for this geometry implies that we have an n-type 
+semiconductor.
+𝑛= −𝐼𝑥𝐵𝑧
+𝑒𝑑𝑉𝐻
+𝑛= −
+(10−3)(5 × 10−2)
+(1.6 × 10−19)(10−5)(−6.25 × 10−3)
+𝑛= 5 × 1021𝑚−3 = 5 × 1015𝑐𝑚−3
+Tuesday, February 18, 2025
+28
+POSD (Dr. Bhaskar Awadhiya)
+THE HALL EFFECT
+The 
+electron 
+mobility 
+is 
+then 
+determined from Equation as
+s
+V
+cm
+enWdV
+L
+I
+n
+n
+x
+x
+n
+−
+=
+
+
+=
+=
+−
+−
+−
+−
+−
+/
+1000
+)
+10
+)(
+10
+)(
+5.
+12
+)(
+10
+5
+)(
+10
+6.1(
+)
+10
+)(
+10
+(
+2
+5
+4
+21
+19
+3
+3
+
+
+
+It is important to note that the MKS units must be used consistently in the Hall effect 
+equations to yield correct results.
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+29
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+30
+Tuesday, February 18, 2025
+POSD (Dr. Bhaskar Awadhiya)
+31

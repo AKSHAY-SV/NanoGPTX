@@ -1,0 +1,50 @@
+Introduction to 
+Discrete Fourier Transform
+Frequency domain sampling
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Review of Fourier representation of discrete signals
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+• The DTFT and inverse DTFT are not symmetric. One is integration over a 
+finite interval (2π), and the other is summation over infinite terms
+• The signal, x[n] is aperiodic, and hence, the transform is a continuous 
+function of frequency
+• Not practical for (real-time) computation on a digital computer
+• Go for Discrete Fourier Transform
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+3
+This derivation is not 
+there for the exam
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+Discrete Fourier Transform (DFT)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6V
+Inverse Discrete Fourier 
+Transform (IDFT)
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7
+Discrete Fourier Transform (DFT)
+Inverse Discrete Fourier Transform (IDFT)
+Fs = sampling frequency
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+9
+Next slide contains
+the proof
+Example: Symmetry property 
+10
+Circular shift of a sequence:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+11
+Next property:
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+12
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+13

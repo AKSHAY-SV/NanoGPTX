@@ -1,0 +1,228 @@
+Experiment-6 
+Introduction to the synthesis of Digital circuits 
+Objective: 
+The main objectives of this lab are: 
+• Familiarization with synthesis flow. 
+• Setting up synthesis constraints. 
+• Generating optimized gate-level netlist and Standard Design Constraints. 
+ 
+Introduction 
+Synthesis is a process of transforming RTL (a description of a circuit expressed in a language such as 
+Verilog or VHDL written in behavioral modeling or data flow modeling) to technologydependent or 
+independent gate-level netlist including nets, sequential and combinational cells, and their connectivity. 
+The main goal of synthesis is obtaining a gate-level netlist, logic optimization, inserting a clock-gating 
+cell for power reduction, inserting DFT (Design for Testability) cell, and maintaining the logical 
+equivalence between RTL and gate-level netlist. The best output of place and route depend on the 
+synthesis. 
+ 
+Purpose of Logic Circuit Synthesis 
+• Automates Design: Reduces the manual effort required to design circuits by automating the 
+generation of gate-level implementations. 
+• Optimization: Ensures the design meets specifications for performance, power consumption, and 
+area (PPA metrics). 
+• Bridges Abstraction Levels: Converts a functional specification into hardware-level 
+representations. 
+ 
+Steps in Logic Circuit Synthesis 
+• High-Level Design Description: 
+▪ Starts with a functional specification in a hardware description language (HDL) such 
+as Verilog or VHDL. 
+▪ Example: Writing if-else conditions, loops, or operations at a behavioral level. 
+• Translation: 
+▪ The HDL code is converted into an intermediate representation (IR) or Boolean 
+expressions. 
+• Logic Optimization: 
+▪ Simplifies Boolean expressions using optimization techniques: 
+▪ 
+Reducing the number of gates. 
+▪ 
+Eliminating redundant paths. 
+▪ Ensures the circuit adheres to constraints like timing, area, and power. 
+• Technology Mapping: 
+▪ Maps the optimized Boolean expressions to the technology library of standard cells 
+(pre-designed logic gates like AND, OR, NOT, multiplexers, etc.). 
+▪ Each standard cell is characterized by a specific process technology node (e.g., 7nm, 
+28nm). 
+• Generation of Gate-Level Netlist: 
+▪ Produces a netlist that describes the connectivity between gates. 
+Types of Synthesis 
+• Behavioral Synthesis: 
+▪ 
+Converts high-level algorithms into a circuit at the RTL (Register Transfer Level). 
+• Logic Synthesis: 
+▪ 
+Converts RTL descriptions into a gate-level design. 
+• Physical Synthesis: 
+▪ 
+Prepares the gate-level netlist for layout by considering physical constraints such as 
+placement and routing. 
+Key Components of Synthesis 
+• Technology Library: 
+▪ 
+Contains predefined logic cells, characterized for performance, power, and area. 
+• Constraints File: 
+ 
+▪ 
+Specifies design constraints such as: 
+▪ 
+Maximum delay (timing constraints). 
+▪ 
+Target area or power limits. 
+• Optimization Objectives: 
+▪ 
+Ensure the design is: 
+▪ 
+Fast (meets timing). 
+▪ 
+Small (uses minimal chip area). 
+▪ 
+Power-efficient (reduces energy consumption) 
+Example: 
+To write a Verilog code for 4bit up/down asynchronous rest counter and its test-bench for verification 
+and do the synthesizing. 
+Tool Required: 
+• Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim). 
+• Synthesis: Genus 
+Design Information and Bock Diagram: 
+• An up/down counter is a digital counter which can be set to count either from 0 to 
+MAX_VALUE or MAX_VALUE to 0. 
+• The direction of the count(mode) is selected using a single bit input. The module has 3 inputs - 
+clk, reset which is active high and an Up Or Down mode input. The output is Counter which is 4 
+bits in size. 
+• When Up mode is selected, counter counts from 0 to 15 and then again from 0 to 15. 
+• When Down mode is selected, the counter counts from 15 to 0 and then again from 15 to 0. 
+• Changing mode doesn't reset the Count value to zero. 
+• You must apply high value to reset, to reset the Counter output. 
+ 
+ 
+ 
+You must perform the function simulation using NCLaunch (Already discuss in previous experiments). 
+This involves three stages : 
+• Step 1: Compilation- Process to check the correct Verilog language syntax and usage 
+• Step 2: Elaboration- To check the port connections in hierarchical design 
+• Step 3: Simulation- Simulate with the given test vectors over a period of time to observe the 
+output behavior. 
+Verilog code for 4-Bit Up-Down Counter: 
+ 
+ 
+Creating Test Bench: 
+• Similarly, create your test bench using gedit .v or .vhdl to open a new blank document 
+(4bup_down_count_tb.v). 
+ 
+ 
+You must perform the function simulation using NCLaunch (Already discuss in previous experiments). 
+This involves three stages : 
+• Step 1: Compilation- Process to check the correct Verilog language syntax and usage 
+• Step 2: Elaboration- To check the port connections in hierarchical design 
+• Step 3: Simulation- Simulate with the given test vectors over a period of time to observe the 
+output behavior. 
+Final Wave form after simulation 
+ 
+ 
+Synthesize the design using Constraints and analyse reports, critical path and Max Operating 
+Frequency. 
+Step 1 : Getting Started 
+ 
+ 
+Step 2 : Creating an SDC File 
+• An SDC file (Synopsys Design Constraints file) is a widely used format in the IC design process to 
+specify design constraints. These constraints guide EDA tools during synthesis, place, and route 
+(P&R), and static timing analysis (STA). The file uses Tcl-based syntax and focuses on defining 
+timing, clocking, and I/O constraints. 
+Key Features of SDC Files: 
+1. Clock Definitions: 
+▪ Specify the clocks in the design, including their frequency, waveform, and latency. 
+2. Input and Output Delays: 
+▪ Defines timing constraints for external inputs and outputs relative to a clock. 
+3. Timing Exceptions: 
+▪ Includes specific paths that require exceptions, such as false paths or multi-cycle paths. 
+4. Design Constraints: 
+▪ Specifies load, drive strength, and other characteristics to guide synthesis and STA. 
+Creating SDC File 
+ 
+ 
+ 
+ 
+ 
+Step 3: Performing Synthesis 
+• The Liberty files are present in the below path, 
+ /home/install/FOUNDRY/digital/nm/dig/lib/ (This can be changed based on defined location) 
+• The Available technology nodes are 180nm ,90nm and 45nm. 
+• In the terminal, initialise the tools with the following commands if a new terminal is being used. 
+▪ csh 
+▪ source /home/install/cshrc 
+▪ The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool. 
+• The Following are commands to proceed, 
+1. read_libs /home/install/FOUNDRY/digital/90nm/dig/lib/slow.lib //corner analysis 
+2. read_hdl counter.v 
+3. elaborate 
+4. read_sdc constraints_top.sdc //Reading Top Level SDC 
+ 
+5. set_db syn_generic_effort medium //Effort level to medium for generic, mapping and 
+optimization 
+6. set_db syn_map_effort medium 
+7. set_db syn_opt_effort medium 
+8. syn_generic 
+9. syn_map 
+10. syn_opt //Performing Synthesis Mapping and Optimisation 
+11. report_timing > counter_timing.rep //Generates Timing report for worst datapath and 
+dumps into file 
+12. report_area > counter_area.rep //Generates Synthesis Area report and dumps into a file 
+13. report_power > counter_power.rep //Generates Power Report [Pre-Layout] 
+14. write_hdl > counter_netlist.v //Creates readable Netlist File 
+15. write_sdc > counter_sdc.sdc //Creates Block Level SDC 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Synthesis RTL Schematic : Schematic Capture of 4bit Up-Down Counter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+• Post Lab Task 
+▪ Can synthesis be possible without Constraints? 
+▪ How constraints are important for timing analysis. 
+Verilog code for Full adder: 
+You must perform the function simulation using NCLaunch (Already discuss in previous experiments). 
+This involves three stages : 
+• Step 1: Compilation- Process to check the correct Verilog language syntax and usage 
+• Step 2: Elaboration- To check the port connections in hierarchical design 
+• Step 3: Simulation- Simulate with the given test vectors over a period of time to observe the 
+output behavior. 
+Full Adder Verilog Code: 
+ 
+Test Bench for Full adder: 
+ 
+ 
+Waveform: 
+ 
+ 
+Repeat the above steps for synthesis for full adder. 
+ 
+ 
+ Exercise problem: 
+1. Perform the above exercises with corner analysis includes fast. 
+2. Write a verilog code and performed synthesis for MOD 10 counter. 
+3. To write a verilog code for 4bit Adder and verify the functionality using Test bench and 
+synthesize, Analyse Reports and Netlist, Critical Path and Max Operating Frequency. 
+▪ Please note that the adder does not contain any clock, SDC can be skipped as an Input, 
+but you have to consider the SDC during the synthesis.

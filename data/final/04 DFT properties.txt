@@ -1,0 +1,35 @@
+Properties of 
+DFT contd…
+Dr. Sampath Kumar
+Associate Professor
+Department of ECE
+MIT, Manipal
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+2
+Put n - l = m
+Put N – l + n = m
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+3
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+4
+Proof is an exercise
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+5
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+6
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+7
+and
+Evaluate IDFT at l = 0
+`
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+8
+`
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+9
+DFT matrix
+10
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+11
+Dr. Sampath Kumar, Dept. of ECE, MIT, Manipal
+12

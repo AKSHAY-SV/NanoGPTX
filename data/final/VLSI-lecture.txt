@@ -1,0 +1,662 @@
+ECE2221
+Lecture # 1
+VLSI Design (ECE2221)
+Instructor: Dr. Amit Kumar Goyal
+Office: AB5/Ground Floor/Room-3/FC43
+Contact: amit.goyal@manipal.edu
+BTech in Electronics Engineering (VLSI Desing and 
+Technology)
+1. This
+course
+provides
+an
+introduction
+to
+the
+fundamental
+principles of VLSI circuit design.
+2. Emphasis is placed on the design of basic building blocks of
+large-scale digital integrated circuits and systems.
+3. Understand the concept behind ASIC Design.
+4. Implement a complete digital system on silicon using state-of-
+the-art CAD tools.
+5. Understand the consequence of scaling down the dimensions of
+transistors and its effect on device speed and density….
+6. Have the necessary background to complete CMOS designs and
+assess which particular design style to use on a given design,
+from FPGA to Full custom design.
+OBJECTIVES and OUTCOME
+1.
+Analyze NMOS & CMOS inverter circuits.
+2. Analyze and Design combinational and sequential circuits using
+MOS devices.
+3. Describe the process of fabrication of NMOS and CMOS devices.
+4. Draw the stick diagrams and layouts for different MOS circuits.
+5. Describe various issues involved in subsystem design and estimate
+performance parameters.
+6. Analyze the impact of interconnects on the circuit performance.
+OBJECTIVES and OUTCOME
+The evolution of MOS technology has followed the famous Moore’s law that predicts a
+steady decrease in gate length. As predicted by Gordon Moore
+in the 1960s, integrated
+circuit (IC) densities have been doubling approximately every 18 months, and this doubling
+in size has been accompanied by a similar exponential increase in circuit speed (or more
+precisely, clock frequency).
+Moore’s law
+On-chip transistor count increase for the Intel processors (Source: Intel).
+What is expected?
+Power
+Min
+Cost
+Min
+Complexity
+
+Min
+Delay
+Size 
+Min
+Intel 4004 Processor: 2300 Transistor 10µm Technology
+Intel i7 Processor : 3,200,000,000 Transistors 14nm Technology
+Intel 4004 Processor: 740KHz 
+Intel i7 Processor : 3.6 GHz
+Intel 4004 Processor: 1 W
+Intel i7 Processor : 47W
+Intel 4004 Processor: 12 mm2
+Intel i7 Processor : 246 mm²
+Intel 4004 Processor: $60
+Intel i7 Processor : $366
+VLSI : Very Large Scale Integration
+• Integration: Integrated Circuits
+– multiple devices on one substrate
+• How large is Very Large?
+• SSI (small scale integration)
+– 7400 series, 10-100 transistors
+• MSI (medium scale)
+– 74000 series 100-1000
+• LSI 1,000-10,000 transistors
+• VLSI > 10,000 transistors
+• ULSI (some disagreement)
+Integration Improves the Design
+• Lower parasitics, higher clocking speed
+• Lower power
+• Physically small
+Integration Reduces Manufacturing Costs
+• (almost) no manual assembly
+• About $1-5billion/fab
+• Typical Fab 1 city block, a few hundred people
+• Packaging is largest cost
+• Testing is second largest cost
+• For low volume ICs, Design Cost may swamp all manufacturing cost
+WHY VLSI?
+What is “CMOS VLSI”?
+• MOS = Metal Oxide Semiconductor (This used to mean a
+Metal gate over Oxide insulation)
+• Now we use polycrystalline silicon which is deposited on the
+surface of the chip as a gate. We call this “poly” or just “red
+stuff” to distinguish it from the body of the chip, the substrate,
+which is a single crystal of silicon.
+• We do use metal (aluminum) for interconnection wires on the
+surface of the chip.
+Micro
+Electronics
+Active 
+Substrate
+Silicon
+MOS
+NMOS
+PMOS
+CMOS
+Bipolar
+TTL
+ECL
+GaAs
+Very Fast 
+Devices
+Inert 
+Substrate
+Good 
+resistors
+Microelectronics Technology
+MOS Vs. BJT
+Bipolar
+CMOS
+Factors
+High
+Low
+Static Power 
+Dissipation
+Low
+High
+Input Impedance
+Low
+High
+Noise Margin
+Low
+High
+Packing Density
+High
+Low
+Fan-out
+Unidirectional
+Bidirectional
+Direction
+CMOS is superior! 
+VLSI Design
+• The real issue in VLSI is about designing systems on
+chips.
+• The designs are complex, and we need to use structured
+design techniques and sophisticated design tools to
+manage the complexity of the design.
+• We also accept the fact that any technology we learn the
+details of will be out of date soon.
+• We are trying to develop and use techniques that will
+transcend the technology, but still respect it.
+• The real issue in VLSI is about designing systems on
+chips.
+Design Styles
+• Full custom
+• Standard cell
+• Gate-array
+• Macro-cell
+• “FPGA”
+• Combinations
+Comparison
+FPGA
+Gate array
+Standard cell
+Full custom
+Macro cell
+Density
+Low
+Medium
+Medium
+High
+High
+Flexibility
+Low (high)
+Low
+Medium
+High
+Medium
+Analog
+No
+No
+No
+Yes
+Yes
+Performance
+Low
+Medium
+High
+Very high
+Very high
+Design time
+Low
+Medium
+Medium
+High
+Medium
+Design costs
+Low
+Medium
+Medium
+High
+High
+Tools
+Simple
+Complex
+Complex
+Very complex Complex
+Volume
+Low
+Medium
+High
+High
+High
+Device cost
+High
+Medium
+Low
+Low
+Low
+• Specifications 
+• IO, Function, Costs
+• Architectural Description
+• VHDL, Verilog, Behavioral, Large Blocks 
+• Logic Design
+• Gates plus Registers
+• Circuit Design
+• Transistors sized for power and speed
+• Discrete Logic, Technology Mapping
+• Layout
+• Size, Interconnect, Parasitics
+Levels of Design
+Design Methodology
+Design methodology
+• Process for creating a design
+Methodology Goals
+• Design cycle
+• Complexity
+• Performance
+• Reuse
+• Reliability
+VLSI Design Flow
+Gajski Y Chart
+What we wish 
+to accomplish 
+with system
+Specifies 
+interconnections 
+of components
+Components arrangement
+Circuit Abstraction
+Abstraction level 
+Complexity
+Circle represents same 
+level of Abstration
+Architectural Abstraction
+RTL Abstraction
+Logic Abstraction
+VLSI Design Hierarchy
+Works on Divide and Conquer
+• Regularity
+• Modularity
+• Locality
+Hierarchical decomposition of a large system
+should result in not only simple, but also similar
+blocks, as much as possible
+Various functional blocks which make up the
+larger system must have well-defined functions
+and interfaces. Independent of each other
+Internals of each module become unimportant
+to the exterior modules. Internal details remain
+at the local level.
+VLSI Design Hierarchy
+Exist at all level of Abstraction
+Behavioral
+Physical
+Structural
+Example of a Computer
+VLSI Design Hierarchy
+Regularity exist at all level of Abstraction
+• Transistor Level: All are of same size
+• Logic Level : All Gate are of same type
+VLSI Design Hierarchy (Advantage)
+Regularity
+usually
+reduces
+the
+number
+of
+different
+modules that need to be designed and verified, at all levels
+of abstraction.
+Modularity enables the parallelization of the design
+process. It also allows the use of generic modules in
+various designs.
+Time-critical operations should be performed locally,
+without the need to access distant modules or signals.
+Structural decomposition of a CMOS four-bit adder into its components
+VLSI Design Hierarchy (Example)
+COURSE INFORMATION
+COURSE INFORMATION
+COURSE INFORMATION
+*Self-directed Learning:
+Simulation of MOSFET based logic circuits using LTSPICE
+Course Books
+4. D. A. Pucknell and K. Eshraghian,“Basic VLSI Design”, PHI publication, 2009.
+5. John P Uyemura, "Introduction to VLSI Circuits and Systems." Wiley, 2002.
+MOS Capacitor
+E0
+Electron 
+Affinity
+Work 
+Function
+Work 
+Function 
+(4.1eV)
+0.95eV
+Eg = 8eV
+4.15eV
+Eg = 
+1.1eV
+MOS Capacitor
+Oxide thickness, Threshold voltage, and Doping levels, depend on the
+fabrication process, and cannot be changed by design; they are
+technology parameters.
+A negative voltage is applied to the gate, so there is negative
+charge on the gate. The mobile positively charged holes are
+attracted to the region beneath the gate. This is called the
+accumulation mode
+i. Accumulation
+MOS Capacitor
+A small positive voltage is applied to the gate, resulting in some
+positive charge on the gate. The holes in the body are repelled from
+the region directly beneath the gate, resulting in a depletion region
+forming below the gate.
+ii. Depletion
+MOS Capacitor
+A higher positive potential exceeding a critical threshold voltage Vt is
+applied, attracting more positive charge to the gate. The holes are
+repelled further and some free electrons in the body are attracted to
+the region beneath the gate. This conductive layer of electrons in the
+p-type body is called the inversion layer
+iii. inversion
+MOS Capacitor
+MOS Capacitor
+MOSFET
+• Enhancement type MOSFET
+1. N-Channel MOSFET
+2. P-Channel MOSFET
+• Depletion type MOSFET
+1. N-Channel MOSFET
+2. P-Channel MOSFET
+Device Structure
+Arrows always point from P to N, so an NMOS (N-channel in P-well
+or P-substrate) has the arrow pointing in (from the bulk to the
+channel)
+Enhancement MOSFET
+Tox= 15Å to 100 Å (Diameter of SiO2 molecule is about 3.2Å)
+Enhancement MOSFET
+VTh is fixed for NMOS and PMOS devices for given 
+fabrication process
+Operation Of N-MOS Transistor
+Depending on the relative voltages of the source, drain and gate, the NMOS
+transistor may operate in any of three regions viz :
+Cut_off : Current flow is essentially zero (also called accumulation region)
+Linear :(Non saturated region)-It is weak inversion region drain current
+depends on gate and drain voltage.
+Saturation : It is strong inversion region where drain current is independent
+of drain-source voltage.
+Cut-off Region
+p-type substrate 
+(Body)
+Source (S)
+VDS=0
+n+
+n+
+n+
+n+
+VGS=0
+VDS=0
+0 VGSVt
+p-type substrate 
+(Body)
+Source (S)
+n+
+n+
+n+
+n+
+Depletion Layer
+VDS=0
+VGS > Vt
+p-type substrate 
+(Body)
+Source (S)
+n+
+n+
+n+
+n+
+Inversion 
+Layer
+VDS < VGS - Vt
+VGS > Vt
+p-type substrate 
+(Body)
+Source (S)
+n+
+n+
+n+
+n+
+Inversion 
+Layer
+VDS = VGS - Vt
+VGS > Vt
+p-type substrate 
+(Body)
+Source (S)
+n+
+n+
+n+
+n+
+n- channel 
+Saturation Region
+VDS > VGS - Vt
+VGS > Vt
+p-type substrate 
+(Body)
+Source (S)
+n+
+n+
+n+
+n+
+n- channel 
+MOSFET
+• Enhancement type MOSFET
+1. N-Channel MOSFET
+2. P-Channel MOSFET
+• Depletion type MOSFET
+1. N-Channel MOSFET
+2. P-Channel MOSFET
+Device Structure
+p-type substrate 
+(Body)
+n+
+n+
+Source (S)
+Gate (G)
+Drain (D)
+L
+Body (B)
+Oxide (SiO2)
+Metal
+Depletion Type MOS
+• In Depletion MOS structure, the source & drain are diffused on P-substrate.
+• Positive voltages enhances number of electrons from source to drain.
+• Negative voltage applied to gate reduces the drain current 
+• This is called as ‘ normally ON ’ MOS.
+Depletion Type MOS
+G
+D
+S
+NMOS
+Source
+Drain
+Gate
+PMOS
+Gate
+Drain
+Source
+NMOS
+N-MOS Structure
+β
+Current Equations
+Linear Operating region
+Vgs>Vt
+Vds<Vgs-Vt
+Saturation Operating region
+Vgs>Vt
+Vds≥Vgs-Vt
+Important Observations
+• The bulk or substrate of nMOS transistors must always
+be connected to the lower voltage that is the reference
+terminal.
+• The positive convention current in an nMOS device is
+from the drain to the source, and is referred to as IDS or
+just ID, since drain and source current are equal.
+• When a positive voltage is applied to the drain terminal,
+the drain current depends on the voltage applied to the
+gate control terminal.
+I/O Characteristics
+nMOS transistor output 
+characteristics
+input characteristics (ID vs. VGS ) 
+for an nMOS,
+I/O Characteristics - NMOS
+nMOS transistor output 
+characteristics
+input characteristics (ID vs. VGS ) 
+for an nMOS,
+NMOS Threshold Voltage
+Vt0 is the threshold voltage when the source is at the body potential.
+ϕs is the surface potential at threshold
+is the body effect coefficient
+and
+is thermal voltage, which is around 
+26mV at room temperature.
+Cut-off Region
+n-type substrate 
+(Body)
+Source (S)
+VDS=0
+n+
+p+
+n+
+p+
+VGS=0
+Enhancement PMOS Transistor
+VDS=0
+0 |VGS||Vt|
+n-type substrate 
+(Body)
+Source (S)
+n+
+p+
+n+
+p+
+Depletion Layer
+VDS=0
+|VGS |> |Vt|
+n-type substrate 
+(Body)
+Source (S)
+n+
+p+
+n+
+p+
+Inversion 
+Layer
+|VDS | < |VGS –
+Vt|
+|VGS |> |Vt|
+n-type substrate 
+(Body)
+Source (S)
+n+
+p+
+n+
+p+
+Inversion 
+Layer
+|VDS| =| VGS –
+Vt|
+|VGS| > |Vt|
+n-type substrate 
+(Body)
+Source (S)
+n+
+p+
+n+
+p+
+n- channel 
+Saturation Region
+|VDS| > |VGS –
+Vt|
+|VGS |> |Vt|
+n-type substrate 
+(Body)
+Source (S)
+n+
+p+
+n+
+p+
+n- channel 
+pMOS transistor output 
+characteristics
+Input characteristics (ID vs. VGS ) 
+for an pMOS,
+I/O Characteristics
+Examples:
+Examples:
+Examples:
+Examples:
+Examples:
+Examples:
+Current Summary
+Second-order Effects
+• Body Effect.
+• Mobility variation or Velocity Saturation
+• Channel length modulation
+• Sub threshold conduction
+• Mobility variation or Velocity Saturation
+• Fowler-Nordheim tunneling
+• Drain punchthrough
+• Impact Ionization-Hot electrons.
+Body Effect
+What happens if the bulk voltage of an N-MOSFET drops below the source voltage ?
+where φMS is the difference between the
+work functions of the polysilicon gate and
+the silicon substrate
+φF= Fermi potential
+Channel length modulation
+λ is a process-technology parameter 
+with the dimensions of V-1
+VA is a process-technology parameter with the dimensions of V.
+Channel length modulation
+Mobility variation
+Mobility is the defined as the ease with which the charge carriers drift in the substrate
+material. Mobility decreases with increase in doping concentration and increase in
+temperature. Mobility is the ratio of average carrier drift velocity and electric field.
+Mobility is represented by the symbol μ.
+Sub threshold conduction
+For VGS ≈VTH, a "weak“ inversion layer still exists and some current flows from D to
+S. Even for VGS < VTH, ID is finite, but it exhibits an exponential dependence on VGS
+Called "subthreshold conduction“. this effect can be formulated for VDS greater than
+roughly 200 m V as
+ζ>1 is a nonideality factor
+When the gate oxide is very thin there can be a current between gate and source
+or drain by electron tunneling through the gate oxide. This current is proportional
+to the area of the gate of the transistor.
+Fowler Nordhiem tunneling:
+Drain punchthrough
+When the drain is a high voltage, the depletion region around the drain may extend
+to the source, causing the current to flow even it gate voltage is zero. This is known
+as Punchthrough condition.
+Impact Ionization-Hot electrons
+When the length of the transistor is reduced, the electric field at the drain increases.
+The field can be come so high that electrons are imparted with enough energy we can
+term them as hot. These hot electrons impact the drain, dislodging holes that are then
+swept toward the negatively charged substrate and appear as a substrate current. This
+effect is known as Impact Ionization.
+Determine the region of operation of M1 in
+each of the circuits shown in Fig.
+VTH = 0.4 V for NMOS devices and −0.4 V for PMOS devices.
+VTH = 0.4 V for NMOS devices and −0.4 V for PMOS devices.
+Inverters 
+Inverters 
+VOH: Maximum output voltage when the output level is logic " 1”
+VOL: Minimum output voltage when the output level is logic “0”
+VIL: Maximum input voltage which can be interpreted as logic "0"
+VIH: Minimum input voltage which can be interpreted as logic "1"
+Resistive Load Inverter
+Enhancement-load Inverter
+Depletion-load Inverter
+CMOS Inverter
+Inverters 
+Resistive-load Inverters 
+Linear Current:
+Saturation Current:
+Resistive-load Inverters 
+VOH
+VOL
+Resistive-load Inverters 
+VIL
+VIH
+Differentiate w.r.t. V=
+Resistive-load Inverters 
+VIH
+Utilize
+Solution:
+For better noise immunity, the NML should be at 
+least about 25% of the power supply voltage VDD, 
+i.e., about 1.25 V.

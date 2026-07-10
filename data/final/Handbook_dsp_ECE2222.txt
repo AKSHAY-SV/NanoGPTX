@@ -1,0 +1,846 @@
+Digital Signal Processing (ECE – 2222) 
+List of Formulae 
+ 
+ 
+1 
+DFT pair 
+ 
+𝑥(𝑛) = 1
+N ∑𝑋(𝑘)𝑒𝑗2𝜋
+𝑁𝑘𝑛, 𝑛= 0, 1,2 … … 𝑁−1
+𝑁−1
+𝑘=0
+ 
+ 
+𝑋(𝑘) = ∑𝑥(𝑛)𝑒−𝑗2𝜋
+𝑁𝑘𝑛, 𝑘= 0, 1,2 … … 𝑁−1
+𝑁−1
+𝑛=0
+ 
+ 
+ 
+ 
+x(n) : Signal of length L 
+X(k): N-point DFT of x(n) 
+N ≥ L 
+2 
+N-point 
+Circular 
+convolution 
+ 
+𝑥3(𝑛) = 𝑥1(𝑛) ⊛𝑥2(𝑛) = ∑𝑥1(𝑚)𝑥2(𝑛−𝑚)
+𝑁−1
+𝑚=0
+ 
+ 
+𝑥1(𝑛), 𝑥2(𝑛): signals of length N 
+or less 
+ 
+3 
+Pole-zero IIR 
+system 
+𝑦(𝑛) = −∑𝑎𝑘𝑦(𝑛−𝑘)
+𝑁
+𝑘=1
++ ∑𝑏𝑘𝑥(𝑛−𝑘) 
+𝑀
+𝑘=0
+ 
+ 
+𝐻(𝑧) = 𝑌(𝑧)
+𝑋(𝑧) =
+∑
+𝑏𝑘𝑧−𝑘 
+𝑀
+𝑘=0
+1 + ∑
+𝑎𝑘𝑧−𝑘 
+𝑁
+𝑘=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+𝑥(𝑛):𝑖𝑛𝑝𝑢𝑡 
+ 
+𝑦(𝑛): 𝑜𝑢𝑡𝑝𝑢𝑡 
+ 
+𝑋(𝑧): z-transform of 𝑥(𝑛) 
+ 
+𝑌(𝑧): z-transform of y(𝑛) 
+ 
+𝐻(𝑧): System function 
+ 
+𝐾: Integer part of (N+1)/2 
+ 
+N ≥ M 
+ 
+𝐶=
+𝑏𝑁
+𝑎𝑁 
+4 
+All pole IIR 
+system 
+𝑦(𝑛) = ∑𝑎𝑘𝑦(𝑛−𝑘)
+𝑁
+𝑘=1
++ 𝑏0𝑥(𝑛) 
+ 
+𝐻(𝑧) = 𝑌(𝑧)
+𝑋(𝑧) =
+𝑏0
+1 + ∑
+𝑎𝑘𝑧−𝑘 
+𝑁
+𝑘=1
+ 
+ 
+5 
+All zero FIR 
+system 
+𝑦(𝑛) = ∑𝑏𝑘𝑥(𝑛−𝑘) 
+𝑀
+𝑘=0
+ 
+ 
+𝐻(𝑧) = 𝑌(𝑧)
+𝑋(𝑧) = ∑𝑏𝑘𝑧−𝑘 
+𝑀
+𝑘=0
+ 
+ 
+6 
+Cascade 
+realization for 
+IIR filters 
+𝐻(𝑧) =
+∑
+𝑏𝑘𝑧−𝑘 
+𝑀
+𝑘=0
+1 + ∑
+𝑎𝑘𝑧−𝑘 
+𝑁
+𝑘=1
+= ∏𝐻𝑘(𝑧)
+𝐾
+𝑘=1
+ 
+ 
+𝐻𝑘(𝑧) = 𝑏𝑘0 + 𝑏𝑘1𝑧−1 + 𝑏𝑘2𝑧−2
+1 + 𝑎𝑘1𝑧−1 + 𝑎𝑘2𝑧−2 
+ 
+7 
+Parallel 
+realization for 
+IIR filters 
+𝐻(𝑧) =
+∑
+𝑏𝑘𝑧−𝑘 
+𝑀
+𝑘=0
+1 + ∑
+𝑎𝑘𝑧−𝑘 
+𝑁
+𝑘=1
+= 𝐶+ ∑𝐻𝑘(𝑧) 
+𝐾
+𝑘=1
+ 
+ 
+𝐻𝑘(𝑧) =
+𝑏𝑘0 + 𝑏𝑘1𝑧−1
+1 + 𝑎𝑘1𝑧−1 + 𝑎𝑘2𝑧−2 
+ 
+8 
+Frequency 
+sampling 
+realization for 
+FIR filters 
+𝐻(𝑧) = 1
+𝑀(1 −𝑧−𝑀)𝐻𝑝(𝑧) 
+ 
+𝐻𝑝(𝑧) =
+𝐻(0)
+1 −𝑧−1 +
+∑
+𝐴(𝑘) −𝐵(𝑘)𝑧−1
+1 −2𝑐𝑜𝑠(2𝜋𝑘
+𝑀) 𝑧−1 + 𝑧−2
+(𝑀−1)/2
+𝑘=1
+ 𝑀 𝑜𝑑𝑑 
+ 
+𝐻𝑝(𝑧) =
+𝐻(0)
+1 −𝑧−1 +
+𝐻(𝑀
+2 )
+1 + 𝑧−1
++ ∑
+𝐴(𝑘) −𝐵(𝑘)𝑧−1
+1 −2𝑐𝑜𝑠(2𝜋𝑘
+𝑀) 𝑧−1 + 𝑧−2
+𝑀
+2 −1
+𝑘=1
+𝑀 𝑒𝑣𝑒𝑛 
+ 
+𝐴(𝑘) = 𝐻(𝑘) + 𝐻(𝑀−𝑘) 
+𝐵(𝑘) = 𝐻(𝑘)𝑒−𝑗2𝜋𝑘
+𝑀+ 𝐻(𝑀−𝑘)𝑒𝑗2𝜋𝑘
+𝑀 
+ 
+ 
+ 
+ 
+ 
+ 
+𝐻(𝜔): Frequency response 
+ 
+𝐻(𝑘): 𝐻(𝜔) at 𝜔= 𝜔𝑘=
+2𝜋𝑘
+𝑀 
+ 
+M: Length of the FIR filter 
+9 
+Impulse 
+Invariant 
+Transformation 
+ 
+𝑧= 𝑒𝑠𝑇 
+𝐻(𝑠) = ∑
+𝐴𝑘
+𝑠−𝑠𝑘
+ ≡ 𝐻(𝑧) = ∑
+𝐴𝑘
+1 −𝑒𝑠𝑘𝑇𝑧−1
+𝑁
+𝑘=1
+𝑁
+𝑘=1
+ 
+N: Order of the analog filter 
+ 
+𝑠𝑘: Poles of 𝐻(𝑠) 
+ 
+𝑧𝑘: Zeroes of 𝐻(𝑠) 
+ 
+T: Sampling interval 
+ 
+Ω: Analog filter frequency variable 
+ 
+ω: Digital filter frequency variable 
+ 
+10 Bilinear 
+Transformation 𝑠= 2
+𝑇
+(1 −𝑧−1)
+(1 + 𝑧−1) 
+ 
+Ω= 2
+𝑇𝑡𝑎𝑛(𝜔
+2) 
+11 Matched 
+z-transform 
+ 
+𝐻(𝑠) =
+∏
+(𝑠−𝑧𝑘)
+𝑀
+𝑘=1
+∏
+(𝑠−𝑠𝑘)
+𝑁
+𝑘=1
+≡𝐻(𝑧) =
+∏
+1 −𝑒𝑧𝑘𝑇𝑧−1
+𝑀
+𝑘=1
+∏
+1 −𝑒𝑠𝑘𝑇𝑧−1
+𝑁
+𝑘=1
+ 
+12 Butterworth 
+analog low 
+pass filter 
+response 
+|𝐻(Ω)|2 =
+1
+1 + ( Ω
+Ω𝑐)
+2𝑁=
+1
+1 + 𝜖2 ( Ω
+Ω𝑝)
+2𝑁 
+ 
+𝑁=
+𝑙𝑜𝑔( 1
+𝛿22−1)
+2𝑙𝑜𝑔(Ω𝑠
+Ω𝑐) or N ≥ log(d)/ log(k) 
+Where d=√(1/𝐴𝑝2) −1/√(1/𝐴𝑠2) −1 and k = 
+Ω𝑝
+Ω𝑠 
+Ap and As are absolute values 
+ 
+𝑠𝑘= Ω𝑐𝑒𝑗∅𝑘 
+ 
+ 
+ 
+ 
+N: order of the filter 
+ 
+|𝐻(Ω)|2 : Squared magnitude response
+ 
+Ω𝑝: Pass band edge frequency 
+Ω𝑝: Stop band edge frequency 
+ 
+Ω𝑐: 3-dB cut-off frequency 
+ 
+1
+1+𝜖2 : Pass band edge value of 
+|𝐻(Ω)|2 
+𝛿2
+2 : Stop band edge value of 
+|𝐻(Ω)|2 
+ 
+𝑠𝑘: Poles of H(s) 
+ 
+∅𝑘= 𝑝𝑜𝑙𝑒 𝑎𝑛𝑔𝑙𝑒 
+ = 𝜋
+2 + (2𝑘+ 1)𝜋
+2𝑁
+, 
+k= 0, 1, 2, ……N-1 
+ 
+ 
+13 Chebyshev 
+analog low 
+pass filter 
+response 
+|𝐻(Ω)|2 =
+1
+1 + 𝜖2𝑇𝑁
+2 ( Ω
+Ω𝑝)
+ 
+𝑇𝑁(𝑥) = {𝑐𝑜𝑠(𝑁𝑐𝑜𝑠−1𝑥), |𝑥| ≤1 
+𝑐𝑜𝑠ℎ(𝑁𝑐𝑜𝑠ℎ−1𝑥), |𝑥| > 1 
+ 
+𝑁=
+𝑙𝑜𝑔
+[
+ 
+ 
+ √1 −𝛿2
+2 + √1 −𝛿2
+2(1 + 𝜖2)
+𝜀𝛿2
+]
+ 
+ 
+ 
+𝑙𝑜𝑔[(Ω𝑠
+Ω𝑝) + √(Ω𝑠
+Ω𝑝)
+2
+−1]
+ 
+N ≥ cosh-1(1/d)/ cosh-1(1/k) 
+Where d=√(1 −𝐴𝑝2) −1/√(1 −𝐴𝑠2) −1 and k = 
+Ω𝑝
+Ω𝑠 
+ 
+𝑠𝑘= 𝑟2𝑐𝑜𝑠(∅𝑘) + 𝑗𝑟1𝑠𝑖𝑛(∅𝑘) 
+𝑟1 = Ω𝑝
+𝛽2+1
+2𝛽 ; 𝑟2 = Ω𝑝
+𝛽2−1
+2𝛽 ; 𝛽= [
+√1+𝜖2+1
+𝜀
+]
+1/𝑁
+ 
+ 
+14 Frequency 
+Transformation 
+for analog 
+filters 
+Prototype Low pass filter has band edge frequency Ω𝒑 
+ 
+Type of Transformation 
+Transformation 
+Band edge frequency of new 
+filter 
+ 
+Low pass 
+ 
+𝑠
+ 
+→ Ω𝑝
+Ω𝑝𝑛
+𝑠 
+ 
+ 
+Ω𝑝𝑛 
+ 
+High pass 
+ 
+𝑠
+ 
+→ Ω𝑝Ω𝑝𝑛
+𝑠
+ 
+ 
+ 
+Ω𝑝𝑛 
+ 
+Band pass 
+ 
+𝑠
+ 
+→ Ω𝑝
+𝑠2 + Ω𝑙Ω𝑢
+𝑠(Ω𝑢−Ω𝑙) 
+ 
+ 
+Ω𝑙 , Ω𝑢 
+ 
+Band stop 
+ 
+𝑠
+ 
+→ Ω𝑝
+𝑠(Ω𝑢−Ω𝑙)
+𝑠2 + Ω𝑙Ω𝑢
+ 
+ 
+ 
+Ω𝑙 , Ω𝑢 
+ 
+ 
+ 
+15 Frequency 
+Transformation 
+for digital 
+filters 
+Prototype Low pass filter has band edge frequency 𝜔𝑝 
+ 
+Type of 
+Transformation 
+Transformation 
+Parameters 
+ 
+ 
+ 
+Low pass 
+ 
+ 
+𝑧−1
+ 
+→ 𝑧−1 −𝑎
+1 −𝑎𝑧−1 
+ 
+ 
+𝜔𝑝𝑛= 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 𝑜𝑓 
+ 𝑛𝑒𝑤 𝑓𝑖𝑙𝑡𝑒𝑟 
+ 
+𝑎= 𝑠𝑖𝑛[(𝜔𝑝−𝜔𝑝𝑛)/2]
+𝑠𝑖𝑛[(𝜔𝑝+ 𝜔𝑝𝑛)/2] 
+ 
+ 
+ 
+ 
+ 
+High pass 
+ 
+ 
+𝑧−1
+ 
+→ 𝑧−1 + 𝑎
+1 + 𝑎𝑧−1 
+ 
+ 
+𝜔𝑝𝑛= 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 𝑜𝑓 
+ 𝑛𝑒𝑤 𝑓𝑖𝑙𝑡𝑒𝑟 
+ 
+𝑎= 𝑐𝑜𝑠[(𝜔𝑝−𝜔𝑝𝑛)/2]
+𝑐𝑜𝑠[(𝜔𝑝+ 𝜔𝑝𝑛)/2] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Band pass 
+ 
+ 
+ 
+ 
+𝑧−1
+ 
+→ −𝑧−2 −𝑎1𝑧−1 + 𝑎2
+𝑎2𝑧−2 −𝑎1𝑧−1 + 1 
+ 
+ 
+𝜔𝑙= 𝑙𝑜𝑤𝑒𝑟 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 
+𝜔𝑢= 𝑢𝑝𝑝𝑒𝑟 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 
+𝑎1 = −2𝛼𝐾
+(𝐾+ 1) 
+𝑎2 =
+(𝐾−1)
+(𝐾+ 1) 
+𝛼= 𝑐𝑜𝑠[(𝜔𝑢+ 𝜔𝑙)/2]
+𝑐𝑜𝑠[(𝜔𝑢−𝜔𝑙)/2] 
+𝐾= 𝑐𝑜𝑡(𝜔𝑢−𝜔𝑙
+2
+) 𝑡𝑎𝑛(𝜔𝑝
+2 ) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Band stop 
+ 
+ 
+ 
+ 
+ 
+𝑧−1
+ 
+→ 𝑧−2 −𝑎1𝑧−1 + 𝑎2
+𝑎2𝑧−2 −𝑎1𝑧−1 + 1 
+ 
+ 
+𝜔𝑙= 𝑙𝑜𝑤𝑒𝑟 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 
+𝜔𝑢= 𝑢𝑝𝑝𝑒𝑟 𝑏𝑎𝑛𝑑 𝑒𝑑𝑔𝑒 𝑓𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦 
+𝑎1 =
+−2𝛼
+(𝐾+ 1) 
+𝑎2 = (1 −𝐾)
+(1 + 𝐾) 
+𝛼= 𝑐𝑜𝑠[(𝜔𝑢+ 𝜔𝑙)/2]
+𝑐𝑜𝑠[(𝜔𝑢−𝜔𝑙)/2] 
+𝐾= 𝑡𝑎𝑛(𝜔𝑢−𝜔𝑙
+2
+) 𝑡𝑎𝑛(𝜔𝑝
+2 ) 
+ 
+ 
+ 
+16 Linear phase 
+FIR filter 
+frequency 
+response 
+i) Symmetric impulse response, odd length 
+𝐻(𝜔) = 𝑒−𝑗𝜔(𝑀−1
+2
+)
+[
+ 
+ 
+ 
+2 ∑ℎ(𝑛)𝑐𝑜𝑠{𝜔(𝑀−1
+2
+−𝑛)}
+𝑀−3
+2
+𝑛=0
+]
+ 
+ 
+ 
+ 
+ 
+ii) Symmetric impulse response, even length 
+𝐻(𝜔) = 𝑒−𝑗𝜔(𝑀−1
+2
+)
+[
+ 
+ 
+ 
+2 ∑ℎ(𝑛)𝑐𝑜𝑠{𝜔(𝑀−1
+2
+−𝑛)}
+𝑀
+2 −1
+𝑛=0
+]
+ 
+ 
+ 
+ 
+iii) Anti-symmetric impulse response, odd length 
+𝐻(𝜔) = 𝑗𝑒−𝑗𝜔(𝑀−1
+2
+)
+[
+ 
+ 
+ 
+2 ∑ℎ(𝑛)𝑠𝑖𝑛{𝜔(𝑀−1
+2
+−𝑛)}
+𝑀−3
+2
+𝑛=0
+]
+ 
+ 
+ 
+ 
+ 
+iv) Anti-symmetric impulse response, even length 
+𝐻(𝜔) = 𝑗𝑒−𝑗𝜔(𝑀−1
+2
+)
+[
+ 
+ 
+ 
+2 ∑ℎ(𝑛)𝑠𝑖𝑛{𝜔(𝑀−1
+2
+−𝑛)}
+𝑀
+2 −1
+𝑛=0
+]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+M: length of the filter 
+ 
+𝐻(𝜔): Frequency response 
+17 Linear phase 
+FIR filter 
+design using 
+window 
+functions 
+Window functions for FIR filter design 
+Name of the 
+window 
+Window function 0≤n≤M-1 
+Main 
+lobe 
+width 
+Peak 
+side 
+lobe 
+(dB) 
+Normalized 
+transition 
+width# 
+Stop band 
+attenuation 
+(dB) 
+Rectangular 
+ 1 
+4π/M 
+-13 
+0.9/(M-1) 
+21 
+Hanning 
+0.5 −0.5𝑐𝑜𝑠( 2𝜋𝑛
+𝑀−1) 
+8π/M 
+-32 
+3.1/(M-1) 
+44 
+Hamming 
+0.54 −0.46𝑐𝑜𝑠( 2𝜋𝑛
+𝑀−1) 
+8π/M 
+-43 
+3.3/(M-1) 
+53 
+Blackman 
+0.42 −0.5𝑐𝑜𝑠( 2𝜋𝑛
+𝑀−1)
++ 0.08𝑐𝑜𝑠( 4𝜋𝑛
+𝑀−1) 
+12π/M 
+-58 
+5.5/(M-1) 
+75 
+Keiser* 
+𝐼0 [𝛽√(𝑀−1
+2
+)
+2
+−(𝑛−𝑀−1
+2
+)
+2
+]
+𝐼0 [𝛽(𝑀−1
+2
+)]
+ 
+ 
+ 
+ 
+> 70 
+*Keiser window parameters can be controlled by 𝛽. I0[.] is modified Bessel function. 
+#Transition width is normalized to 2π or equivalently to sampling frequency Fs 
+ 
+18 Frequency 
+sampling 
+design of FIR 
+filter 
+ 
+ℎ(𝑛) = 1
+𝑀
+{ 
+ 
+𝐺(0) + 2 ∑𝐺(𝑘)𝑐𝑜𝑠2𝜋𝑘
+𝑀(𝑛+ 1
+2)
+(𝑀−1)
+2
+𝑘=1
+} 
+ 
+,
+𝑀 𝑜𝑑𝑑 
+ 
+ℎ(𝑛) = 1
+𝑀
+{
+ 
+ 
+𝐺(0) + 2 ∑𝐺(𝑘)𝑐𝑜𝑠2𝜋𝑘
+𝑀(𝑛+ 1
+2)
+𝑀
+2 −1
+𝑘=1
+}
+ 
+ 
+,
+𝑀 𝑒𝑣𝑒𝑛 
+ 
+ℎ(𝑛) =
+1
+𝑀[𝐻(0) + 2 ∑
+𝑅𝑒{𝐻(𝑘)𝑒
+𝑗2𝜋𝑛𝑘
+𝑀}
+𝑀−1
+2
+𝑘=1
+] M odd 
+ℎ(𝑛) =
+1
+𝑀[𝐻(0) + 2 ∑
+𝑅𝑒{𝐻(𝑘)𝑒
+𝑗2𝜋𝑛𝑘
+𝑀}
+𝑀
+2 −1
+𝑘=1
+] M even 
+𝐻𝑑(𝜔) = 𝐻𝑟(𝜔)𝑒−𝑗𝜔(𝑀−1)/2 
+Where ω=
+2𝜋𝑘
+𝑀 
+𝐻(𝑘) = 𝐻𝑟(𝑘)𝑒
+−𝑗2𝜋𝑘(
+𝑀
+𝑀−1)
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+M: length of the filter 
+ 
+𝐻𝑑(𝜔) : Desired frequency response
+ 
+𝐺(𝑘) = (−1)𝑘𝐻𝑟(2𝜋𝑘
+𝑀) 
+19 Non-
+parametric 
+power 
+spectrum 
+estimators 
+ 
+ 
+Estimate 
+Quality factor Computational 
+requirement 
+ 
+ 
+Bartlett 
+ 
+ 
+ 𝑄𝐵
+= 1.1𝑁∆𝑓 
+ 
+ 𝑁
+2 log2
+0.9
+∆𝑓 
+Welch 
+ (50% 
+overlap) 
+ 
+ 
+ 𝑄𝑊
+= 1.39𝑁∆𝑓 
+ 𝑁log2
+5.12
+∆𝑓 
+ 
+Blackman-
+Tukey 
+ 
+𝑄𝐵𝑇
+= 2.34𝑁∆𝑓 
+ 𝑁log2
+1.28
+∆𝑓 
+ 
+ 
+ 
+ 
+ 
+ 
+Quality factor 
+𝑄=
+{𝐸[𝑒𝑠𝑡𝑖𝑚𝑎𝑡𝑒]}2
+𝑣𝑎𝑟[𝑒𝑠𝑡𝑖𝑚𝑎𝑡𝑒] 
+ 
+∆𝑓: Frequency resolution 
+ 
+N: Data frame length

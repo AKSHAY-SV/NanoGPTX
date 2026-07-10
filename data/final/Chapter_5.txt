@@ -1,0 +1,202 @@
+Thursday, April 10, 2025
+1
+POSD (Dr. Bhaskar Awadhiya)
+MOSFET
+MOS CAPACITOR
+Thursday, April 10, 2025
+2
+POSD (Dr. Bhaskar Awadhiya)
+➢
+The physics of the MOS structure can be more easily explained with the aid of the
+simple parallel-plate capacitor.
+MOS CAPACITOR
+Thursday, April 10, 2025
+3
+POSD (Dr. Bhaskar Awadhiya)
+Accumulation Mode (VG<0)
+➢The top metal gate is at a negative voltage with respect to the semiconductor substrate. 
+➢Negative charge will exist on the top metal plate and an electric field will be induced with 
+➢ the direction bottom to top.
+➢If the electric field were to penetrate into the semiconductor, the majority carrier holes would 
+experience a force toward the oxide– semiconductor interface. 
+➢A pile of holes of holes at the oxide–semiconductor junction has occurred is called as 
+accumulation 
+.
+MOS CAPACITOR
+Thursday, April 10, 2025
+4
+POSD (Dr. Bhaskar Awadhiya)
+Depletion (0 <VG< VTH)
+➢The top metal gate is at a positive with respect to the semiconductor substrate. 
+➢If the electric field penetrates the semiconductor in this case, majority carrier holes will 
+experience a force away from the oxide–semiconductor interface.
+➢As the holes are pushed away from the interface, a negative space charge region is created 
+because of the fixed ionized acceptor atoms. 
+➢This is known as Depletion.
+MOS CAPACITOR
+Thursday, April 10, 2025
+5
+POSD (Dr. Bhaskar Awadhiya)
+Inversion (VG >VTH)
+➢We consider the case when a larger positive voltage is applied to the top
+metal gate of the MOS capacitor 
+➢The p-region near to interface is converted into n-region and hence is called inversion.
+MOS CAPACITOR
+Thursday, April 10, 2025
+6
+POSD (Dr. Bhaskar Awadhiya)
+Accumulation Mode (VG<0)
+Depletion (0 <VG< VTH)
+Inversion (VG >VTH)
+MOS CAPACITOR
+Thursday, April 10, 2025
+7
+POSD (Dr. Bhaskar Awadhiya)
+Depletion Width
+Maximum Depletion Width (xdT)
+MOS CAPACITOR
+Thursday, April 10, 2025
+8
+POSD (Dr. Bhaskar Awadhiya)
+MOS CAPACITOR
+Thursday, April 10, 2025
+9
+POSD (Dr. Bhaskar Awadhiya)
+Flat Band Voltage
+The flat-band voltage is defined as the applied gate voltage such that there is no band 
+bending in the semiconductor and, as a result, zero net space charge in this region. 
+➢In an ideal scenario, it is considered that there is zero net charge density in the oxide material.
+➢Work function difference and possible trapped charge in the oxide may make the net fixed 
+charge density usually positive, which may exist in the insulator. 
+VFB is the flat-band voltage, Cox is oxide capacitance per unit area and is equivalent trapped 
+charge per unit area, is metal semiconductor work function. 
+ 
+MOS CAPACITOR
+Thursday, April 10, 2025
+10
+POSD (Dr. Bhaskar Awadhiya)
+Flat Band Voltage
+MOS CAPACITOR
+Thursday, April 10, 2025
+11
+POSD (Dr. Bhaskar Awadhiya)
+Threshold Voltage
+The threshold voltage is defined as the applied gate voltage required to achieve the
+threshold inversion point.
+The threshold inversion point, in turn, is defined as the condition when the surface potential is 
+ϕs=2ϕfp for the p-type semiconductor
+MOS CAPACITOR
+Thursday, April 10, 2025
+12
+POSD (Dr. Bhaskar Awadhiya)
+Threshold Voltage
+MOS CAPACITOR
+Thursday, April 10, 2025
+13
+POSD (Dr. Bhaskar Awadhiya)
+Flat Band Voltage
+𝑉𝑇𝑁= −0.83, 𝐸𝑛ℎ𝑎𝑛𝑐𝑒𝑚𝑒𝑛𝑡 𝑀𝑜𝑑𝑒
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+14
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+15
+CV Characteristics (Low Frequency)
+Thursday, April 10, 2025
+16
+POSD (Dr. Bhaskar Awadhiya)
+MOS CAPACITOR
+Thursday, April 10, 2025
+17
+POSD (Dr. Bhaskar Awadhiya)
+MOS CAPACITOR
+Thursday, April 10, 2025
+18
+POSD (Dr. Bhaskar Awadhiya)
+CV Characteristics (High Frequency)
+Thursday, April 10, 2025
+19
+POSD (Dr. Bhaskar Awadhiya)
+Low-frequency and high-frequency capacitance versus gate voltage of a MOS capacitor with a p-type substrate. 
+➢The electron concentration in the inversion layer, then, cannot change instantaneously.
+➢If the ac voltage across the MOS capacitor changes rapidly, the change in the inversion layer 
+charge will not be able to respond.
+➢The inversion layer charge will not respond to a differential change in capacitor voltage. 
+CV Characteristics (High Frequency)
+Thursday, April 10, 2025
+20
+POSD (Dr. Bhaskar Awadhiya)
+CV Characteristics
+Thursday, April 10, 2025
+21
+POSD (Dr. Bhaskar Awadhiya)
+𝐶𝑜𝑥= 4.36 × 10−7𝐹/𝑐𝑚2
+𝑡𝑜𝑥= 7.9163𝑛𝑚
+I-V Characteristics
+Thursday, April 10, 2025
+22
+POSD (Dr. Bhaskar Awadhiya)
+I-V Characteristics
+Thursday, April 10, 2025
+23
+POSD (Dr. Bhaskar Awadhiya)
+I-V Characteristics
+Thursday, April 10, 2025
+24
+POSD (Dr. Bhaskar Awadhiya)
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+25
+I-V Characteristics
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+26
+I-V Characteristics
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+27
+I-V Characteristics
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+28
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+29
+Substrate Bias Effect/ Body Effect
+➢When VS = VD = 0, and VG is somewhat less than VTH, a depletion region is formed under the gate 
+but no inversion layer exists.
+➢As VB becomes more negative, more holes are attracted to the substrate connection, leaving a larger 
+negative charge behind; the depletion region becomes wider.
+➢Threshold voltage is a function of the total charge in the depletion region. Thus, as VB drops and QD 
+increases, VTH also increases.
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+30
+Substrate Bias Effect/ Body Effect
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+31
+Substrate Bias Effect/ Body Effect
+Intercept = 
+Intercept = 
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+32
+Substrate Bias Effect/ Body Effect
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+33
+Substrate Bias Effect/ Body Effect
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+34
+Channel Length Modulation
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+35
+Channel Length Modulation
+Thursday, April 10, 2025
+POSD (Dr. Bhaskar Awadhiya)
+36
+Subthreshold Conduction

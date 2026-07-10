@@ -1,0 +1,397 @@
+ECE2243
+Lecture # 1
+FPGA Based System Design using 
+Verilog
+Instructor: Dr. Amit Kumar Goyal
+Office: AB5/Ground Floor/Room-3/FC43
+Contact: amit.goyal@manipal.edu
+BTech in Electronics Engineering (VLSI Desing 
+and Technology)
+COURSE INFORMATION
+COURSE INFORMATION
+Course Books
+OBJECTIVES
+Explain the various modelling style in Verilog
+CLO1
+Explain the various FPGA architecture and technologies
+CLO2
+Develop the ability to model combinational and sequential digital circuits by Verilog HDL
+CLO3
+Implementation of the combinational and sequential digital circuits in FPGA
+CLO4
+Design and implement a system using FPGAs for real-world applications like a traffic 
+light controller or real-time clock.
+CLO5
+Traditional Design approaches
+Gate Level Design
+Schematic Design
+Where is the problem?
+• System specification is behavioral
+• Manual Translation of design in Boolean equations
+• Handling of large Complex Designs
+• Can we still use SPICE for simulating Digital circuits?
+Two most commonly used HDLs: 
+VHDL (Very high-speed integrated circuits HDL-VHSIC)
+Verilog HDL (also called Verilog for short)
+Features of HDLs:
+Design can be described at a very abstract level.
+Functional verification can be done early in the design cycle.
+Designing with HDLs is analogous to computer programming.
+HDL: Hardware Description Language
+Importance of HDLs
+• Why use an HDL?
+– Describe complex designs (millions of gates)
+– Input to synthesis tools (synthesizable subset)
+– Design exploration with simulation
+• Why not use a general-purpose language
+– Support for structure and instantiation
+– Support for describing bit-level behavior
+– Support for timing
+– Support for concurrency
+• Verilog vs. VHDL
+– Verilog is relatively simple and close to C
+– VHDL is complex and close to Ada
+– Verilog has 60% of the world digital design market (larger share in US)
+Importance of HDLs
+Modules –Hardware Module Concept
+Modules –Verilog HDL modules
+The module is the basic building block in Verilog
+Modules can be interconnected to describe the structure of your digital 
+system
+Modules start with keyword module and end with keyword endmodule
+Modules have ports for interconnection with other modules
+Module name<port list>
+•
+•
+•
+endmodule
+Module CPU <port list>
+•
+•
+•
+endmodule
+Modules –Verilog HDL modules
+The module can’t be nested
+Module name<port list>
+•
+•
+•
+endmodule
+Modules must have a module_name (here:and_1), which is an identifier for the module. 
+Value Set
+Lexical Conventions
+Identifire’s first character must be a letter or underscore, and not a 
+digit or dollar sign
+Usually ignored by Verilog except in string
+Comments
+1. “//” indicates a single-
+line comment.
+2. A multiple-line comment 
+starts with /* and ends 
+with */ and cannot be 
+nested.
+Lexical Conventions
+Lexical Conventions
+Keywords
+Note : All keywords are defined in lower case
+Examples : 
+module, endmodule
+input, output, inout
+reg, integer, real, time
+not, and, nand, or, nor, xor
+parameter
+begin, end
+Data Types
+• Nets
+– Nets are physical connections between devices
+– Nets always reflect the logic value of the driving device
+– Many types of nets, but all we care about is wire
+• Registers
+– Implicit storage – unless variable of this type is modified it 
+retains previously assigned value
+– Does not necessarily imply a hardware register
+– Register type is denoted by reg
+- int is also used
+Nets
+Net data type represent physical connections between 
+structural entities. 
+A net must be driven by a driver, such as a gate or a 
+continuous assignment.
+Verilog automatically propagates new values onto a net
+when the drivers change value.
+wire
+: default
+wor
+: wire-ORed
+wand : wire-ANDed
+trireg : with Capacitive Storage
+supply1
+; power
+supply0
+; groun
+Registers
+Registers represent abstract storage elements.
+A register holds its value until a new value is assigned to 
+it.
+Registers are used extensively in behavior modeling.
+Scalars and Vectors
+Ports and Data Types
+• Correct data types for ports
+inout
+input
+output
+net
+net
+net
+net
+Register
+/net
+register/net
+Module
+Specifications of Ports
+Registered Output
+Assignments Statement
+Continuous Assignment
+Procedural Assignment
+assign out = a&b;
+assign out = sel?a:b
+Blocking and Nonblocking Statement
+Blocking and Nonblocking Statement
+There are three types of operators: unary, binary,
+and ternary or conditional.
+Unary operators shall appear to the left of their operand
+Binary operators shall appear between their operands
+Conditional operators have two separate operators that separate 
+three operands
+Operators
+Operators
+{}
+Concatenations
+?:
+Conditional Operators
+>>, <<
+Shift Operators
+&, ~&, |, ~|, ^, ~^
+Unary Reduction
+~, &, |, ^, ~^
+Bit-Wise Operators
+!, &&, ||
+Logical Operators
+==, !=, ===, !==
+Equality Operators
+<, <=, >, >=
+Relational Operators
++, -, *, /, %
+Arithmetic Operators
+Arithmetic Operators
+Arithmetic Operators
+Relational Operators
+Equality Operators
+Operands are compared bit by bit, with zero filling if the two operands do
+not have the same length.
+For the == and != operators, the result is x, if either operand contains an x
+or a z
+Logical Operators
+Logical operators often combine logical expressions formed from relational operators.
+Operators
+{}
+Concatenations
+?:
+Conditional Operators
+>>, <<
+Shift Operators
+&, ~&, |, ~|, ^, ~^
+Unary Reduction
+~, &, |, ^, ~^
+Bit-Wise Operators
+!, &&, ||
+Logical Operators
+==, !=, ===, !==
+Equality Operators
+<, <=, >, >=
+Relational Operators
++, -, *, /, %
+Arithmetic Operators
+Logical Operators
+Logical operators often combine logical expressions formed from relational operators.
+Operator Precedence
+Operator Precedence
+Bit-wise Operators
+Example
+c will now have the value 4'b1000
+assign c = ~a;
+Now c will have the value 4'b0101
+Unary Reduction Operators
+Example
+In this example b will be 0
+Reduction Operators
+Shift Operators
+Example 1
+b: 5'b10000
+c: 5'b00101
+b: 5'b10000
+c: 5’b11101
+Logical shift operators 
+: << and >>
+Arithmetic shift operators: <<< and >>>
+The basic shift operators 
+are zero-filling
+Example 2
+Shift Operators
+These vary from the basic shift operators because they perform sign-
+extended shifts. 
+When shifting left, it performs the same as the basic shift operator, but 
+When shifting to the right, the most significant bit (the sign bit) plays a 
+role.
+If the sign bit is 0, then the arithmetic shift operator acts the same way as 
+the basic shift operator. However, if the sign bit is 1, the shift will fill the 
+left side with ones.
+Concatenation and Replication Operators
+Function 
+Operator
+Concatenation
+:
+{ , }
+Replication
+:
+{ { } }
+The concatenation operator is used to merge 
+two values together into a wider value.
+The replication operator is used to duplicate 
+a value multiple times.
+Example 1
+c: 8'b11001010
+b: 'b10101010 
+(a is replicated four times)
+Example 2
+Exercises
+Write Verilog code to implement the following circuit:
+(A)
+(B)
+Exercises
+Write behavioral Verilog code for 2 to 1 multiplexer using always and
+conditional operators.
+(A)
+(B)
+Write a Verilog code for a 4 to 1 multiplexer 
+module m41(input a, input b, input c, input d, input s0, s1, output out); 
+assign out = s1 ? (s0 ? d : c) : (s0 ? b : a); 
+endmodule
+Exercises
+(A) Write behavioral Verilog code for a 4 to 1 multiplexer using the if-else statement. 
+module multiplexer4_1( din, sel, dout );
+output dout;
+reg dout;
+input [3:0] din;
+input [1:0] sel;
+always @ (din or sel)
+begin
+if (sel= =0)
+dout = din[3];
+else if (sel= =1)
+dout = din[2];
+else if (sel= =2)
+dout = din[1];
+else
+dout = din[0];
+end
+endmodule
+Exercises
+(A) Write behavioral Verilog code for a 4 to 1 multiplexer using case statement. 
+module multiplexer4_1( din, sel, dout );
+output dout;
+reg dout;
+input [3:0] din;
+input [1:0] sel;
+always @ (din or sel)
+begin
+case (sel)
+2'b00 : dout <= din[3];
+2'b01 : dout <= din[2];
+2'b10 : dout <= din[1];
+default : dout <= din[0];
+endcase
+end
+endmodule
+2'b11 : dout <= din[0];
+What if we have ‘x’ or ‘z’ ??
+Module Modeling Style
+Structural Style
+DataFlow Style
+Behavioral Style
+Mixed Style
+Module Modeling Styles
+Module Modeling Styles
+Structural Modeling Styles
+The module is implemented in terms of logic gates and
+interconnections between these gates.
+All the basic gates are available as ready modules called
+“Primitives.”
+Design at this level is similar to describing a design in terms of
+a gate-level logic diagram.
+12-Gate Primitives 
+16-Switch Primitives 
+Verilog Switch Primitives
+Verilog Gate Primitives
+Verilog Gate Primitives
+• Basic logic gates only
+– and
+– or
+– not
+– buf
+– xor
+– nand
+– nor
+– xnor
+– bufif1, bufif0
+– notif1, notif0
+Verilog Gate Primitives
+Verilog Gate Primitives Summary
+Verilog Gate Primitives Summary
+Array of Instances
+Connecting by ordered list
+Connecting by ordered list is the
+most intuitive method for most
+beginners.
+The signals to be connected must appear in the module instantiation 
+in the same order as the ports in the port list in the module definition
+Connecting by Port list
+What if number of ports are higher?
+Verilog Switch Primitives
+MOS Switch Primitives
+Example: CMOS Inverter
+Example: CMOS NAND Gate
+CMOS Switch
+Example: CMOS 2:1 MUX
+Bidirectional Switch
+Delay in Structural Style
+Verilog can account for different types of propagation delays of
+circuit elements.
+Any connection can cause a delay due to the distributed nature of its
+resistance and capacitance.
+Due to the manufacturing tolerances, these can vary over a range in
+any given circuit. Similar delays are present in gates too.
+These manifest as propagation delays in the 0 to 1 transitions and 1
+to 0 transitions from input to the output.
+Sometimes manufacturers adjust input and output impedances of
+circuit elements to specific levels and exploit them to reduce
+interface hardware.
+A variety of such delays can be accommodated in Verilog.
+Delay
+Delay
+Inertial
+Delay
+Delays and storage times can be specified on the gate primitives and
+the nets but not on regs.
+All 3-delay values are separately specified in the most versatile case.
+If only two time-values are specified, Verilog interprets these as the
+rise and fall time, respectively. The turn-off time (delay) is taken as
+the smaller of these two.
+If only 1-delay value is specified, it is taken as the rise time, the fall
+time, and the turn-off time.
+If no time value is specified, the rise and fall times at the output are
+taken as zero. The turn-off is taken as instantaneous.
+Important Point: Delay
+Transport 
+Delay
+Transport and Inertial Delays

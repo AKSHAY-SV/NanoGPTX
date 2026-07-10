@@ -1,0 +1,959 @@
+Distributions 
+ 
+ 
+ 
+ 
+Binomial Distribution: BIPARAMETRIC 
+ 
+ 
+Mean and Variance: 
+E(X)= ∑
+𝒙𝑷(𝒙)
+𝒏
+𝒙=𝟏
+ 
+= ∑
+𝒙 𝐶
+𝑛
+𝑥
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 
+= ∑
+𝒙 𝐶
+𝑛
+𝑥
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 
+= ∑
+𝒙 
+𝑛!
+𝑥! (𝑛−𝑥)!
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 
+= np ∑
+ 
+(𝑛−1)!
+(𝑥−1)! (𝑛−𝑥)!
+𝒏
+𝒙=𝟏
+ 𝑝𝑥−1𝑞𝑛−𝑥 
+Substitute, x-1=s 
+We get, 
+E(X)= np ∑
+ 
+(𝑛−1)!
+𝑠! (𝑛−𝑠−1)!
+𝒏−𝟏
+𝒔=𝟎
+ 𝑝𝑠𝑞𝑛−𝑠−1 
+= np ∑
+ 
+(𝑛−1)!
+𝑠! (𝑛−𝑠−1)!
+𝒏−𝟏
+𝒔=𝟎
+ 𝑝𝑠𝑞𝑛−1−𝑠 
+= np (𝑝+ 𝑞)𝑛−1 
+= np 
+V(X)= 𝐸(𝑥2) −[𝐸(𝑥)]2= 𝐸(𝑥2) – (𝑛𝑝)2 
+Where, 
+𝐸(𝑥2) = ∑
+(𝒙𝟐−𝒙+ 𝒙) 𝐶
+𝑛
+𝑥
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 
+= ∑
+(𝒙𝟐−𝒙) 𝐶
+𝑛
+𝑥
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 + ∑
+𝒙 𝐶
+𝑛
+𝑥
+𝒏
+𝒙=𝟏
+ 𝑝𝑥𝑞𝑛−𝑥 
+= ∑
+𝒙 (𝒙−𝟏) 
+𝑛!
+𝑥! (𝑛−𝑥)!
+𝒏
+𝒙=𝟐
+ 𝑝𝑥𝑞𝑛−𝑥 + np 
+= 𝑛(𝑛−1)𝑝2 ∑
+ 
+(𝑛−2)!
+(𝑥−2)! (𝑛−𝑥)!
+𝒏
+𝒙=𝟐
+ 𝑝𝑥−2𝑞𝑛−𝑥 + np 
+Substitute, x-2=s 
+= 𝑛(𝑛−1)𝑝2 ∑
+ 
+(𝑛−2)!
+𝑠! (𝑛−𝑠−2)!
+𝒏−𝟐
+𝒔=𝟎
+ 𝑝𝑠𝑞𝑛−𝑠−2 + np 
+= 𝑛(𝑛−1)𝑝2 (𝑝+ 𝑞)𝑛−2+ np 
+= 𝑛(𝑛−1)𝑝2+ np 
+V(X)= 𝐸(𝑥2) −[𝐸(𝑥)]2 = 𝑛(𝑛−1)𝑝2+ np – (𝑛𝑝)2 
+V(X)= npq 
+Problems: 
+1. Six coins are tossed. Find the probability of getting: 
+a) Exactly 3 heads --------P(X=3)--------5/16 
+b) At least 3 heads -------P(𝑋≥3)-----21/32 
+c) At most 3 heads -------P(𝑋≤3)-- --21/32 
+d) At least 1 head ---------P(𝑋≥1) = 1-P(zero heads) 
+Ans: n=6 X: number of heads 
+p: getting head = ½ 
+q: getting tail = ½ 
+2. What is the probability of getting a 6 at least once in 2 throws of a fair die. 
+ 
+Ans: n=2 X: number of times 6 obtained 
+P(𝑋≥1) ------------11/36 
+ 
+p: getting six = 1/6 
+ q: not getting six = 5/6 
+3. A fair die is thrown 180 times. What is the expected number of sixes. 
+ 
+Ans: n=180 X: number of times 6 obtained 
+ E(x) =np=30 
+4. A die is thrown 8 times. Find the probability that 3 appears. 
+i. 
+Two times……….P(X=2)= 0.2604 
+ii. 
+At least 7 times ……….P(X≥7)= 0.0000244 
+iii. 
+Exactly one time ……..P(X=1)= 0.372 
+5. Two percent fuses manufactured by company are defective. Find the probability that a box containing 200 
+fuses contains. 
+i. 
+NO defective …………P(X=0)= 0.01758 
+ii. 
+3 or more defective……….P(3 or more)=1- P(0,1,2)= 0.7649 
+6. Find the probability in a family of 4 children there will be at least one boy by assuming that probability of 
+male birth is ½……….P(At least 1)= 1- P(NO boy) 
+7. A family has 6 children. Find the probability that there are fewer boys than girls. 
+Ans: n=6 and X- number of boys can take the values 0, 1, or 2 
+8. The sum and product of mean and variance of binomial distribution are 24 and 128. Find the distribution. 
+Solution: np+npq=24 
+np.npq=128 
+q= 2 and 0.5 
+2 not possible therefore q=0.5 hence p=0.5 
+We have np.npq=128 therefore n=32 
+The binomial distribution = 32Cx (0.5)𝑥 (0.5)32−𝑥 
+9. Numbers are selected at random one at a time from the two digit numbers 00,01,…, 99 with replacement. An 
+event occurs iff the product of the two digits of selected number is 18. If 4 numbers are selected find the 
+probability that the event occurs at least 3 times. 
+Solution: n= 4 
+p= 4/100 and q= 24/25 
+P(𝑋≥3)= 97/254 
+10. A perfect die is tossed 100 times in sets of 8 the occurrence of 5 and 6 is called a success. How many times 
+do you expect to get 3 success. 
+Solution: 
+p=1/3 and q=2/3 and n=8 
+P (3 success)= 8C3 (1/3)3 (2/3)5= 0.2731 
+E (3 success)=100 x 0.2731= 27.31 
+11. Suppose that the probability for A to win a game of tennis against B is 0.4. A has an option of playing either a 
+best of 3 games or a best of 5 games. Which option A should choose so that his probability of winning is 
+greater. 
+Solution: 
+X: number of games A wins against B 
+P= 0.4 and q= o.6 
+When n= 3 
+P(𝑋≥2)= 0.352 
+When n= 5 
+P(𝑋≥3)= 0.31744 
+12. An aircraft knows that 5% of the people making reservation on a certain flight will not show up. 
+Consequently, their policy is to sell 52 tickets for the flight that can only hold 50 passengers. What is the 
+probability that there will be a seat available for every passenger who turns up? 
+Solution: n=52 
+X: number of passengers who won’t turn up 
+p= passenger will not turn up= 0.05 
+q= 0.95 
+P(𝑋≥2)= 1- [P(X=0)+P(X=1)]= 0.7405 
+ 
+Poisson’s Distribution: UNIPARAMETRIC 
+ 
+ 
+Theorem: Let X be a binomial random variable with parameters n, p and pdf P(X=x)= nCx 𝑝𝑥𝑞𝑛−𝑥. Suppose 
+n→∞; np=𝛼 then lim
+𝑛→∞𝑃(𝑋= 𝑥) = 
+𝑒−𝛼𝛼𝑥
+𝑥! is a Poisson’s distribution with parameter 𝛼. 
+Proof: General expression for binomial distribution is P(X)= nCx 𝑝𝑥𝑞𝑛−𝑥 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = nCx 𝑝𝑥(1 −𝑝)𝑛−𝑥 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = 
+𝑛(𝑛−1)(𝑛−2)…(𝑛−𝑥+1)
+𝑥!
+ 𝑝𝑥(1 −𝑝)𝑛−𝑥 
+Let 𝑛𝑝= 𝛼 
+ 
+ 
+ 
+ 
+ 
+= 
+𝑛(𝑛−1)(𝑛−2)…(𝑛−𝑥+1)
+𝑥!
+ (
+𝛼
+𝑛)
+𝑥
+(1 −
+𝛼
+𝑛)
+𝑛−𝑥
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+𝛼𝑥
+𝑥! [1. (1 −
+1
+𝑛) (1 −
+2
+𝑛) … (1 −
+{𝑥+1}
+𝑛)]
+(1−𝛼
+𝑛)
+𝑛
+(1−𝛼
+𝑛)
+𝑥 
+Let n→∞ and 𝛼= 𝑛𝑝 
+lim
+𝑛→∞𝑃(𝑋= 𝑥) = lim
+𝑛→∞(𝛼𝑥
+𝑥! [1. (1 −1
+𝑛) … (1 −
+{𝑥+ 1}
+𝑛
+)]
+(1 −𝛼
+𝑛)
+𝑛
+(1 −𝛼
+𝑛)
+𝑥) 
+lim
+𝑛→∞𝑃(𝑋= 𝑥) = 𝛼𝑥 𝑒−𝛼
+𝑥!
+ 
+Mean and Variance: 
+E(X)= ∑
+𝒙𝑷(𝒙)
+∞
+𝒙=𝟎
+ 
+= ∑
+𝒙 
+𝑒−𝛼𝛼𝑥
+𝑥!
+∞
+𝒙=𝟏
+ 
+= ∑
+ 
+𝑒−𝛼𝛼𝑥
+(𝑥−1)!
+∞
+𝒙=𝟏
+ 
+= 𝛼𝑒−𝛼 ∑
+ 
+𝛼(𝑥−1)
+(𝑥−1)!
+∞
+𝒙=𝟏
+ 
+Substitute, x-1=s 
+= 𝛼𝑒−𝛼 ∑
+ 
+𝛼𝑠
+𝑠!
+∞
+𝒔=𝟎
+ 
+= 𝛼𝑒−𝛼𝑒𝛼 = 𝛼 
+Therefore, 
+E(X)= 𝛼 
+V(X)= 𝐸(𝑥2) −[𝐸(𝑥)]2= 𝐸(𝑥2) −[𝛼]2 
+𝐸(𝑥2) = ∑
+𝒙𝟐 
+𝑒−𝛼𝛼𝑥
+𝑥!
+∞
+𝒙=𝟏
+ 
+ = 𝛼∑
+𝒙 
+𝑒−𝛼𝛼𝑥−1
+(𝑥−1)!
+∞
+𝒙=𝟏
+ 
+Substitute, x-1=s 
+𝐸(𝑥2) = 𝛼∑(𝒔+ 𝟏) 𝑒−𝛼𝛼𝑠
+𝑠!
+∞
+𝒔=𝟎
+ 
+= 𝛼∑
+𝒔 
+𝑒−𝛼𝛼𝑠
+𝑠!
+∞
+𝒔=𝟏
++ 𝛼𝑒−𝛼∑
+ 
+𝛼𝑠
+𝑠!
+∞
+𝒔=𝟎
+ 
+= 𝛼2𝑒−𝛼 ∑
+ 
+𝛼𝑠−1
+(𝑠−1)!
+∞
+𝒔=𝟏
++ 𝛼 𝑒−𝛼𝑒𝛼 
+= 𝛼2 + 𝛼 
+Therefore, 
+V(X)= 𝐸(𝑥2) −[𝐸(𝑥)]2= 𝛼 
+ 
+Problems: 
+a) 2% of fuses manufactured by a company are defective. Find the probability that a box having 200 fuses 
+contains. 
+i. 
+No defective fuse. 
+ii. 
+3 or more defective fuses. 
+Solution: 
+𝛼= 𝑛𝑝 
+n=200, p=0.02, q= 0.98. Therefore, 𝛼= 4. 
+i. 
+P(X=0) = 0.0183 
+ii. 
+𝑃(𝑋≥3) = 0.769 
+ 
+b) A pot has 10% of defective items. What should be the number of items such that the probability of finding at 
+least 1 defective item is at least 0.95. 
+Solution: 
+n=? p= 0.1 and q= 0.9 
+P (𝑥≥1) ≥0.95 
+[1-P(x<1)] ≥0.95 
+P(x<1) ≤ 0.05 
+P(x=0) ≤ 0.05 
+𝑒−𝛼𝛼0 ≤0.05 
+𝑒−𝑛𝑝≤0.05 
+𝑛≥29.95 
+c) Suppose that a container contains 10,000 particles. The probability that such a particle escapes from the 
+container equals 0.0004. What is the probability that more than 5 such escape occurs. 
+Solution: 
+X: number of particle escapes 
+n= 10,000 p= 0.0004 and 𝛼= 4 
+P (𝑋> 5)= 1 −𝑃(𝑋≤5) = 1 −∑
+𝑒−44𝑥
+𝑥!
+5
+𝑥=0
+ 
+d) X is a Poisson’s variable and it’s found that the probability that X=2 is two third of the probability that X=1. 
+Find the probability that X=0 and X=3. What is the probability that X exceeds 3? 
+Solution: P(X=2) = 2/3 P(X=1) 
+𝛼= 4
+3 
+P(X=0) =0.2635 
+P(X=3) = ………. 
+P(X>3) =………… 
+e) An insurance company has discovered that only about 0.1% of the population is limited in a certain type of 
+accidents each year. If its 10000 policy holders were randomly selected from the population. What is the 
+probability that not more than 5 of the clients are involved in such accidents each year. 
+Solution: 
+X: number of clients involved in accidents 
+p=0.001 n=1000 𝛼= 10 
+P(𝑋≥5) = 0.8686 
+f) Suppose that a book of 585 pages contains 43 typographical errors. If these errors are randomly distributed 
+throughout the book, what is the probability that 10 pages selected at random will be errorfree. 
+Solution: 
+X: number of errors 
+n=10 
+p= 43/585 
+𝛼= 0.735 
+ 
+P(X=0)=0.4795 
+ 
+g) Probability that an individual suffers a bad reaction from an injection is 0.001. Find the probability that out of 
+2000 individuals (i) exactly 3 (ii) not more than 2 suffer from bad reaction. 
+ 
+ 
+Continuous Distributions 
+Exponential Distribution: UNIPARAMETRIC 
+This family of distributions is characterized by a single parameter λ, which is called the rate. Intuitively, λ 
+can be thought of as the instantaneous “failure rate” of a “device” at any time t, given that the device has 
+survived up to t. The exponential distribution is typically used to model time intervals between “random 
+events”. 
+Examples: 
+a. The length of time between telephone calls 
+b. The length of time between arrivals at a service station 
+c. The lifetime of electronic components, i.e., an inter failure time. 
+ 
+ 
+Mean and Variance: 
+𝐸(𝑋) = ∫𝑥 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+ 
+𝐸(𝑋) = ∫𝑥 𝜆𝑒−𝜆𝑥𝑑𝑥
+∞
+0
+ 
+ = 𝜆{𝑥𝑒−𝜆𝑥
+−𝜆− 𝑒−𝜆𝑥
+𝜆2 } = 1
+𝜆 
+𝑆𝑖𝑚𝑖𝑙𝑎𝑟𝑙𝑦, 𝑉(𝑋) = 1
+𝜆2 
+ 
+Gamma Distribution 
+A continuous random variable X is said to have a gamma distribution with parameters 𝛼> 0 and r > 0 , 
+shown as X∼G(𝛼 , r) , if its PDF is given by 
+ 
+ 
+Note: When we sub r=1 in gamma distribution we get exponential distribution. 
+Mean and Variance: 
+𝐸(𝑋) = ∫𝑥 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+ 
+𝐸(𝑋) = ∫𝑥 {𝑥𝑟−1 𝑒−𝛼𝑥 𝛼𝑟
+Γ(𝑟)
+} 𝑑𝑥
+∞
+0
+ 
+Multiply and divide by "𝛼 𝑟" 
+𝐸(𝑋) = 
+𝑟
+𝛼∫
+ {
+𝑥𝑟 𝑒−𝛼𝑥 𝛼𝑟+1
+Γ(𝑟+1)
+} 𝑑𝑥
+∞
+0
+ 
+where ∫
+ {
+𝑥𝑟 𝑒−𝛼𝑥 𝛼𝑟+1
+Γ(𝑟+1)
+} 𝑑𝑥
+∞
+0
+= 1 𝑏𝑒𝑖𝑛𝑔 𝑎 𝑝𝑑𝑓 𝑜𝑓 𝐺𝑎𝑚𝑚𝑎 𝑓𝑢𝑛𝑐𝑡𝑖𝑜𝑛 
+𝐸(𝑋) = 𝑟
+𝛼 
+V(X)= 𝐸(𝑥2) −[𝐸(𝑥)]2 
+𝐸(𝑥2) = ∫𝑥2 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+ 
+𝐸(𝑥2) = ∫𝑥2 {
+𝑥𝑟−1 𝑒−𝛼𝑥 𝛼𝑟
+Γ(𝑟)
+} 𝑑𝑥
+∞
+0
+ 
+Multiply and divide by "𝛼2 𝑟(𝑟+ 1)" 
+ 
+𝐸(𝑥2) = 
+𝑟(𝑟+1)
+𝛼2
+∫ {
+𝑥𝑟+1 𝑒−𝛼𝑥 𝛼𝑟+2
+Γ(𝑟+2)
+} 𝑑𝑥
+∞
+0
+= 
+𝑟(𝑟+1)
+𝛼2 
+where ∫
+ {
+𝑥𝑟+1 𝑒−𝛼𝑥 𝛼𝑟+2
+Γ(𝑟+2)
+} 𝑑𝑥
+∞
+0
+= 1 𝑏𝑒𝑖𝑛𝑔 𝑎 𝑝𝑑𝑓 𝑜𝑓 𝐺𝑎𝑚𝑚𝑎 𝑓𝑢𝑛𝑐𝑡𝑖𝑜𝑛 
+Therefore, 
+ 
+V(X)= 
+𝑟
+𝛼2 
+To check the pdf defined is valid: 
+𝑓(𝑥) ≥0 
+∫
+ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+= ∫
+ 𝑓(𝑥)𝑑𝑥
+∞
+0
+ = ∫
+ {
+𝑥𝑟−1 𝑒−𝛼𝑥 𝛼𝑟
+Γ(𝑟)
+} 𝑑𝑥
+∞
+0
+ 
+𝑠𝑢𝑏𝑠𝑡𝑖𝑡𝑢𝑡𝑒, 𝛼𝑥= 𝑣 
+ = 𝛼𝑟
+Γ(𝑟) ∫ {𝑣
+𝛼}
+𝑟−1
+ 𝑒−𝑣 (1/𝛼)𝑑𝑣
+∞
+0
+ 
+ 
+= 
+1
+Γ(𝑟) ∫
+ {𝑣}𝑟−1 𝑒−𝑣 𝑑𝑣
+∞
+0
+ 
+ 
+ = 1 
+ 
+Problems: 
+1. The number of road accidents per day in a city is following a gamma distribution with an average of 6 and 
+variance of 18. Find the probability that there will be (i) more than 8 accidents (ii) between 5 to 8 in a 
+day. 
+Solution: 
+𝑟
+𝛼 =6 and 
+𝑟
+𝛼2 = 18 → r=2 and 𝛼=
+1
+3 
+P(X>8) = ∫{
+(1/3) 𝑒−(1
+3)𝑥 (1
+3𝑥)
+Γ(1)
+} 𝑑𝑥
+8
+0
+ = 1/9 [11𝑒−1/3 −1] 
+2. The daily consumption of electric power is in million Kw in a certain city is a random variable x having the 
+pdf f(x)= {
+1
+9 𝑥 𝑒−𝑥 
+3 0 < 𝑥 
+0 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+. Find the probability that the power supply is inadequate on 
+any given date if the daily capacity of the power plant is 12 million Kw. 
+Solution: P(x>12) = ∫
+{
+1
+9 𝑥 𝑒−𝑥 
+3} 𝑑𝑥
+∞
+12
+ 
+Note: V(X)= 
+𝑟
+𝛼2= 
+2
+(1
+3)
+2 = 18 
+3. If X has the pdf f(x)= {
+1
+4 𝑥 𝑒−𝑥 
+2 0 < 𝑥< ∞ 
+0 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+ . Find the mean and variance. 
+4. Solution: 
+𝐸(𝑋) = 
+𝑟
+𝛼 and V(X)= 
+𝑟
+𝛼2 
+We have, r-1=1 i.e r=2 and −𝛼𝑥= −
+𝑥
+2 𝑖. 𝑒 𝛼=
+1
+2 
+𝐸(𝑋) = 
+𝑟
+𝛼= 4 and V(X)= 
+𝑟
+𝛼2 = 8 
+ 
+ 
+5. The amount of time required to repair a TV is exponentially distributed with mean 2. Find (i) the 
+probability that the required time exceeds 2 hours. (ii) The conational probability that the required 
+time taken at least 10 hours given that already 9 hours have been spent on repairing the TV. 
+Solution: E(X)=
+1
+λ = 2 λ = 0.5 
+f(x)= {
+1
+2 e−x 
+2 0 < x 
+0 otherwise
+ 
+(i) 
+P(X>2)=1/e 
+(ii) 
+𝑃(𝑋≥10 |𝑥> 9 ) =
+𝑃(𝑋≥10∩ |𝑥>9 )
+𝑃(𝑥>9 )
+= 𝑒−1
+2 
+6. If 𝑋 ~ 𝐸(𝜆) with P(𝑋≤1) = P(x>1) then find V(X). 
+Solution: 𝛼= ln 2 therefore 𝑉(𝑋) = 
+1
+𝜆2= 
+1
+(ln 2)2 
+Chi-square Distribution: 
+Special case of Gamma distribution: 𝒓=
+𝒏
+𝟐 and 𝜶=
+𝟏
+𝟐 in 𝚪 function we get 𝝌𝟐distribution. 
+A continuous random variable X is said to have a chi-square distribution if its PDF is given by. 
+ 
+ 
+Mean and Variance: 
+𝐸(𝑋) = 
+𝑟
+𝛼 = n and V(X)= 
+𝑟
+𝛼2 = 2n 
+ 
+Normal Distribution: (Gaussian Distribution) 
+ 
+ 
+To check the pdf defined is valid: 
+𝑓(𝑥) ≥0 
+∫ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+= ∫ 
+1
+σ√2𝝅
+ 𝑒
+−(𝑥−μ )
+2
+2σ
+2
+ 𝑑𝑥
+∞
+−∞
+ 
+Sub, 
+𝑥−𝜇
+𝜎= 𝑧 
+ 
+ 
+ 
+∫ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+=
+1
+√2𝝅
+∫ 𝑒
+−(𝑧 )
+2
+2
+ 𝑑𝑧
+∞
+−∞
+ 
+∫ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+=
+2
+√2𝝅
+∫ 𝑒
+−(𝑧 )
+2
+2
+ 𝑑𝑧
+∞
+0
+ 
+∫ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+=
+√2
+√𝝅∫ 𝑒
+−(𝑧 )
+2
+2
+ 𝑑𝑧
+∞
+0
+ 
+Sub, 
+𝑧2
+2 = t 
+ 
+ 
+ 
+∫
+ 𝑓(𝑥)𝑑𝑥
+∞
+−∞
+=
+√2
+√𝝅 ∫
+ 
+𝑒−𝑡
+√2𝑡 𝑑𝑡
+∞
+0
+=1 
+ 
+ 
+ 
+Mean and Variance: Prove the following. 
+E(X)=𝜇 and V(X)= 𝜎2 
+Problem on Chebyshev’s Inequality: 
+The number of patients requiring ICU in a hospital is a random variable with mean 18 and S.D 2.5. Determine 
+minimum probability- that number of patients are between 8 and 28. 
+Solution: 𝑃(8 ≤𝑋≤28) > 1 − 
+1
+𝑘2 
+𝑃(𝜇+ 𝑘𝜎≤𝑋≤𝜇−𝑘𝜎) > 1 − 1
+𝑘2 
+𝜇+ 𝑘𝜎= 8 therefore k = 4 
+𝑃(8 ≤𝑋≤28) > 15
+16 
+ 
+ 
+ 
+Standard normal distribution 
+The standard normal distribution, also called the z-distribution, is a special normal distribution where 
+the mean(𝜇) is 0 and the standard deviation(𝜎) is 1. The curve is symmetric about x=0. Denoted by 𝑍∼
+𝑁(0, 1). 
+Its PDF is, 
+ϕ(z) = 
+e
+−z2
+2
+√2π, -∞<z<∞ 
+where, 𝑧=
+𝑥−𝜇
+𝜎 when 𝜇 is 0 and and 𝜎 is 1 z=x. 
+ 
+Properties: 
+1. Area under the curve is one. 
+2. P(a<x<b) is area under the curve from a to b. 
+3. Cdf of 𝝓(𝒂) = 𝑷(𝒁≤𝒂) 
+4. P(𝒂≤Z≤𝒃)= 𝝓(𝒃) −𝝓(𝒂) 
+5. 𝝓(−𝒂) = 𝑷(𝒁≤−𝒂) = 𝑷(𝒁≥𝒂)= 1-P(Z<a)= 1- 𝝓(𝒂) 
+6. 𝑃(𝑎≤𝑥≤𝑏)= 𝑃(
+𝑎−𝜇
+𝜎
+≤𝑧≤ 
+𝑏−𝜇
+𝜎) 
+ 
+ 
+Problems: 
+1. Suppose 𝑿~𝑵(𝟕𝟓, 𝟏𝟎𝟎). 𝑭𝒊𝒏𝒅 
+(i) 
+P(X<60) 
+(ii) 
+P (70< X<100) 
+(iii) 
+P(X<65) 
+Solution: 𝜇= 75 and 𝜎2 = 100. 
+Z= 
+𝑋−75
+10 and 𝑍∼𝑁(0, 1) 
+(i) 
+P(X<60) = P (Z<
+𝑋−75
+10 ) 
+= P(Z<-1.5) 
+= 𝜙(−1.5) 
+= 1 −𝜙(1.5) = 1 −0.9332= 0.0668 
+(ii) 
+P(70<X<100) = P(-0.5< z <2.5) 
+= 𝜙(2.5) −𝜙(−0.5) = 𝜙(2.5) −[1 −𝜙(0.5)] 
+= 0.9938-1+0.6915 
+= 0.6853 
+(iii) 
+P(X<65)= 0.1587 
+ 
+2. Suppose 𝑋~𝑁(2, 0.16). 𝐹𝑖𝑛𝑑. 
+(i) 
+𝑃(𝑋≥2.3)→ 0.2266 
+(ii) 
+𝑃(1.8 ≤𝑋≤2.1) → 0.2902 
+ 
+3. Diameter of an electric cable is normally distributed with mean 0.8 and variance 0.0004. What is the 
+probability that the diameter exceeds 0.81 inches. 
+Solution: 
+𝜇= 0.8 𝑎𝑛𝑑 𝜎= 0.02 
+𝑃(𝑋> 0.81) = 𝑃 (𝑍> 
+0.81−𝜇
+𝜎
+)= 0.3085 
+ 
+4. 𝑋~𝑁(1, 4), 𝐹𝑖𝑛𝑑 𝑃(|𝑥| > 4). 𝐴𝑛𝑠= 0.073 
+ 
+5. 𝑋~𝑁(75, 25). 𝐹𝑖𝑛𝑑 𝑃(𝑋> 80|𝑋> 77). 𝐴𝑛𝑠: 0.4605 
+ 
+6. The height of 500 soldiers is found to have normal distribution. Of them 258 are found to be within 2c.m 
+of the mean height of 170c.m. Find the standard deviation of X. 
+ 
+Solution: 𝜇= 170 
+X: height of soldiers 
+𝑋~𝑁(170,
+𝜎2) 
+P(168 <X<172)= 
+258
+500 = 0.516 
+P(
+168−𝜇
+𝜎
+ <Z<
+172−𝜇
+𝜎
+)= 0.516 
+2𝜙(2
+𝜎, ) = 1.516 
+2/𝜎 = 𝜙−1(0.758) 
+2
+𝜎= 0.7 
+𝜎= 2.857 
+ 
+7. In normal distribution 31% of item are <45 and 8% are over 64. Find mean and Standard distribution. 
+Solution: P(X<45)=0.31 
+ P(X>64) = 0.08 
+Simplifying, 45- 𝜇= -0.5𝜎 
+ 
+ 
+64 −𝜇= 1.41𝜎 
+Solving, 𝜇= 49.97 𝑎𝑛𝑑 𝜎= 9.94 
+ 
+8. Suppose X has 𝑁(3, 4). Find “c” such that P(𝑋> 𝑐)= 2𝑃(𝑋≤𝑐). 
+Ans: c= 2.14 
+ 
+9. Suppose that the life span of two electronic device A and B have distribution N(40, 36) and N(45, 9). If 
+the electronic device is to be used for 45 hours period which device is to be preferred. If it is used for 48 
+hours which device is to be preferred. 
+Solution: 
+Device A 
+N ( 40 , 36) 
+Mean = 40 
+SD = 6 
+device A is to be used for a 45h period and 
+above. 
+𝑃(𝑋≥45) = 0.2025 
+device A is to be used for a 48h period. 
+𝑃(𝑋≥48) = 0.0915 
+ 
+Device B 
+N (45 , 9) 
+Mean = 45 
+SD = 3 
+device B is to be used for a 45 –h period. 
+𝑃(𝑋≥45) = 0.5 
+0.5 > 0.2025 Hence Device B is better for 45 
+hours. 
+ 
+Device B is to be used for a 48 –h period. 
+𝑃(𝑋≥48) = 0.1587 
+0.1587 > 0.0915 
+Hence Device B is better for 48 hours. 
+in Both cases Device B is better 
+ 
+ 
+10. In a normal distribution, 7% of the item are under 35 and 89% of the item are under 63. Find the mean 
+and variance of the distribution. 
+Solution: P(X<35) = 0.07 and P(X<65)= 0.89 gives 𝑋~𝑁(50, 100) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11. Obtain the percentage of students who are graded A, B, C, D, E and F. 
+ 
+ 
+Solution: 
+P(𝑋> 𝜇+ 𝜎)= 0.1587 
+P(𝜇< 𝑋< 𝜇+ 𝜎)=0.3413 
+𝑃(𝜇 −𝜎< 𝑋< 𝜇 )= 0.3413 
+𝑃(𝜇 −2𝜎< 𝑋< 𝜇−𝜎 ) = 0.1359 
+𝑃(𝑋< 𝜇−2𝜎) = 0.0228 
+ 
+12. The monthly income of a group of 10,000 person were found to be normally distributed with mean 750 
+rupees and SD rupees 50. Show that of this group about 95% had income exceeding rupees 668 and 
+only 5% had income exceeding rupees 832. What was the lowest income among the richest 100? 
+Solution: 
+X: Monthly income of a group 
+To Show P(X>668) =0.95 and P(X>832) =0.05 
+Consider, P(X>668) and P(X>832) and solve. 
+To find “C” such that P(X>𝜇+C) = 100/10000 =0.01 
+C= 116.5 
+Therefore, lowest income among the richest 100 = 𝜇+ 𝐶= 866.5 
+ 
+13. The annual rainfall at a certain locality is known to be normally distributed random variable with mean 
+29.5inches and SD 2.5inches. How many inches of rain annually exceeds about 5% of the time? 
+Solution: 
+X: annual rainfall at certain locality 
+𝜇= 29.5 𝑎𝑛𝑑 𝜎= 2.5 
+𝑃(𝑋> 𝜇+ 𝑐) = 0.05 
+1 −𝑃(𝑍≤𝑐
+𝜎) = 0.95 
+C= 4.125 
+Rain exceeds about 5% of the time is 𝜇+ 𝑐= 33.625 inches.
